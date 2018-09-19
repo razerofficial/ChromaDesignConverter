@@ -45,6 +45,7 @@ namespace ChromaDesignConverter
                     using (StreamReader sr = new StreamReader(fs))
                     {
                         string line;
+                        bool insideBlock = false;
                         do
                         {
                             line = sr.ReadLine();
@@ -60,9 +61,22 @@ namespace ChromaDesignConverter
                             }
                             if (line.Contains(".onclick"))
                             {
+                                if (insideBlock)
+                                {
+                                    continue;
+                                }
                                 int index = line.IndexOf(".onclick");
                                 line = line.Substring(0, index);
                                 line = "void " + char.ToUpper(line[0]) + line.Substring(1) + "()\r\n{";
+                                insideBlock = true;
+                            }
+                            if (line.EndsWith("});"))
+                            {
+                                continue;
+                            }
+                            if (line == "}")
+                            {
+                                insideBlock = false;
                             }
                             if (SwapStart(ref line, "var baseLayer", "const char* baseLayer"))
                             {
@@ -120,9 +134,51 @@ namespace ChromaDesignConverter
                             {
                                 line = line.Replace("0.033)", "0.033f)");
                             }
-                            if (line.StartsWith("displayAndPlayAnimationKeyboard("))
+                            if (Replace(ref line, "ChromaAnimationAPI::makeBlankFramesRGB(", "ChromaAnimationAPI::MakeBlankFramesRGBName("))
                             {
-                                line = "ChromaAnimationAPI::PlayAnimationName(baseLayer, true);\r\n}";
+                                line = line.Replace("0.1,", "0.1f,");
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fadeStartFrames(", "ChromaAnimationAPI::FadeStartFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fadeEndFrames(", "ChromaAnimationAPI::FadeEndFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyTargetColorLerpAllFrames(", "ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::trimStartFrames(", "ChromaAnimationAPI::TrimStartFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::trimEndFrames(", "ChromaAnimationAPI::TrimEndFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::duplicateFrames(", "ChromaAnimationAPI::DuplicateFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::reduceFrames(", "ChromaAnimationAPI::ReduceFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::insertDelay(", "ChromaAnimationAPI::InsertDelayName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillZeroColorAllFrames(", "ChromaAnimationAPI::FillZeroColorAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsAllFrames(", "ChromaAnimationAPI::FillThresholdColorsAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityColorAllFrames(", "ChromaAnimationAPI::MultiplyIntensityColorAllFramesName("))
+                            {
+                            }
+                            if (line.StartsWith("displayAndPlayAnimationChromaLink(") ||
+                                line.StartsWith("displayAndPlayAnimationHeadset(") ||
+                                line.StartsWith("displayAndPlayAnimationKeyboard(") ||
+                                line.StartsWith("displayAndPlayAnimationKeypad(") ||
+                                line.StartsWith("displayAndPlayAnimationMouse(") ||
+                                line.StartsWith("displayAndPlayAnimationMousepad("))
+                            {
+                                line = "ChromaAnimationAPI::PlayAnimationName(baseLayer, true);";
                             }
 
                             Console.WriteLine("{0}", line);
@@ -139,7 +195,12 @@ namespace ChromaDesignConverter
         }
         static void Main(string[] args)
         {
-            using (FileStream fs = File.Open("Output.cpp", FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            string outputFile = "Output.cpp";
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
