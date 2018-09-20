@@ -400,7 +400,7 @@ namespace ChromaDesignConverter
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
-        static void ProcessUE4Header(string filename, StreamWriter sw)
+        static void ProcessUE4Header(string filename, StreamWriter sw, string gameName)
         {
             try
             {
@@ -414,9 +414,16 @@ namespace ChromaDesignConverter
 UCLASS()
 class UGameChromaBP : public UBlueprintFunctionLibrary
 {
-	GENERATED_UCLASS_BODY()";
-                Console.WriteLine("{0}", classDefinition);
-                sw.WriteLine("{0}", classDefinition);
+	GENERATED_UCLASS_BODY()
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSampleStart"", Keywords = ""Init at the start of the application""), Category = ""Sample"")
+	static void GameSampleStart();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSampleEnd"", Keywords = ""Uninit at the end of the application""), Category = ""Sample"")
+	static void GameSampleEnd();";
+
+                Console.WriteLine("{0}", classDefinition.Replace("Game", gameName));
+                sw.WriteLine("{0}", classDefinition.Replace("Game", gameName));
 
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
@@ -449,11 +456,11 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                             string funcName = line.Substring(tokenVoid.Length);
                             funcName = funcName.Substring(0, funcName.IndexOf(tokenParens));
 
-                            string bpDef = string.Format("\tUFUNCTION(BlueprintCallable, meta = (DisplayName = \"{0}\", Keywords = \"Example\"), Category = \"Sample\")", funcName);
+                            string bpDef = string.Format("\tUFUNCTION(BlueprintCallable, meta = (DisplayName = \"{0}{1}\", Keywords = \"Example\"), Category = \"Sample\")", gameName, funcName);
                             Console.WriteLine("{0}", bpDef);
                             sw.WriteLine("{0}", bpDef);
 
-                            line = string.Format("\tstatic void {0}();", funcName);
+                            line = string.Format("\tstatic void {0}{1}();", gameName, funcName);
 
                             Console.WriteLine("{0}", line);
                             sw.WriteLine(line);
@@ -471,7 +478,7 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
-        static void ProcessUE4Implementation(string filename, StreamWriter sw)
+        static void ProcessUE4Implementation(string filename, StreamWriter sw, string gameName)
         {
             try
             {
@@ -504,8 +511,8 @@ void UGameChromaBP::GameSampleEnd()
 		UChromaSDKPluginBPLibrary::ChromaSDKUnInit();
 	}
 }";
-                Console.WriteLine("{0}", classDefinition);
-                sw.WriteLine("{0}", classDefinition);
+                Console.WriteLine("{0}", classDefinition.Replace("Game", gameName));
+                sw.WriteLine("{0}", classDefinition.Replace("Game", gameName));
 
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
@@ -535,7 +542,7 @@ void UGameChromaBP::GameSampleEnd()
                                 string funcName = line.Substring(tokenVoid.Length);
                                 funcName = funcName.Substring(0, funcName.IndexOf(tokenParens));
 
-                                line = string.Format("void UGameChromaBP::{0}();", funcName);
+                                line = string.Format("void UGameChromaBP::{0}{1}()", gameName, funcName);
                             }
 
                             if (Replace(ref line, "const char*", "FString"))
@@ -546,7 +553,8 @@ void UGameChromaBP::GameSampleEnd()
                             {
                             }
 
-                            if (line.Contains("UChromaSDKPluginBPLibrary::GetRGB"))
+                            if (line.Contains("UChromaSDKPluginBPLibrary::GetRGB") ||
+                                line.Contains("UChromaSDKPluginBPLibrary::LerpColor"))
                             {
                                 string tokenInt = "int ";
                                 if (line.StartsWith(tokenInt))
@@ -555,8 +563,29 @@ void UGameChromaBP::GameSampleEnd()
                                 }
                             }
 
-                            Console.WriteLine("{0}", line);
-                            sw.WriteLine(line);
+                            if (line.Contains("UChromaSDKPluginBPLibrary::MakeBlankFramesName"))
+                            {
+                                string[] parts = line.Split(",".ToCharArray());
+                                if (parts.Length == 4)
+                                {
+                                    string color = parts[3];
+                                    string[] parts2 = color.Split(")".ToCharArray());
+                                    if (parts2.Length == 2)
+                                    {
+                                        string colorParam = parts2[0].Trim();
+                                        int val;
+                                        if (int.TryParse(colorParam, out val))
+                                        {
+                                            parts[3] = string.Format("UChromaSDKPluginBPLibrary::ToLinearColor({0}));", val);
+                                        }
+                                    }
+                                }
+                                line = string.Join(", ", parts);
+                            }
+
+                            string className = gameName + "ChromaBP";
+                            Console.WriteLine("{0}", line.Replace("GameChromaBP", className));
+                            sw.WriteLine(line.Replace("GameChromaBP", className));
                         }
                         while (line != null);
                     }
@@ -581,7 +610,7 @@ void UGameChromaBP::GameSampleEnd()
                 }
             }
         }
-        static void ConvertToUE4(string input, string headerFile, string implementationFile)
+        static void ConvertToUE4(string input, string headerFile, string implementationFile, string gameName)
         {
             if (File.Exists(headerFile))
             {
@@ -591,7 +620,7 @@ void UGameChromaBP::GameSampleEnd()
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    ProcessUE4Header(input, sw);
+                    ProcessUE4Header(input, sw, gameName);
                 }
             }
 
@@ -603,14 +632,16 @@ void UGameChromaBP::GameSampleEnd()
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    ProcessUE4Implementation(input, sw);
+                    ProcessUE4Implementation(input, sw, gameName);
                 }
             }
         }
         static void Main(string[] args)
         {
+            string gameName = "Game";
+
             //ConvertToCpp("Sample.js", "Output.cpp");
-            ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp");
+            ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp", gameName);
         }
     }
 }
