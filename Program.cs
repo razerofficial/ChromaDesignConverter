@@ -400,9 +400,117 @@ namespace ChromaDesignConverter
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
-        static void Main(string[] args)
+        static void ProcessUE4Header(string filename, StreamWriter sw)
         {
-            string outputFile = "Output.cpp";
+            try
+            {
+                string classDefinition = @"// Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
+
+#pragma once
+
+#include ""Engine.h""
+#include ""GameChromaBP.generated.h""
+
+UCLASS()
+class UGameChromaBP : public UBlueprintFunctionLibrary
+{
+	GENERATED_UCLASS_BODY()";
+                Console.WriteLine("{0}", classDefinition);
+                sw.WriteLine("{0}", classDefinition);
+
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+                            if (!line.StartsWith("void"))
+                            {
+                                continue;
+                            }
+
+                            Console.WriteLine();
+                            sw.WriteLine();
+
+                            string tokenVoid = "void ";
+                            string tokenParens = "(";
+                            string funcName = line.Substring(tokenVoid.Length);
+                            funcName = funcName.Substring(0, funcName.IndexOf(tokenParens));
+
+                            string bpDef = string.Format("\tUFUNCTION(BlueprintCallable, meta = (DisplayName = \"{0}\", Keywords = \"Example\"), Category = \"Sample\")", funcName);
+                            Console.WriteLine("{0}", bpDef);
+                            sw.WriteLine("{0}", bpDef);
+
+                            line = string.Format("\tstatic void {0}();", funcName);
+
+                            Console.WriteLine("{0}", line);
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+                    }
+                }
+
+                string classFooter= @"};";
+                Console.WriteLine("{0}", classFooter);
+                sw.WriteLine("{0}", classFooter);
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+        static void ProcessUE4Implementation(string filename, StreamWriter sw)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        int blockLevel = 0;
+                        int nextBlockLevel = blockLevel;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.TrimStart();
+                            if (line.Trim() == "")
+                            {
+                                continue;
+                            }
+
+                            Console.WriteLine("{0}", line);
+                            sw.WriteLine(line);
+                            blockLevel = nextBlockLevel;
+                        }
+                        while (line != null);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+        static void ConvertToCpp(string input, string outputFile)
+        {
             if (File.Exists(outputFile))
             {
                 File.Delete(outputFile);
@@ -411,9 +519,42 @@ namespace ChromaDesignConverter
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    ProcessHTML5("Sample.js", sw);
+                    ProcessHTML5(input, sw);
                 }
             }
+        }
+        static void ConvertToUE4(string input, string headerFile, string implementationFile)
+        {
+            if (File.Exists(headerFile))
+            {
+                File.Delete(headerFile);
+            }
+            using (FileStream fs = File.Open(headerFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessUE4Header(input, sw);
+                }
+            }
+
+            /*
+            if (File.Exists(implementationFile))
+            {
+                File.Delete(implementationFile);
+            }
+            using (FileStream fs = File.Open(implementationFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessUE4Implementation(input, sw);
+                }
+            }
+            */
+        }
+        static void Main(string[] args)
+        {
+            //ConvertToCpp("Sample.js", "Output.cpp");
+            ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp");
         }
     }
 }
