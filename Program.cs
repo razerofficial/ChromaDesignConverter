@@ -490,19 +490,19 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                     string colorParam = parts2[0].Trim();
                     if (colorParam.StartsWith("0x"))
                     {
-                        parts[parameterCount-1] = string.Format("UChromaSDKPluginBPLibrary::ToLinearColor({0}));", colorParam);
+                        parts[parameterCount-1] = string.Format(" UChromaSDKPluginBPLibrary::ToLinearColor({0}));", colorParam);
                     }
                     else
                     {
                         int val;
                         if (int.TryParse(colorParam, out val))
                         {
-                            parts[parameterCount-1] = string.Format("UChromaSDKPluginBPLibrary::ToLinearColor({0}));", val);
+                            parts[parameterCount-1] = string.Format(" UChromaSDKPluginBPLibrary::ToLinearColor({0}));", val);
                         }
                     }
                 }
             }
-            line = string.Join(", ", parts);
+            line = string.Join(",", parts);
         }
         static void ProcessUE4Implementation(string filename, StreamWriter sw, string gameName)
         {
@@ -602,11 +602,6 @@ void UGameChromaBP::GameSampleEnd()
                                 line = "FLinearColor color;";
                             }
 
-                            if (line.Contains("UChromaSDKPluginBPLibrary::MakeBlankFramesName"))
-                            {
-                                ConvertIntToLinearColor(ref line, 4);
-                            }
-
                             if (line.Contains("UChromaSDKPluginBPLibrary::FillZeroColorAllFramesName") ||
                                 line.Contains("UChromaSDKPluginBPLibrary::FillNonZeroColorAllFramesName"))
                             {
@@ -617,6 +612,12 @@ void UGameChromaBP::GameSampleEnd()
                                 line.Contains("UChromaSDKPluginBPLibrary::FillThresholdColorsAllFramesName"))
                             {
                                 ConvertIntToLinearColor(ref line, 3);
+                            }
+
+                            if (line.Contains("UChromaSDKPluginBPLibrary::MakeBlankFramesName") ||
+                                line.Contains("UChromaSDKPluginBPLibrary::SetKeysColorAllFramesName"))
+                            {
+                                ConvertIntToLinearColor(ref line, 4);
                             }
 
                             string className = gameName + "ChromaBP";
