@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.IO;
 
 namespace ChromaDesignConverter
@@ -36,6 +37,22 @@ namespace ChromaDesignConverter
             return false;
         }
 
+        static void Indent(string line, int blockLevel, StreamWriter sw)
+        {
+            for (int i = 0; i < blockLevel; ++i)
+            {
+                if (line.Contains("}"))
+                {
+                    if (i + 1 == blockLevel)
+                    {
+                        break;
+                    }
+                }
+                Console.Write(" ");
+                sw.Write(" ");
+            }
+        }
+
         static void ProcessHTML5(string filename, StreamWriter sw)
         {
             try
@@ -45,38 +62,70 @@ namespace ChromaDesignConverter
                     using (StreamReader sr = new StreamReader(fs))
                     {
                         string line;
-                        bool insideBlock = false;
+                        int blockLevel = 0;
+                        int nextBlockLevel = blockLevel;
+                        bool readingArray = false;
                         do
                         {
                             line = sr.ReadLine();
-                            if (line != null)
+                            if (line == null ||
+                                line == "\0")
                             {
-                                line = line.TrimStart();
+                                break;
                             }
+                            line = line.TrimStart();
                             if (line.Trim() == "" ||
                                 line.StartsWith("exampleReset()") ||
                                 line.StartsWith("handleButtonClick("))
                             {
                                 continue;
                             }
+                            if (readingArray)
+                            {
+                                string tokenGetRGB = "ChromaAnimation.getRGB";
+                                string tokenPush = ".push(";
+                                if (line.Contains(tokenGetRGB))
+                                {
+                                    int index = line.IndexOf(tokenGetRGB);
+                                    line = line.Substring(index);
+                                    line = line.Replace(");", ",");
+                                }
+                                else if (line.Contains(tokenPush))
+                                {
+                                    int index = line.IndexOf(tokenPush);
+                                    line = line.Substring(index + tokenPush.Length);
+                                    index = line.IndexOf(")");
+                                    line = line.Substring(0, index);
+                                    if (Replace(ref line, "RZKEY.RZKEY_", "Keyboard::RZKEY::RZKEY_"))
+                                    {
+                                        line += ",";
+                                    }
+                                }
+                                else
+                                {
+                                    readingArray = false;
+                                    string closeArray = "};";
+                                    Indent(closeArray, blockLevel, sw);
+
+                                    Console.WriteLine("{0}", closeArray);
+                                    sw.WriteLine(closeArray);
+                                    --nextBlockLevel;
+                                    blockLevel = nextBlockLevel;
+                                }
+                            }
                             if (line.Contains(".onclick"))
                             {
-                                if (insideBlock)
+                                if (blockLevel > 0)
                                 {
                                     continue;
                                 }
                                 int index = line.IndexOf(".onclick");
                                 line = line.Substring(0, index);
                                 line = "void " + char.ToUpper(line[0]) + line.Substring(1) + "()\r\n{";
-                                insideBlock = true;
                             }
                             if (line.EndsWith("});"))
                             {
                                 continue;
-                            }
-                            if (line == "}")
-                            {
-                                insideBlock = false;
                             }
                             if (SwapStart(ref line, "var baseLayer", "const char* baseLayer"))
                             {
@@ -89,6 +138,18 @@ namespace ChromaDesignConverter
                                 Replace(ref line, "../ChromaCommon/a", "A");
                             }
                             if (SwapStart(ref line, "var frameCount", "int frameCount"))
+                            {
+                            }
+                            if (SwapStart(ref line, "var color", "int color"))
+                            {
+                            }
+                            if (SwapStart(ref line, "var t ", "float t "))
+                            {
+                            }
+                            if (SwapStart(ref line, "for (var ", "for (int "))
+                            {
+                            }
+                            if (SwapStart(ref line, "var ", "int "))
                             {
                             }
                             if (Replace(ref line, "ChromaAnimation.", "ChromaAnimationAPI::"))
@@ -171,6 +232,108 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityColorAllFrames(", "ChromaAnimationAPI::MultiplyIntensityColorAllFramesName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::subtractNonZeroAllKeysAllFramesOffset(", "ChromaAnimationAPI::SubtractNonZeroAllKeysAllFramesOffsetName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillZeroColorAllFramesRGB(", "ChromaAnimationAPI::FillZeroColorAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityAllFrames(", "ChromaAnimationAPI::MultiplyIntensityAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityAllFramesRGB(", "ChromaAnimationAPI::MultiplyIntensityAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::addNonZeroAllKeysAllFrames(", "ChromaAnimationAPI::AddNonZeroAllKeysAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityColor(", "ChromaAnimationAPI::MultiplyIntensityColorName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::setKeysColor(", "ChromaAnimationAPI::SetKeysColorName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::setKeysColorAllFrames(", "ChromaAnimationAPI::SetKeysColorAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::lerpColor(", "ChromaAnimationAPI::LerpColor("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::duplicateFirstFrame(", "ChromaAnimationAPI::DuplicateFirstFrameName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillNonZeroColor(", "ChromaAnimationAPI::FillNonZeroColorName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillNonZeroColorAllFrames(", "ChromaAnimationAPI::FillNonZeroColorAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillNonZeroColorAllFramesRGB(", "ChromaAnimationAPI::FillNonZeroColorAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::subtractNonZeroAllKeysAllFrames(", "ChromaAnimationAPI::SubtractNonZeroAllKeysAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroAllKeysAllFramesOffset(", "ChromaAnimationAPI::CopyNonZeroAllKeysAllFramesOffsetName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyColorLerpAllFrames(", "ChromaAnimationAPI::MultiplyColorLerpAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::appendAllFrames(", "ChromaAnimationAPI::AppendAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroTargetAllKeysAllFrames(", "ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::invertColorsAllFrames(", "ChromaAnimationAPI::InvertColorsAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::offsetNonZeroColorsAllFrames(", "ChromaAnimationAPI::OffsetNonZeroColorsAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::addNonZeroTargetAllKeysAllFrames(", "ChromaAnimationAPI::AddNonZeroTargetAllKeysAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyAnimation(", "ChromaAnimationAPI::CopyAnimationName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillThresholdRGBColorsAllFramesRGB(", "ChromaAnimationAPI::FillThresholdRGBColorsAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensity(", "ChromaAnimationAPI::MultiplyIntensityName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::addNonZeroAllKeysAllFramesOffset(", "ChromaAnimationAPI::AddNonZeroAllKeysAllFramesOffsetName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroTargetAllKeysAllFramesOffset(", "ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesOffsetName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillZeroColor(", "ChromaAnimationAPI::FillZeroColorName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::setKeysColorAllFramesRGB(", "ChromaAnimationAPI::SetKeysColorAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillRandomColorsBlackAndWhiteAllFrames(", "ChromaAnimationAPI::FillRandomColorsBlackAndWhiteAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.abs(", "fabsf("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.cos(", "cos("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.floor(", "floor("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.PI", "MATH_PI"))
+                            {
+                            }
+                            if (Replace(ref line, "/ frameCount", "/ (float)frameCount"))
+                            {
+                            }
                             if (line.StartsWith("displayAndPlayAnimationChromaLink(") ||
                                 line.StartsWith("displayAndPlayAnimationHeadset(") ||
                                 line.StartsWith("displayAndPlayAnimationKeyboard(") ||
@@ -181,8 +344,52 @@ namespace ChromaDesignConverter
                                 line = "ChromaAnimationAPI::PlayAnimationName(baseLayer, true);";
                             }
 
+                            if (line.Contains("SetKeysColorName") ||
+                                line.Contains("SetKeysColorAllFramesName"))
+                            {
+                                string[] parts = line.Split(",".ToCharArray());
+                                ArrayList list = new ArrayList(parts);
+                                if (list.Count > 2)
+                                {
+                                    string varName = ((string)list[list.Count - 2]).Trim();
+                                    list.Insert(list.Count - 1, string.Format("(int)size({0})", varName));
+                                }
+                                string nextLine = string.Join(", ", list.ToArray());
+                                line = nextLine;
+                            }
+
+                            if (line.Contains("SetKeysColorAllFramesRGBName"))
+                            {
+                                string[] parts = line.Split(",".ToCharArray());
+                                ArrayList list = new ArrayList(parts);
+                                if (list.Count > 2)
+                                {
+                                    string varName = ((string)list[1]).Trim();
+                                    list.Insert(2, string.Format("(int)size({0})", varName));
+                                }
+                                string nextLine = string.Join(", ", list.ToArray());
+                                line = nextLine;
+                            }
+
+                            if (Replace(ref line, " = [];", "[] = {"))
+                            {
+                                readingArray = true;
+                            }
+
+                            if (line.Contains("{"))
+                            {
+                                ++nextBlockLevel;
+                            }
+                            if (line.Contains("}"))
+                            {
+                                --nextBlockLevel;
+                            }
+
+                            Indent(line, blockLevel, sw);
+                            
                             Console.WriteLine("{0}", line);
                             sw.WriteLine(line);
+                            blockLevel = nextBlockLevel;
                         }
                         while (line != null);
                     }
