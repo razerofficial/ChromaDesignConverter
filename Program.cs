@@ -475,13 +475,43 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
         {
             try
             {
+                string classDefinition = @"// Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
+
+//#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_16_OR_GREATER
+#include ""UE4ChromaSDKRT.h""
+#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
+#include ""ChromaSDKPluginBPLibrary.h""
+
+UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
+	: Super(PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
+//UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
+//	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
+{
+}
+
+void UGameChromaBP::GameSampleStart()
+{
+	if (!UChromaSDKPluginBPLibrary::IsInitialized())
+	{
+		UChromaSDKPluginBPLibrary::ChromaSDKInit();
+	}
+}
+
+void UGameChromaBP::GameSampleEnd()
+{
+	if (UChromaSDKPluginBPLibrary::IsInitialized())
+	{
+		UChromaSDKPluginBPLibrary::ChromaSDKUnInit();
+	}
+}";
+                Console.WriteLine("{0}", classDefinition);
+                sw.WriteLine("{0}", classDefinition);
+
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     using (StreamReader sr = new StreamReader(fs))
                     {
                         string line;
-                        int blockLevel = 0;
-                        int nextBlockLevel = blockLevel;
                         do
                         {
                             line = sr.ReadLine();
@@ -490,15 +520,43 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                             {
                                 break;
                             }
-                            line = line.TrimStart();
-                            if (line.Trim() == "")
+                            line = line.Trim();
+                            if (line == "")
                             {
                                 continue;
+                            }
+                            if (line.StartsWith("void"))
+                            {
+                                Console.WriteLine();
+                                sw.WriteLine();
+
+                                string tokenVoid = "void ";
+                                string tokenParens = "(";
+                                string funcName = line.Substring(tokenVoid.Length);
+                                funcName = funcName.Substring(0, funcName.IndexOf(tokenParens));
+
+                                line = string.Format("void UGameChromaBP::{0}();", funcName);
+                            }
+
+                            if (Replace(ref line, "const char*", "FString"))
+                            {
+                            }
+
+                            if (Replace(ref line, "ChromaAnimationAPI::", "UChromaSDKPluginBPLibrary::"))
+                            {
+                            }
+
+                            if (line.Contains("UChromaSDKPluginBPLibrary::GetRGB"))
+                            {
+                                string tokenInt = "int ";
+                                if (line.StartsWith(tokenInt))
+                                {
+                                    line = "FLinearColor " + line.Substring(tokenInt.Length);
+                                }
                             }
 
                             Console.WriteLine("{0}", line);
                             sw.WriteLine(line);
-                            blockLevel = nextBlockLevel;
                         }
                         while (line != null);
                     }
@@ -537,7 +595,6 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                 }
             }
 
-            /*
             if (File.Exists(implementationFile))
             {
                 File.Delete(implementationFile);
@@ -549,7 +606,6 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                     ProcessUE4Implementation(input, sw);
                 }
             }
-            */
         }
         static void Main(string[] args)
         {
