@@ -675,10 +675,10 @@ void UGameChromaBP::GameSampleEnd()
         }
         static void Main(string[] args)
         {
-            string gameName = "Game";
+            const string gameName = "Game";
 
-            //ConvertToCpp("Sample.js", "Output.cpp");
-            ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp", gameName);
+            ConvertToCpp("Sample.js", "Output.cpp");
+            //ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp", gameName);
         }
     }
 }
