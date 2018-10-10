@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.IO;
 
 namespace ChromaDesignConverter
@@ -57,6 +58,7 @@ namespace ChromaDesignConverter
         {
             try
             {
+                Dictionary<string, string> variables = new Dictionary<string, string>();
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
                     using (StreamReader sr = new StreamReader(fs))
@@ -229,10 +231,16 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsAllFrames(", "ChromaAnimationAPI::FillThresholdColorsAllFramesName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsMinMaxAllFramesRGB(", "ChromaAnimationAPI::FillThresholdColorsMinMaxAllFramesRGBName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityColorAllFrames(", "ChromaAnimationAPI::MultiplyIntensityColorAllFramesName("))
                             {
                             }
                             if (Replace(ref line, "ChromaAnimationAPI::subtractNonZeroAllKeysAllFramesOffset(", "ChromaAnimationAPI::SubtractNonZeroAllKeysAllFramesOffsetName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::subtractNonZeroTargetAllKeysAllFrames(", "ChromaAnimationAPI::SubtractNonZeroTargetAllKeysAllFramesName("))
                             {
                             }
                             if (Replace(ref line, "ChromaAnimationAPI::fillZeroColorAllFramesRGB(", "ChromaAnimationAPI::FillZeroColorAllFramesRGBName("))
@@ -319,6 +327,12 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::fillRandomColorsBlackAndWhiteAllFrames(", "ChromaAnimationAPI::FillRandomColorsBlackAndWhiteAllFramesName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsAllFramesRGB(", "ChromaAnimationAPI::FillThresholdColorsAllFramesRGBName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::insertFrame(", "ChromaAnimationAPI::InsertFrameName("))
+                            {
+                            }
                             if (Replace(ref line, "Math.abs(", "fabsf("))
                             {
                             }
@@ -371,6 +385,30 @@ namespace ChromaDesignConverter
                                 line = nextLine;
                             }
 
+                            string tokenInt = "int ";
+                            if (line.StartsWith(tokenInt))
+                            {
+                                string varName = line.Substring(tokenInt.Length);
+                                for (int i = 0; i < varName.Length; ++i)
+                                {
+                                    if (char.IsLetter(varName[i]) ||
+                                        char.IsNumber(varName[i]))
+                                    {
+                                        continue;
+                                    }
+                                    varName = varName.Substring(0, i);
+                                    break;
+                                }
+                                if (variables.ContainsKey(varName))
+                                {
+                                    line = line.Substring(tokenInt.Length);
+                                }
+                                else
+                                {
+                                    variables[varName] = null;
+                                }
+                            }
+
                             if (Replace(ref line, " = [];", "[] = {"))
                             {
                                 readingArray = true;
@@ -383,6 +421,10 @@ namespace ChromaDesignConverter
                             if (line.Contains("}"))
                             {
                                 --nextBlockLevel;
+                                if (nextBlockLevel == 0)
+                                {
+                                    variables.Clear();
+                                }
                             }
 
                             Indent(line, blockLevel, sw);
