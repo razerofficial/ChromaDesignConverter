@@ -333,7 +333,16 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::insertFrame(", "ChromaAnimationAPI::InsertFrameName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityRGB(", "ChromaAnimationAPI::MultiplyIntensityRGBName("))
+                            {
+                            }
                             if (Replace(ref line, "Math.abs(", "fabsf("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.min(", "min("))
+                            {
+                            }
+                            if (Replace(ref line, "Math.max(", "max("))
                             {
                             }
                             if (Replace(ref line, "Math.cos(", "cos("))
@@ -451,12 +460,16 @@ namespace ChromaDesignConverter
 #pragma once
 
 #include ""Engine.h""
+#include ""UMG.h""
 #include ""GameChromaBP.generated.h""
 
 UCLASS()
 class UGameChromaBP : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
+
+    UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSetupButtonsEffects"", Keywords = ""Setup an array of button widgets""), Category = ""Sample"")
+	static void GameSetupButtonsEffects(const TArray<UButton*>& buttons);
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSampleStart"", Keywords = ""Init at the start of the application""), Category = ""Sample"")
 	static void GameSampleStart();
@@ -556,12 +569,29 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
 #include ""UE4ChromaSDKRT.h""
 #include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
 #include ""ChromaSDKPluginBPLibrary.h""
+#include ""GameButton.h""
 
 UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
 	: Super(PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
 //UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 //	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 {
+}
+
+void UGameChromaBP::GameSetupButtonsEffects(const TArray<UButton*>& buttons)
+{
+	for (int i = 0; i < buttons.Num(); ++i)
+	{
+		UButton* button = buttons[i];
+		if (button)
+		{
+			UGameButton* dynamicButton;
+			dynamicButton = NewObject<UGameButton>();
+			dynamicButton->AddToRoot(); //avoid GC collection
+			dynamicButton->Name = button->GetName();
+			button->OnClicked.AddDynamic(dynamicButton, &UGameButton::HandleClick);
+		}
+	}
 }
 
 void UGameChromaBP::GameSampleStart()
