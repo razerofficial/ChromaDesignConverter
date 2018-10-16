@@ -451,6 +451,60 @@ namespace ChromaDesignConverter
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
+
+        static void ProcessUWP(string filename, StreamWriter sw)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+
+
+                            if (Replace(ref line, "const char*", "Platform::String^"))
+                            {
+                            }
+
+                            if (Replace(ref line, "MATH_PI", "M_PI"))
+                            {
+                            }
+
+                            if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            {
+                            }
+
+                            /*
+                            // key array
+                            Platform::Array<int>^ keysArray = ref new Platform::Array<int>(keys, (int)size(keys));
+                            */
+
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+
         static void ProcessUE4Header(string filename, StreamWriter sw, string gameName)
         {
             try
@@ -533,6 +587,7 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
+
         static void ConvertIntToLinearColor(ref string line, int parameterCount)
         {
             string[] parts = line.Split(",".ToCharArray());
@@ -559,6 +614,7 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
             }
             line = string.Join(",", parts);
         }
+
         static void ProcessUE4Implementation(string filename, StreamWriter sw, string gameName)
         {
             try
@@ -705,6 +761,7 @@ void UGameChromaBP::GameSampleEnd()
                 Console.Error.WriteLine("Failed to process file: {0}", filename);
             }
         }
+
         public static void ConvertToCpp(string input, string outputFile)
         {
             if (File.Exists(outputFile))
@@ -716,6 +773,21 @@ void UGameChromaBP::GameSampleEnd()
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     ProcessHTML5(input, sw);
+                }
+            }
+        }
+
+        public static void ConvertToUWP(string input, string outputFile)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessUWP(input, sw);
                 }
             }
         }
