@@ -246,6 +246,9 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::fillZeroColorAllFramesRGB(", "ChromaAnimationAPI::FillZeroColorAllFramesRGBName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsRGB(", "ChromaAnimationAPI::FillThresholdColorsRGBName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityAllFrames(", "ChromaAnimationAPI::MultiplyIntensityAllFramesName("))
                             {
                             }
@@ -434,6 +437,7 @@ namespace ChromaDesignConverter
                                 {
                                     variables.Clear();
                                 }
+                                line = line.Replace("};", "}");
                             }
 
                             Indent(line, blockLevel, sw);
@@ -485,6 +489,71 @@ namespace ChromaDesignConverter
                             }
 
                             if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            {
+                            }
+
+                            /*
+                            // key array
+                            Platform::Array<int>^ keysArray = ref new Platform::Array<int>(keys, (int)size(keys));
+                            */
+
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+
+        static void ProcessUnity(string filename, StreamWriter sw)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+
+
+                            if (Replace(ref line, "const char*", "string"))
+                            {
+                            }
+
+                            if (Replace(ref line, "MATH_PI", "Math.PI"))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "Math.Floor"))
+                            {
+                            }
+
+                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            {
+                            }
+
+                            if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            {
+                            }
+
+                            if (Replace(ref line, "ChromaAnimationAPI::", "ChromaAnimationAPI."))
                             {
                             }
 
@@ -788,6 +857,20 @@ void UGameChromaBP::GameSampleEnd()
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     ProcessUWP(input, sw);
+                }
+            }
+        }
+        public static void ConvertToUnity(string input, string outputFile)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessUnity(input, sw);
                 }
             }
         }
