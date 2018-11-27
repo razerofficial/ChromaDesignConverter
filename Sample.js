@@ -275,7 +275,7 @@ showTableEffect13.onclick = function () {
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
 
-        var frameCount = baseAnimation.getFrameCount();
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
 
         // loop over all frames in the layer
         for (var frameId = 0; frameId < frameCount; ++frameId) {
@@ -320,7 +320,7 @@ showTableEffect15.onclick = function () {
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
 
-        var frameCount = baseAnimation.getFrameCount();
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
 
         var color1 = ChromaAnimation.getRGB(255, 0, 0); //red
         var color2 = ChromaAnimation.getRGB(0, 255, 0); //green
@@ -375,7 +375,7 @@ showTableEffect17.onclick = function () {
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
 
-        var frameCount = baseAnimation.getFrameCount();
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
 
         // loop over all frames in the layer
         for (var frameId = 0; frameId < frameCount; ++frameId) {
@@ -466,7 +466,7 @@ showTableEffect21.onclick = function () {
 
             var background = ChromaAnimation.getRGB(127, 0, 0);
 
-            var frameCount = layer2Animation.getFrameCount();
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
             ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, background);
 
             // copy non zero colors from layer 2 to the base layer
@@ -493,7 +493,7 @@ showTableEffect22.onclick = function () {
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
         ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = layer2Animation.getFrameCount();
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
 
             // setup background color on the base layer
             var background = ChromaAnimation.getRGB(127, 0, 0);
@@ -526,7 +526,7 @@ showTableEffect23.onclick = function () {
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
         ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = layer2Animation.getFrameCount();
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
 
             // setup background color on the base layer
             var background = ChromaAnimation.getRGB(127, 0, 0);
@@ -556,7 +556,7 @@ showTableEffect24.onclick = function () {
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
         ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = layer2Animation.getFrameCount();
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
 
             // setup background color on the base layer
             var background = ChromaAnimation.getRGB(127, 0, 0);
@@ -586,7 +586,7 @@ showTableEffect25.onclick = function () {
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
         ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = layer2Animation.getFrameCount();
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
             ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
 
             // copy non zero colors from layer 2 to the base layer where the base layer was non zero

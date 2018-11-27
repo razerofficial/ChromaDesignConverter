@@ -4,12 +4,12 @@
     {
         static void Main(string[] args)
         {
-            const string gameName = "Game";
+            const string gameName = "SampleApp";
 
             Converter.ConvertToCpp("Sample.js", "Output.cpp");
             Converter.ConvertToUWP("Output.cpp", "UWP.cpp");
             Converter.ConvertToUnity("Output.cpp", "Unity.cs");
-            Converter.ConvertToUE4("Output.cpp", "GameChromaBP.h", "GameChromaBP.cpp", gameName);
+            Converter.ConvertToUE4("Output.cpp", "SampleAppBP.h", "SampleAppBP.cpp", gameName);
         }
     }
 }
