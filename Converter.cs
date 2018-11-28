@@ -591,6 +591,9 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
+    static int min(int a, int b);
+	static int max(int a, int b);
+
     UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSetupButtonsEffects"", Keywords = ""Setup an array of button widgets""), Category = ""Sample"")
 	static void GameSetupButtonsEffects(const TArray<UButton*>& buttons);
 
@@ -701,6 +704,29 @@ UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //_
 //UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 //	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 {
+}
+
+int UGameChromaBP::min(int a, int b)
+{
+	if (a < b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
+}
+int UGameChromaBP::max(int a, int b)
+{
+	if (a > b)
+	{
+		return a;
+	}
+	else
+	{
+		return b;
+	}
 }
 
 void UGameChromaBP::GameSetupButtonsEffects(const TArray<UButton*>& buttons)
