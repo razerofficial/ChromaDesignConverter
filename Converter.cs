@@ -339,6 +339,9 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityRGB(", "ChromaAnimationAPI::MultiplyIntensityRGBName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::setKeyColor(", "ChromaAnimationAPI::SetKeyColorName("))
+                            {
+                            }
                             if (Replace(ref line, "Math.abs(", "fabsf("))
                             {
                             }
