@@ -483,6 +483,11 @@ namespace ChromaDesignConverter
                             }
 
 
+                            if (Replace(ref line, "\"Animations", "\"Assets/Animations"))
+                            {
+
+                            }
+
                             if (Replace(ref line, "const char*", "Platform::String^"))
                             {
                             }
@@ -499,6 +504,45 @@ namespace ChromaDesignConverter
                             // key array
                             Platform::Array<int>^ keysArray = ref new Platform::Array<int>(keys, (int)size(keys));
                             */
+
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+
+        static void ProcessXDK(string filename, StreamWriter sw)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+
+                            if (Replace(ref line, "Platform::String^", "const char*"))
+                            {
+                            }
 
                             sw.WriteLine(line);
                         }
@@ -889,6 +933,22 @@ void UGameChromaBP::GameSampleEnd()
                 }
             }
         }
+
+        public static void ConvertToXDK(string input, string outputFile)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessXDK(input, sw);
+                }
+            }
+        }
+
         public static void ConvertToUnity(string input, string outputFile)
         {
             if (File.Exists(outputFile))
