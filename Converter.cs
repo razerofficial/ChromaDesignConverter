@@ -481,6 +481,11 @@ namespace ChromaDesignConverter
 
                             }
 
+                            if (Replace(ref line, "\"animations", "\"Assets/Animations"))
+                            {
+
+                            }
+
                             if (Replace(ref line, "const char*", "Platform::String^"))
                             {
                             }
