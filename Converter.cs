@@ -84,15 +84,8 @@ namespace ChromaDesignConverter
                             }
                             if (readingArray)
                             {
-                                string tokenGetRGB = "ChromaAnimation.getRGB";
                                 string tokenPush = ".push(";
-                                if (line.Contains(tokenGetRGB))
-                                {
-                                    int index = line.IndexOf(tokenGetRGB);
-                                    line = line.Substring(index);
-                                    line = line.Replace(");", ",");
-                                }
-                                else if (line.Contains(tokenPush))
+                                if (line.Contains(tokenPush))
                                 {
                                     int index = line.IndexOf(tokenPush);
                                     line = line.Substring(index + tokenPush.Length);
