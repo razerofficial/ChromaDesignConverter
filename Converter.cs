@@ -335,6 +335,19 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::setKeyColor(", "ChromaAnimationAPI::SetKeyColorName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyRedChannelAllFrames(", "ChromaAnimationAPI::CopyRedChannelAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyGreenChannelAllFrames(", "ChromaAnimationAPI::CopyGreenChannelAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyBlueChannelAllFrames(", "ChromaAnimationAPI::CopyBlueChannelAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::offsetColorsAllFrames(", "ChromaAnimationAPI::OffsetColorsAllFramesName("))
+                            {
+                            }
+                           
                             if (Replace(ref line, "Math.abs(", "fabsf("))
                             {
                             }
