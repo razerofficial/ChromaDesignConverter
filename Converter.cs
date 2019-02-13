@@ -361,13 +361,13 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::setIdleAnimation(", "ChromaAnimationAPI::SetIdleAnimationName("))
                             {
                             }
-                            if (Replace(ref line, "EChromaSDKDevice1DEnum.", "EChromaSDKDevice1DEnum::"))
+                            if (Replace(ref line, "EChromaSDKDevice1DEnum.", "(int)EChromaSDKDevice1DEnum::"))
                             {
                             }
-                            if (Replace(ref line, "EChromaSDKDevice2DEnum.", "EChromaSDKDevice2DEnum::"))
+                            if (Replace(ref line, "EChromaSDKDevice2DEnum.", "(int)EChromaSDKDevice2DEnum::"))
                             {
                             }
-                            if (Replace(ref line, "EChromaSDKDeviceEnum.", "EChromaSDKDeviceEnum::"))
+                            if (Replace(ref line, "EChromaSDKDeviceEnum.", "(int)EChromaSDKDeviceEnum::"))
                             {
                             }
 
