@@ -934,6 +934,16 @@ void UGameChromaBP::GameSampleEnd()
                                 ConvertIntToLinearColor(ref line, 4);
                             }
 
+                            if (Replace(ref line, "(int)EChromaSDKDevice1DEnum::", "EChromaSDKDevice1DEnum::"))
+                            {
+                            }
+                            if (Replace(ref line, "(int)EChromaSDKDevice2DEnum::", "EChromaSDKDevice2DEnum::"))
+                            {
+                            }
+                            if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum::"))
+                            {
+                            }
+
                             string className = gameName + "ChromaBP";
                             Console.WriteLine("{0}", line.Replace("GameChromaBP", className));
                             sw.WriteLine(line.Replace("GameChromaBP", className));
