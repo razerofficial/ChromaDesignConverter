@@ -188,6 +188,9 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroAllKeysAllFrames(", "ChromaAnimationAPI::CopyNonZeroAllKeysAllFramesName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyKeysColorAllFrames(", "ChromaAnimationAPI::CopyKeysColorAllFramesName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::setChromaCustomFlag(", "ChromaAnimationAPI::SetChromaCustomFlagName("))
                             {
                             }
