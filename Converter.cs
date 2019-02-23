@@ -888,6 +888,14 @@ void UGameChromaBP::GameSampleEnd()
                                 line = string.Format("void UGameChromaBP::{0}{1}()", gameName, funcName);
                             }
 
+                            if (Replace(ref line, "\"Animations", string.Format("\"{0}Animations", gameName)))
+                            {
+                            }
+
+                            if (Replace(ref line, "\"animations", string.Format("\"{0}Animations", gameName)))
+                            {
+                            }
+
                             if (Replace(ref line, "const char*", "FString"))
                             {
                             }
