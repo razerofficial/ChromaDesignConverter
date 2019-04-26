@@ -263,6 +263,12 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityAllFramesRGB(", "ChromaAnimationAPI::MultiplyIntensityAllFramesRGBName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyZeroTargetAllKeysAllFrames(", "ChromaAnimationAPI::CopyZeroTargetAllKeysAllFramesName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::fillRandomColorsAllFrames(", "ChromaAnimationAPI::FillRandomColorsAllFramesName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::addNonZeroAllKeysAllFrames(", "ChromaAnimationAPI::AddNonZeroAllKeysAllFramesName("))
                             {
                             }
@@ -798,16 +804,16 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
             {
                 string classDefinition = @"// Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
 
-//#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_16_OR_GREATER
+#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_16_OR_GREATER
 #include ""UE4ChromaSDKRT.h""
-#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
+//#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
 #include ""ChromaSDKPluginBPLibrary.h""
 #include ""GameButton.h""
 
-UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
-	: Super(PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
-//UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
-//	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
+//UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
+//	: Super(PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
+UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
+	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 {
 }
 
