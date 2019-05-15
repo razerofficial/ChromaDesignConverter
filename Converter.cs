@@ -695,27 +695,27 @@ namespace ChromaDesignConverter
 
 #include ""Engine.h""
 #include ""UMG.h""
-#include ""GameChromaBP.generated.h""
+#include ""__Game__ChromaBP.generated.h""
 
 UCLASS()
-class UGameChromaBP : public UBlueprintFunctionLibrary
+class U__Game__ChromaBP : public UBlueprintFunctionLibrary
 {
 	GENERATED_UCLASS_BODY()
 
     static int min(int a, int b);
 	static int max(int a, int b);
 
-    UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSetupButtonsEffects"", Keywords = ""Setup an array of button widgets""), Category = ""Sample"")
-	static void GameSetupButtonsEffects(const TArray<UButton*>& buttons);
+    UFUNCTION(BlueprintCallable, meta = (DisplayName = ""__Game__SetupButtonsEffects"", Keywords = ""Setup an array of button widgets""), Category = ""Sample"")
+	static void __Game__SetupButtonsEffects(const TArray<UButton*>& buttons);
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSampleStart"", Keywords = ""Init at the start of the application""), Category = ""Sample"")
-	static void GameSampleStart();
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""__Game__SampleStart"", Keywords = ""Init at the start of the application""), Category = ""Sample"")
+	static void __Game__SampleStart();
 
-	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""GameSampleEnd"", Keywords = ""Uninit at the end of the application""), Category = ""Sample"")
-	static void GameSampleEnd();";
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = ""__Game__SampleEnd"", Keywords = ""Uninit at the end of the application""), Category = ""Sample"")
+	static void __Game__SampleEnd();";
 
-                Console.WriteLine("{0}", classDefinition.Replace("Game", gameName));
-                sw.WriteLine("{0}", classDefinition.Replace("Game", gameName));
+                Console.WriteLine("{0}", classDefinition.Replace("__Game__", gameName));
+                sw.WriteLine("{0}", classDefinition.Replace("__Game__", gameName));
 
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {
@@ -804,20 +804,20 @@ class UGameChromaBP : public UBlueprintFunctionLibrary
             {
                 string classDefinition = @"// Copyright 1998-2014 Epic Games, Inc. All Rights Reserved.
 
-#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_16_OR_GREATER
+#include ""__Game__ChromaBP.h"" //___HACK_UE4_VERSION_4_16_OR_GREATER
 #include ""UE4ChromaSDKRT.h""
-//#include ""GameChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
+//#include ""__Game__ChromaBP.h"" //___HACK_UE4_VERSION_4_15_OR_LESS
 #include ""ChromaSDKPluginBPLibrary.h""
-#include ""GameButton.h""
+#include ""__Game__Button.h""
 
-//UGameChromaBP::UGameChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
+//U__Game__ChromaBP::U__Game__ChromaBP(const FPostConstructInitializeProperties& PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
 //	: Super(PCIP) //___HACK_UE4_VERSION_4_8_OR_LESS
-UGameChromaBP::UGameChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
+U__Game__ChromaBP::U__Game__ChromaBP(const FObjectInitializer& ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 	: Super(ObjectInitializer) //___HACK_UE4_VERSION_4_9_OR_GREATER
 {
 }
 
-int UGameChromaBP::min(int a, int b)
+int U__Game__ChromaBP::min(int a, int b)
 {
 	if (a < b)
 	{
@@ -828,7 +828,7 @@ int UGameChromaBP::min(int a, int b)
 		return b;
 	}
 }
-int UGameChromaBP::max(int a, int b)
+int U__Game__ChromaBP::max(int a, int b)
 {
 	if (a > b)
 	{
@@ -840,23 +840,23 @@ int UGameChromaBP::max(int a, int b)
 	}
 }
 
-void UGameChromaBP::GameSetupButtonsEffects(const TArray<UButton*>& buttons)
+void U__Game__ChromaBP::__Game__SetupButtonsEffects(const TArray<UButton*>& buttons)
 {
 	for (int i = 0; i < buttons.Num(); ++i)
 	{
 		UButton* button = buttons[i];
 		if (button)
 		{
-			UGameButton* dynamicButton;
-			dynamicButton = NewObject<UGameButton>();
+			U__Game__Button* dynamicButton;
+			dynamicButton = NewObject<U__Game__Button>();
 			dynamicButton->AddToRoot(); //avoid GC collection
 			dynamicButton->Name = button->GetName();
-			button->OnClicked.AddDynamic(dynamicButton, &UGameButton::HandleClick);
+			button->OnClicked.AddDynamic(dynamicButton, &U__Game__Button::HandleClick);
 		}
 	}
 }
 
-void UGameChromaBP::GameSampleStart()
+void U__Game__ChromaBP::__Game__SampleStart()
 {
 	if (!UChromaSDKPluginBPLibrary::IsInitialized())
 	{
@@ -864,15 +864,15 @@ void UGameChromaBP::GameSampleStart()
 	}
 }
 
-void UGameChromaBP::GameSampleEnd()
+void U__Game__ChromaBP::__Game__SampleEnd()
 {
 	if (UChromaSDKPluginBPLibrary::IsInitialized())
 	{
 		UChromaSDKPluginBPLibrary::ChromaSDKUnInit();
 	}
 }";
-                Console.WriteLine("{0}", classDefinition.Replace("Game", gameName));
-                sw.WriteLine("{0}", classDefinition.Replace("Game", gameName));
+                Console.WriteLine("{0}", classDefinition.Replace("__Game__", gameName));
+                sw.WriteLine("{0}", classDefinition.Replace("__Game__", gameName));
 
                 using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
                 {

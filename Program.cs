@@ -10,7 +10,7 @@
             Converter.ConvertToUWP("Output.cpp", "UWP.cpp");
             Converter.ConvertToXDK("UWP.cpp", "XDK.cpp");
             Converter.ConvertToUnity("Output.cpp", "Unity.cs");
-            Converter.ConvertToUE4("Output.cpp", GAME_NAME+"BP.h", GAME_NAME+"BP.cpp", GAME_NAME);
+            Converter.ConvertToUE4("Output.cpp", GAME_NAME+"ChromaBP.h", GAME_NAME+"ChromaBP.cpp", GAME_NAME);
         }
     }
 }
