@@ -971,6 +971,24 @@ void U__Game__ChromaBP::__Game__SampleEnd()
                             if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum::"))
                             {
                             }
+                            if (Replace(ref line, "int keys[] = {", "{\r\nTArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;"))
+                            {
+                            }
+                            if (Replace(ref line, "keys[] = {", "{\r\nTArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;"))
+                            {
+                            }
+                            if (line.StartsWith("EChromaSDKKeyboardKey::KK_") && Replace(ref line, "EChromaSDKKeyboardKey::KK_", "keys.Add(EChromaSDKKeyboardKey::KK_"))
+                            {
+                                if (Replace(ref line, ",", ");"))
+                                {
+
+                                }
+                            }
+
+                            if (Replace(ref line, "keys, (int)size(keys), ", "keys,"))
+                            {
+
+                            }
 
                             string className = gameName + "ChromaBP";
                             Console.WriteLine("{0}", line.Replace("GameChromaBP", className));
