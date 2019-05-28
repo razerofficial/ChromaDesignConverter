@@ -55,7 +55,7 @@ namespace ChromaDesignConverter
             }
         }
 
-        static void ProcessHTML5(string filename, StreamWriter sw)
+        static void ProcessHTML5(string filename, StreamWriter sw, int effectCount)
         {
             try
             {
@@ -505,6 +505,17 @@ namespace ChromaDesignConverter
                 }
 
                 sw.WriteLine("{0}", "#pragma endregion");
+
+                for (int effect = 1; effect <= effectCount; ++effect)
+                {
+                    sw.WriteLine("case {0}:", effect);
+                    sw.WriteLine("\tShowEffect{0}();", effect);
+                    sw.WriteLine("\tShowEffect{0}ChromaLink();", effect);
+                    sw.WriteLine("\tShowEffect{0}Headset();", effect);
+                    sw.WriteLine("\tShowEffect{0}Mousepad();", effect);
+                    sw.WriteLine("\tShowEffect{0}Mouse();", effect);
+                    sw.WriteLine("\tbreak;");
+                }
             }
             catch (Exception)
             {
@@ -1111,7 +1122,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             }
         }
 
-        public static void ConvertToCpp(string input, string outputFile)
+        public static void ConvertToCpp(string input, string outputFile, int effectCount)
         {
             if (File.Exists(outputFile))
             {
@@ -1121,12 +1132,12 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    ProcessHTML5(input, sw);
+                    ProcessHTML5(input, sw, effectCount);
                 }
             }
         }
 
-        public static void ConvertToUWP(string input, string outputFile)
+        public static void ConvertToUWP(string input, string outputFile, int effectCount)
         {
             if (File.Exists(outputFile))
             {
@@ -1141,7 +1152,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             }
         }
 
-        public static void ConvertToXDK(string input, string outputFile)
+        public static void ConvertToXDK(string input, string outputFile, int effectCount)
         {
             if (File.Exists(outputFile))
             {
@@ -1156,7 +1167,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             }
         }
 
-        public static void ConvertToUnity(string input, string outputFile)
+        public static void ConvertToUnity(string input, string outputFile, int effectCount)
         {
             if (File.Exists(outputFile))
             {
