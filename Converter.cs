@@ -312,6 +312,9 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroTargetAllKeysAllFrames(", "ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::copyNonZeroTargetZeroAllKeysAllFrames(", "ChromaAnimationAPI::CopyNonZeroTargetZeroAllKeysAllFramesName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::invertColorsAllFrames(", "ChromaAnimationAPI::InvertColorsAllFramesName("))
                             {
                             }
@@ -373,6 +376,9 @@ namespace ChromaDesignConverter
                             {
                             }
                             if (Replace(ref line, "ChromaAnimationAPI::setIdleAnimation(", "ChromaAnimationAPI::SetIdleAnimationName("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::offsetColorsWithColorAllFrames(", "ChromaAnimationAPI::OffsetColorsWithColorAllFramesName("))
                             {
                             }
                             if (Replace(ref line, "EChromaSDKDevice1DEnum.", "(int)EChromaSDKDevice1DEnum::"))
@@ -505,6 +511,7 @@ namespace ChromaDesignConverter
                 }
 
                 sw.WriteLine("{0}", "#pragma endregion");
+                sw.WriteLine("{0}", "/*");
 
                 for (int effect = 1; effect <= effectCount; ++effect)
                 {
@@ -516,6 +523,8 @@ namespace ChromaDesignConverter
                     sw.WriteLine("\tShowEffect{0}Mouse();", effect);
                     sw.WriteLine("\tbreak;");
                 }
+
+                sw.WriteLine("{0}", "*/");
             }
             catch (Exception)
             {
