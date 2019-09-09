@@ -166,6 +166,33 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::closeAnimation(", "ChromaAnimationAPI::CloseAnimationName("))
                             {
                             }
+                            if (Replace(ref line, "baseAnimation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(baseLayer);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer2Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer2);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer3Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer3);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer4Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer4);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer5Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer5);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer6Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer6);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer7Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer7);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer8Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer8);"))
+                            {
+                            }
+                            if (Replace(ref line, "layer9Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer9);"))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::getFrameCount(", "ChromaAnimationAPI::GetFrameCountName("))
                             {
                             }
@@ -753,39 +780,11 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "void ShowEffect", "void showEffect"))
+                            if (Replace(ref line, "void ShowEffect", "public static void showEffect"))
                             {
                             }
 
                             if (Replace(ref line, "\"Animations/", "getAnimationPath() + \"Animations/"))
-                            {
-                            }
-
-                            if (Replace(ref line, "baseAnimation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(baseLayer);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer2Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer2);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer3Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer3);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer4Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer4);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer5Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer5);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer6Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer6);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer7Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer7);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer8Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer8);"))
-                            {
-                            }
-                            if (Replace(ref line, "layer9Animation.getFrameCount();", "ChromaAnimationAPI::GetFrameCountName(layer9);"))
                             {
                             }
 
