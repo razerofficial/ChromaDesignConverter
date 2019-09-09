@@ -757,16 +757,20 @@ namespace ChromaDesignConverter
                             {
                             }
 
+                            if (Replace(ref line, "\"Animations/", "getAnimationPath() + \"Animations/"))
+                            {
+                            }
+
                             if (Replace(ref line, "ChromaAnimationAPI::", "sChromaAnimationAPI."))
                             {
                                 string token = "sChromaAnimationAPI.";
-                                int index = line.IndexOf(token);
-                                if (index >= 0)
+                                int start = line.IndexOf(token);
+                                if (start >= 0)
                                 {
-                                    index += token.Length;
+                                    int index = start + token.Length;
                                     if ((index+1) < line.Length)
                                     {
-                                        line = token + char.ToLower(line[index]) + line.Substring(index+1);
+                                        line = line.Substring(0, start) + token + char.ToLower(line[index]) + line.Substring(index+1);
                                     }
                                 }
                             }
