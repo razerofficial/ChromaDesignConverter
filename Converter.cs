@@ -706,6 +706,83 @@ namespace ChromaDesignConverter
             }
         }
 
+        static void ProcessJava(string filename, StreamWriter sw)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+                            if (line.StartsWith("#"))
+                            {
+                                continue;
+                            }
+
+                            if (Replace(ref line, "const char*", "String"))
+                            {
+                            }
+
+                            if (Replace(ref line, "MATH_PI", "Math.PI"))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "Math.Floor"))
+                            {
+                            }
+
+                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            {
+                            }
+
+                            if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            {
+                            }
+
+                            if (Replace(ref line, "void ShowEffect", "void showEffect"))
+                            {
+                            }
+
+                            if (Replace(ref line, "ChromaAnimationAPI::", "sChromaAnimationAPI."))
+                            {
+                                string token = "sChromaAnimationAPI.";
+                                int index = line.IndexOf(token);
+                                if (index >= 0)
+                                {
+                                    index += token.Length;
+                                    if ((index+1) < line.Length)
+                                    {
+                                        line = token + char.ToLower(line[index]) + line.Substring(index+1);
+                                    }
+                                }
+                            }
+
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+
         static void ProcessUE4Header(string filename, StreamWriter sw, string gameName)
         {
             try
@@ -1237,6 +1314,21 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     ProcessUE4ButtonImplementation(input, sw, gameName, buttonCount);
+                }
+            }
+        }
+
+        public static void ConvertToJava(string input, string outputFile)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessJava(input, sw);
                 }
             }
         }

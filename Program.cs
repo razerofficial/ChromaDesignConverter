@@ -12,6 +12,7 @@
             Converter.ConvertToXDK("UWP.cpp", "XDK.cpp", EFFECT_COUNT);
             Converter.ConvertToUnity("Output.cpp", "Unity.cs", EFFECT_COUNT);
             Converter.ConvertToUE4("Output.cpp", GAME_NAME+"ChromaBP.h", GAME_NAME+"ChromaBP.cpp", GAME_NAME+"Button.h", GAME_NAME + "Button.cpp", EFFECT_COUNT, GAME_NAME);
+            Converter.ConvertToJava("Output.cpp", "Chroma.java");
         }
     }
 }
