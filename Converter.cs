@@ -784,7 +784,7 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "\"Animations/", "getAnimationPath() + \"Animations/"))
+                            if (Replace(ref line, "\"Animations/", "getAnimationPath()+\""))
                             {
                             }
 
