@@ -71,6 +71,7 @@ void USampleAppChromaBP::SampleAppSampleEnd()
 
 void USampleAppChromaBP::SampleAppShowEffect1()
 {
+UChromaSDKPluginBPLibrary::UseIdleAnimation(EChromaSDKDeviceEnum::DE_Keyboard, false);
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Sprite1_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
@@ -701,7 +702,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -726,7 +727,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -751,7 +752,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -776,7 +777,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -801,7 +802,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -1170,7 +1171,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1196,7 +1197,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1222,7 +1223,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1248,7 +1249,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1274,7 +1275,7 @@ int speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId+1)/frameCount));
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -3391,8 +3392,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -3415,8 +3416,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -3439,8 +3440,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -3463,8 +3464,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -3487,10 +3488,719 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
 }
+
+void USampleAppChromaBP::SampleAppShowEffect41()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keyboard.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
+int maxRow = UChromaSDKPluginBPLibrary::getMaxRow(EChromaSDKDevice2DEnum::DE_Keyboard);
+int maxColumn = UChromaSDKPluginBPLibrary::getMaxColumn(EChromaSDKDevice2DEnum::DE_Keyboard);
+int startColumn = floor(Math.random() * maxColumn) % 22;
+int startRow = floor(Math.random() * maxRow) % 6;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+int radius = 0;
+int speed = 25 / (float)frameCount;
+int lineWidth = 2;
+for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
+int stroke = radius;
+for (int t = 0; t < lineWidth; ++t) {
+for (int i = 0; i < 360; ++i) {
+int angle = i * PI / 180;
+int r = floor(startRow + stroke * Math.sin(angle));
+int c = floor(startColumn + stroke * cos(angle));
+if (r >= 0 && r < maxRow &&
+c >= 0 && c < maxColumn) {
+int key = (r << 8) | c;
+UChromaSDKPluginBPLibrary::SetKeyColorName(baseLayer, frameIndex, key, color);
+}
+}
+stroke += speed;
+}
+radius += speed;
+}
+// play at top speed
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect41ChromaLink()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_ChromaLink.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect41Headset()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Headset.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect41Mousepad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Mousepad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect41Mouse()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect42()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keyboard.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 1;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
+int maxRow = UChromaSDKPluginBPLibrary::getMaxRow(EChromaSDKDevice2DEnum::DE_Keyboard);
+int maxColumn = UChromaSDKPluginBPLibrary::getMaxColumn(EChromaSDKDevice2DEnum::DE_Keyboard);
+// pick first key
+int pointAColumn = floor(Math.random() * maxColumn) % 22;
+int pointARow = floor(Math.random() * maxRow) % 6;
+// pick a different second key
+int pointBColumn;
+int pointBRow;
+do {
+pointBColumn = floor(Math.random() * maxColumn) % 22;
+pointBRow = floor(Math.random() * maxRow) % 6;
+} while (pointAColumn == pointBColumn && pointARow == pointBRow);
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+int frameIndex = 0;
+for (int i = 0.0; i <= 1.0; i += 0.04) { // 1.0/22.0
+int r = floor(UChromaSDKPluginBPLibrary::lerp(pointARow, pointBRow, i));
+int c = floor(UChromaSDKPluginBPLibrary::lerp(pointAColumn, pointBColumn, i));
+if (r >= 0 && r < maxRow &&
+c >= 0 && c < maxColumn) {
+int key = (r << 8) | c;
+UChromaSDKPluginBPLibrary::SetKeyColorName(baseLayer, frameIndex, key, color);
+}
+}
+// play at top speed
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect42ChromaLink()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_ChromaLink.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect42Headset()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Headset.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect42Mousepad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Mousepad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect42Mouse()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect43()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keyboard.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_W);
+keys.Add(EChromaSDKKeyboardKey::KK_A);
+keys.Add(EChromaSDKKeyboardKey::KK_S);
+keys.Add(EChromaSDKKeyboardKey::KK_D);
+keys.Add(EChromaSDKKeyboardKey::KK_P);
+keys.Add(EChromaSDKKeyboardKey::KK_M);
+keys.Add(EChromaSDKKeyboardKey::KK_F1);
+};
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::SetKeysColorAllFramesName(baseLayer,  keys, color);
+UChromaSDKPluginBPLibrary::SetChromaCustomFlagName(baseLayer, true);
+UChromaSDKPluginBPLibrary::SetChromaCustomColorAllFramesName(baseLayer);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect43ChromaLink()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_ChromaLink.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect43Headset()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Headset.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect43Mousepad()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mousepad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect43Mouse()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44()
+{
+FString baseLayer = "SampleAppAnimations/Spiral_Keyboard.chroma";
+FString layer2 = "SampleAppAnimations/Rainbow_Keyboard.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(layer2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_W);
+keys.Add(EChromaSDKKeyboardKey::KK_A);
+keys.Add(EChromaSDKKeyboardKey::KK_S);
+keys.Add(EChromaSDKKeyboardKey::KK_D);
+keys.Add(EChromaSDKKeyboardKey::KK_P);
+keys.Add(EChromaSDKKeyboardKey::KK_M);
+keys.Add(EChromaSDKKeyboardKey::KK_F1);
+};
+UChromaSDKPluginBPLibrary::CopyKeysColorAllFramesName(layer2, baseLayer, keys);
+UChromaSDKPluginBPLibrary::SetChromaCustomFlagName(baseLayer, true);
+UChromaSDKPluginBPLibrary::SetChromaCustomColorAllFramesName(baseLayer);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44ChromaLink()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_ChromaLink.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44Headset()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Headset.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44Mousepad()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mousepad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44Mouse()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Keyboard.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 120;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_W);
+keys.Add(EChromaSDKKeyboardKey::KK_A);
+keys.Add(EChromaSDKKeyboardKey::KK_S);
+keys.Add(EChromaSDKKeyboardKey::KK_D);
+};
+UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255,  255,  0);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_F1);
+keys.Add(EChromaSDKKeyboardKey::KK_F2);
+keys.Add(EChromaSDKKeyboardKey::KK_F3);
+keys.Add(EChromaSDKKeyboardKey::KK_F4);
+keys.Add(EChromaSDKKeyboardKey::KK_F5);
+keys.Add(EChromaSDKKeyboardKey::KK_F6);
+};
+float t = 0;
+int speed = 0.05;
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+t += speed;
+int hp = fabsf(cos(PI / 2 + t));
+for (int i = 0; i < keys.length; ++i) {
+int ratio = (i + 1) / keys.length;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255 * (1 - hp), 0);
+if ((i + 1) / (keys.length + 1) < hp) {
+color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+} else {
+color = UChromaSDKPluginBPLibrary::GetRGB(0, 100, 0);
+}
+int key = keys[i];
+UChromaSDKPluginBPLibrary::SetKeyColorName(baseLayer, frameId, key, color);
+}
+}
+UChromaSDKPluginBPLibrary::SetChromaCustomFlagName(baseLayer, true);
+UChromaSDKPluginBPLibrary::SetChromaCustomColorAllFramesName(baseLayer);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45ChromaLink()
+{
+FString baseLayer = "SampleAppAnimations/Blank_ChromaLink.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45Headset()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Headset.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45Mousepad()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Mousepad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45Mouse()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect46()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Keyboard.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 120;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_W);
+keys.Add(EChromaSDKKeyboardKey::KK_A);
+keys.Add(EChromaSDKKeyboardKey::KK_S);
+keys.Add(EChromaSDKKeyboardKey::KK_D);
+};
+UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255,  0,  0);
+{
+TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
+keys.Add(EChromaSDKKeyboardKey::KK_F7);
+keys.Add(EChromaSDKKeyboardKey::KK_F8);
+keys.Add(EChromaSDKKeyboardKey::KK_F9);
+keys.Add(EChromaSDKKeyboardKey::KK_F10);
+keys.Add(EChromaSDKKeyboardKey::KK_F11);
+keys.Add(EChromaSDKKeyboardKey::KK_F12);
+};
+float t = 0;
+int speed = 0.05;
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+t += speed;
+int hp = fabsf(cos(PI / 2 + t));
+for (int i = 0; i < keys.length; ++i) {
+int ratio = (i + 1) / keys.length;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(255 * (1 - hp), 255 * (1 - hp), 0);
+if ((i + 1) / (keys.length + 1) < hp) {
+color = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+} else {
+color = UChromaSDKPluginBPLibrary::GetRGB(100, 100, 0);
+}
+int key = keys[i];
+UChromaSDKPluginBPLibrary::SetKeyColorName(baseLayer, frameId, key, color);
+}
+}
+UChromaSDKPluginBPLibrary::SetChromaCustomFlagName(baseLayer, true);
+UChromaSDKPluginBPLibrary::SetChromaCustomColorAllFramesName(baseLayer);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect46ChromaLink()
+{
+FString baseLayer = "SampleAppAnimations/Blank_ChromaLink.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect46Headset()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Headset.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect46Mousepad()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Mousepad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect46Mouse()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
 #pragma endregion
+/*
+case 1:
+ShowEffect1();
+ShowEffect1ChromaLink();
+ShowEffect1Headset();
+ShowEffect1Mousepad();
+ShowEffect1Mouse();
+break;
+case 2:
+ShowEffect2();
+ShowEffect2ChromaLink();
+ShowEffect2Headset();
+ShowEffect2Mousepad();
+ShowEffect2Mouse();
+break;
+case 3:
+ShowEffect3();
+ShowEffect3ChromaLink();
+ShowEffect3Headset();
+ShowEffect3Mousepad();
+ShowEffect3Mouse();
+break;
+case 4:
+ShowEffect4();
+ShowEffect4ChromaLink();
+ShowEffect4Headset();
+ShowEffect4Mousepad();
+ShowEffect4Mouse();
+break;
+case 5:
+ShowEffect5();
+ShowEffect5ChromaLink();
+ShowEffect5Headset();
+ShowEffect5Mousepad();
+ShowEffect5Mouse();
+break;
+case 6:
+ShowEffect6();
+ShowEffect6ChromaLink();
+ShowEffect6Headset();
+ShowEffect6Mousepad();
+ShowEffect6Mouse();
+break;
+case 7:
+ShowEffect7();
+ShowEffect7ChromaLink();
+ShowEffect7Headset();
+ShowEffect7Mousepad();
+ShowEffect7Mouse();
+break;
+case 8:
+ShowEffect8();
+ShowEffect8ChromaLink();
+ShowEffect8Headset();
+ShowEffect8Mousepad();
+ShowEffect8Mouse();
+break;
+case 9:
+ShowEffect9();
+ShowEffect9ChromaLink();
+ShowEffect9Headset();
+ShowEffect9Mousepad();
+ShowEffect9Mouse();
+break;
+case 10:
+ShowEffect10();
+ShowEffect10ChromaLink();
+ShowEffect10Headset();
+ShowEffect10Mousepad();
+ShowEffect10Mouse();
+break;
+case 11:
+ShowEffect11();
+ShowEffect11ChromaLink();
+ShowEffect11Headset();
+ShowEffect11Mousepad();
+ShowEffect11Mouse();
+break;
+case 12:
+ShowEffect12();
+ShowEffect12ChromaLink();
+ShowEffect12Headset();
+ShowEffect12Mousepad();
+ShowEffect12Mouse();
+break;
+case 13:
+ShowEffect13();
+ShowEffect13ChromaLink();
+ShowEffect13Headset();
+ShowEffect13Mousepad();
+ShowEffect13Mouse();
+break;
+case 14:
+ShowEffect14();
+ShowEffect14ChromaLink();
+ShowEffect14Headset();
+ShowEffect14Mousepad();
+ShowEffect14Mouse();
+break;
+case 15:
+ShowEffect15();
+ShowEffect15ChromaLink();
+ShowEffect15Headset();
+ShowEffect15Mousepad();
+ShowEffect15Mouse();
+break;
+*/
