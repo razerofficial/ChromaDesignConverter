@@ -31,6 +31,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect1();
         USampleAppChromaBP::SampleAppShowEffect1ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect1Headset();
+        USampleAppChromaBP::SampleAppShowEffect1Keypad();
         USampleAppChromaBP::SampleAppShowEffect1Mousepad();
         USampleAppChromaBP::SampleAppShowEffect1Mouse();
     }
@@ -40,6 +41,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect2();
         USampleAppChromaBP::SampleAppShowEffect2ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect2Headset();
+        USampleAppChromaBP::SampleAppShowEffect2Keypad();
         USampleAppChromaBP::SampleAppShowEffect2Mousepad();
         USampleAppChromaBP::SampleAppShowEffect2Mouse();
     }
@@ -49,6 +51,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect3();
         USampleAppChromaBP::SampleAppShowEffect3ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect3Headset();
+        USampleAppChromaBP::SampleAppShowEffect3Keypad();
         USampleAppChromaBP::SampleAppShowEffect3Mousepad();
         USampleAppChromaBP::SampleAppShowEffect3Mouse();
     }
@@ -58,6 +61,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect4();
         USampleAppChromaBP::SampleAppShowEffect4ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect4Headset();
+        USampleAppChromaBP::SampleAppShowEffect4Keypad();
         USampleAppChromaBP::SampleAppShowEffect4Mousepad();
         USampleAppChromaBP::SampleAppShowEffect4Mouse();
     }
@@ -67,6 +71,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect5();
         USampleAppChromaBP::SampleAppShowEffect5ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect5Headset();
+        USampleAppChromaBP::SampleAppShowEffect5Keypad();
         USampleAppChromaBP::SampleAppShowEffect5Mousepad();
         USampleAppChromaBP::SampleAppShowEffect5Mouse();
     }
@@ -76,6 +81,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect6();
         USampleAppChromaBP::SampleAppShowEffect6ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect6Headset();
+        USampleAppChromaBP::SampleAppShowEffect6Keypad();
         USampleAppChromaBP::SampleAppShowEffect6Mousepad();
         USampleAppChromaBP::SampleAppShowEffect6Mouse();
     }
@@ -85,6 +91,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect7();
         USampleAppChromaBP::SampleAppShowEffect7ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect7Headset();
+        USampleAppChromaBP::SampleAppShowEffect7Keypad();
         USampleAppChromaBP::SampleAppShowEffect7Mousepad();
         USampleAppChromaBP::SampleAppShowEffect7Mouse();
     }
@@ -94,6 +101,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect8();
         USampleAppChromaBP::SampleAppShowEffect8ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect8Headset();
+        USampleAppChromaBP::SampleAppShowEffect8Keypad();
         USampleAppChromaBP::SampleAppShowEffect8Mousepad();
         USampleAppChromaBP::SampleAppShowEffect8Mouse();
     }
@@ -103,6 +111,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect9();
         USampleAppChromaBP::SampleAppShowEffect9ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect9Headset();
+        USampleAppChromaBP::SampleAppShowEffect9Keypad();
         USampleAppChromaBP::SampleAppShowEffect9Mousepad();
         USampleAppChromaBP::SampleAppShowEffect9Mouse();
     }
@@ -112,6 +121,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect10();
         USampleAppChromaBP::SampleAppShowEffect10ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect10Headset();
+        USampleAppChromaBP::SampleAppShowEffect10Keypad();
         USampleAppChromaBP::SampleAppShowEffect10Mousepad();
         USampleAppChromaBP::SampleAppShowEffect10Mouse();
     }
@@ -121,6 +131,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect11();
         USampleAppChromaBP::SampleAppShowEffect11ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect11Headset();
+        USampleAppChromaBP::SampleAppShowEffect11Keypad();
         USampleAppChromaBP::SampleAppShowEffect11Mousepad();
         USampleAppChromaBP::SampleAppShowEffect11Mouse();
     }
@@ -130,6 +141,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect12();
         USampleAppChromaBP::SampleAppShowEffect12ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect12Headset();
+        USampleAppChromaBP::SampleAppShowEffect12Keypad();
         USampleAppChromaBP::SampleAppShowEffect12Mousepad();
         USampleAppChromaBP::SampleAppShowEffect12Mouse();
     }
@@ -139,6 +151,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect13();
         USampleAppChromaBP::SampleAppShowEffect13ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect13Headset();
+        USampleAppChromaBP::SampleAppShowEffect13Keypad();
         USampleAppChromaBP::SampleAppShowEffect13Mousepad();
         USampleAppChromaBP::SampleAppShowEffect13Mouse();
     }
@@ -148,6 +161,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect14();
         USampleAppChromaBP::SampleAppShowEffect14ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect14Headset();
+        USampleAppChromaBP::SampleAppShowEffect14Keypad();
         USampleAppChromaBP::SampleAppShowEffect14Mousepad();
         USampleAppChromaBP::SampleAppShowEffect14Mouse();
     }
@@ -157,6 +171,7 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect15();
         USampleAppChromaBP::SampleAppShowEffect15ChromaLink();
         USampleAppChromaBP::SampleAppShowEffect15Headset();
+        USampleAppChromaBP::SampleAppShowEffect15Keypad();
         USampleAppChromaBP::SampleAppShowEffect15Mousepad();
         USampleAppChromaBP::SampleAppShowEffect15Mouse();
     }

@@ -55,10 +55,21 @@ void ShowEffect1Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect1Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Sprite1_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect2()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -69,7 +80,7 @@ void ShowEffect2()
 void ShowEffect2ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -80,7 +91,7 @@ void ShowEffect2ChromaLink()
 void ShowEffect2Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -91,7 +102,7 @@ void ShowEffect2Headset()
 void ShowEffect2Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -102,7 +113,18 @@ void ShowEffect2Mousepad()
 void ShowEffect2Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect2Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Trails_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -113,7 +135,7 @@ void ShowEffect2Mouse()
 void ShowEffect3()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -129,7 +151,7 @@ void ShowEffect3()
 void ShowEffect3ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -145,7 +167,7 @@ void ShowEffect3ChromaLink()
 void ShowEffect3Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -161,7 +183,7 @@ void ShowEffect3Headset()
 void ShowEffect3Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -177,7 +199,7 @@ void ShowEffect3Mousepad()
 void ShowEffect3Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -190,10 +212,23 @@ void ShowEffect3Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect3Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // static color
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect4()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Keyboard.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -204,7 +239,7 @@ void ShowEffect4()
 void ShowEffect4ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_ChromaLink.chroma";
+ const char* baseLayer = "animations/ParticlesOut_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -215,7 +250,7 @@ void ShowEffect4ChromaLink()
 void ShowEffect4Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Headset.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -226,7 +261,7 @@ void ShowEffect4Headset()
 void ShowEffect4Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Mousepad.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -237,7 +272,18 @@ void ShowEffect4Mousepad()
 void ShowEffect4Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Mouse.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect4Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/ParticlesOut_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -248,7 +294,7 @@ void ShowEffect4Mouse()
 void ShowEffect5()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Keyboard.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -261,7 +307,7 @@ void ShowEffect5()
 void ShowEffect5ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_ChromaLink.chroma";
+ const char* baseLayer = "animations/ParticlesOut_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -274,7 +320,7 @@ void ShowEffect5ChromaLink()
 void ShowEffect5Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Headset.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -287,7 +333,7 @@ void ShowEffect5Headset()
 void ShowEffect5Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Mousepad.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -300,7 +346,20 @@ void ShowEffect5Mousepad()
 void ShowEffect5Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/OutParticle1_Mouse.chroma";
+ const char* baseLayer = "animations/ParticlesOut_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // turn grayscale particles to blue water
+ ChromaAnimationAPI::MultiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect5Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/ParticlesOut_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -382,6 +441,23 @@ void ShowEffect6Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // set all frames to white, with all frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+ // fade the start of the animation starting at frame zero to 40
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, 40);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect6Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -480,6 +556,23 @@ void ShowEffect7Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect7Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // set all frames to white, with all frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+ // fade the end of the animation starting at frame length - 40 (60)
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, 40);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect8()
 {
  // start with a blank animation
@@ -560,6 +653,25 @@ void ShowEffect8Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // set all frames to white, with all frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+ // fade the start of the animation starting at frame zero to 40
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, 40);
+ // fade the end of the animation starting at frame length - 40 (60)
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, 40);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect8Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -695,10 +807,34 @@ void ShowEffect9Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect9Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // set all frames to white, with all frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+ //integer number of times to blink during animation
+ int speed = 2;
+ // loop over all frames in the layer
+ for (int frameId = 0; frameId < frameCount; ++frameId) {
+  //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
+  // multiply the frame by the 't' intensity
+  ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
+ }
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect10()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Keyboard.chroma";
+ const char* baseLayer = "animations/Particles2_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -709,7 +845,7 @@ void ShowEffect10()
 void ShowEffect10ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Particles2_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -720,7 +856,7 @@ void ShowEffect10ChromaLink()
 void ShowEffect10Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Headset.chroma";
+ const char* baseLayer = "animations/Particles2_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -731,7 +867,7 @@ void ShowEffect10Headset()
 void ShowEffect10Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Mousepad.chroma";
+ const char* baseLayer = "animations/Particles2_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -742,7 +878,18 @@ void ShowEffect10Mousepad()
 void ShowEffect10Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Mouse.chroma";
+ const char* baseLayer = "animations/Particles2_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect10Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Particles2_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -753,7 +900,7 @@ void ShowEffect10Mouse()
 void ShowEffect11()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Keyboard.chroma";
+ const char* baseLayer = "animations/Particles2_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -766,7 +913,7 @@ void ShowEffect11()
 void ShowEffect11ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Particles2_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -779,7 +926,7 @@ void ShowEffect11ChromaLink()
 void ShowEffect11Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Headset.chroma";
+ const char* baseLayer = "animations/Particles2_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -792,7 +939,7 @@ void ShowEffect11Headset()
 void ShowEffect11Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Mousepad.chroma";
+ const char* baseLayer = "animations/Particles2_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -805,7 +952,20 @@ void ShowEffect11Mousepad()
 void ShowEffect11Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Clouds1_Mouse.chroma";
+ const char* baseLayer = "animations/Particles2_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // reduce the intensity of the layer
+ ChromaAnimationAPI::MultiplyIntensityAllFramesName(baseLayer, 0.25f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect11Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Particles2_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -863,6 +1023,17 @@ void ShowEffect12Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect12Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -955,6 +1126,23 @@ void ShowEffect13Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect13Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(baseLayer);
+ // loop over all frames in the layer
+ for (int frameId = 0; frameId < frameCount; ++frameId) {
+  // give color to the layer
+  ChromaAnimationAPI::MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+ }
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect14()
 {
  // start with a blank animation
@@ -1007,6 +1195,18 @@ void ShowEffect14Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::MultiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect14Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1140,10 +1340,35 @@ void ShowEffect15Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect15Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(baseLayer);
+ int color1 = ChromaAnimationAPI::GetRGB(255, 0, 0); //red
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0); //green
+ //integer number of times to transition during animation
+ int speed = 2;
+ // loop over all frames in the layer
+ for (int frameId = 0; frameId < frameCount; ++frameId) {
+  //Math.cos gives a smooth 1 to 0 to 1 curve
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
+  // use t to transition from color 1 to color 2
+  int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
+  // give color to the layer
+  ChromaAnimationAPI::MultiplyIntensityColorName(baseLayer, frameId, color);
+ }
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect16()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1154,7 +1379,7 @@ void ShowEffect16()
 void ShowEffect16ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1165,7 +1390,7 @@ void ShowEffect16ChromaLink()
 void ShowEffect16Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1176,7 +1401,7 @@ void ShowEffect16Headset()
 void ShowEffect16Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1187,7 +1412,18 @@ void ShowEffect16Mousepad()
 void ShowEffect16Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect16Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Trails_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1198,7 +1434,7 @@ void ShowEffect16Mouse()
 void ShowEffect17()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1216,7 +1452,7 @@ void ShowEffect17()
 void ShowEffect17ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1234,7 +1470,7 @@ void ShowEffect17ChromaLink()
 void ShowEffect17Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1252,7 +1488,7 @@ void ShowEffect17Headset()
 void ShowEffect17Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1270,7 +1506,25 @@ void ShowEffect17Mousepad()
 void ShowEffect17Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(baseLayer);
+ // loop over all frames in the layer
+ for (int frameId = 0; frameId < frameCount; ++frameId) {
+  int threshold = 100;
+  // give color to the layer
+  ChromaAnimationAPI::FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+ }
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect17Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Trails_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1288,7 +1542,7 @@ void ShowEffect17Mouse()
 void ShowEffect18()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1301,7 +1555,7 @@ void ShowEffect18()
 void ShowEffect18ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1314,7 +1568,7 @@ void ShowEffect18ChromaLink()
 void ShowEffect18Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1327,7 +1581,7 @@ void ShowEffect18Headset()
 void ShowEffect18Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1340,7 +1594,20 @@ void ShowEffect18Mousepad()
 void ShowEffect18Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int threshold = 50;
+ ChromaAnimationAPI::FillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect18Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Trails_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1353,7 +1620,7 @@ void ShowEffect18Mouse()
 void ShowEffect19()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Keyboard.chroma";
+ const char* baseLayer = "animations/Trails_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1367,7 +1634,7 @@ void ShowEffect19()
 void ShowEffect19ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_ChromaLink.chroma";
+ const char* baseLayer = "animations/Trails_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1381,7 +1648,7 @@ void ShowEffect19ChromaLink()
 void ShowEffect19Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Headset.chroma";
+ const char* baseLayer = "animations/Trails_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1395,7 +1662,7 @@ void ShowEffect19Headset()
 void ShowEffect19Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mousepad.chroma";
+ const char* baseLayer = "animations/Trails_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1409,7 +1676,21 @@ void ShowEffect19Mousepad()
 void ShowEffect19Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Tongue1_Mouse.chroma";
+ const char* baseLayer = "animations/Trails_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int minThreshold = 50; //dark cyan
+ int maxThreshold = 150; //purple
+ ChromaAnimationAPI::FillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect19Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Trails_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1423,7 +1704,7 @@ void ShowEffect19Mouse()
 void ShowEffect20()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Arc3_Keyboard.chroma";
+ const char* baseLayer = "animations/Arc3_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1434,7 +1715,7 @@ void ShowEffect20()
 void ShowEffect20ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Arc3_ChromaLink.chroma";
+ const char* baseLayer = "animations/Arc3_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1445,7 +1726,7 @@ void ShowEffect20ChromaLink()
 void ShowEffect20Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Arc3_Headset.chroma";
+ const char* baseLayer = "animations/Arc3_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1456,7 +1737,7 @@ void ShowEffect20Headset()
 void ShowEffect20Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Arc3_Mousepad.chroma";
+ const char* baseLayer = "animations/Arc3_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1467,7 +1748,18 @@ void ShowEffect20Mousepad()
 void ShowEffect20Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/Arc3_Mouse.chroma";
+ const char* baseLayer = "animations/Arc3_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect20Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Arc3_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1479,7 +1771,7 @@ void ShowEffect21()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Keyboard.chroma";
- const char* layer2 = "Animations/Arc3_Keyboard.chroma";
+ const char* layer2 = "animations/Arc3_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1498,7 +1790,7 @@ void ShowEffect21ChromaLink()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_ChromaLink.chroma";
- const char* layer2 = "Animations/Arc3_ChromaLink.chroma";
+ const char* layer2 = "animations/Arc3_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1517,7 +1809,7 @@ void ShowEffect21Headset()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Headset.chroma";
- const char* layer2 = "Animations/Arc3_Headset.chroma";
+ const char* layer2 = "animations/Arc3_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1536,7 +1828,7 @@ void ShowEffect21Mousepad()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mousepad.chroma";
- const char* layer2 = "Animations/Arc3_Mousepad.chroma";
+ const char* layer2 = "animations/Arc3_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1555,7 +1847,26 @@ void ShowEffect21Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
- const char* layer2 = "Animations/Arc3_Mouse.chroma";
+ const char* layer2 = "animations/Arc3_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::CloseAnimationName(layer2);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::GetAnimation(layer2);
+ int background = ChromaAnimationAPI::GetRGB(127, 0, 0);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+ // copy non zero colors from layer 2 to the base layer
+ ChromaAnimationAPI::CopyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect21Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ const char* layer2 = "animations/Arc3_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1574,7 +1885,7 @@ void ShowEffect22()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Keyboard.chroma";
- const char* layer2 = "Animations/Arc3_Keyboard.chroma";
+ const char* layer2 = "animations/Arc3_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1596,7 +1907,7 @@ void ShowEffect22ChromaLink()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_ChromaLink.chroma";
- const char* layer2 = "Animations/Arc3_ChromaLink.chroma";
+ const char* layer2 = "animations/Arc3_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1618,7 +1929,7 @@ void ShowEffect22Headset()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Headset.chroma";
- const char* layer2 = "Animations/Arc3_Headset.chroma";
+ const char* layer2 = "animations/Arc3_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1640,7 +1951,7 @@ void ShowEffect22Mousepad()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mousepad.chroma";
- const char* layer2 = "Animations/Arc3_Mousepad.chroma";
+ const char* layer2 = "animations/Arc3_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1662,7 +1973,29 @@ void ShowEffect22Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
- const char* layer2 = "Animations/Arc3_Mouse.chroma";
+ const char* layer2 = "animations/Arc3_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::CloseAnimationName(layer2);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::GetAnimation(layer2);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
+ // setup background color on the base layer
+ int background = ChromaAnimationAPI::GetRGB(127, 0, 0);
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+ // replace darker colors with background color
+ ChromaAnimationAPI::FillThresholdColorsAllFramesName(layer2, 64, background);
+ // copy non zero colors from layer 2 to the base layer
+ ChromaAnimationAPI::CopyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect22Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ const char* layer2 = "animations/Arc3_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1684,7 +2017,7 @@ void ShowEffect23()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Keyboard.chroma";
- const char* layer2 = "Animations/Arc3_Keyboard.chroma";
+ const char* layer2 = "animations/Arc3_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1704,7 +2037,7 @@ void ShowEffect23ChromaLink()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_ChromaLink.chroma";
- const char* layer2 = "Animations/Arc3_ChromaLink.chroma";
+ const char* layer2 = "animations/Arc3_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1724,7 +2057,7 @@ void ShowEffect23Headset()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Headset.chroma";
- const char* layer2 = "Animations/Arc3_Headset.chroma";
+ const char* layer2 = "animations/Arc3_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1744,7 +2077,7 @@ void ShowEffect23Mousepad()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mousepad.chroma";
- const char* layer2 = "Animations/Arc3_Mousepad.chroma";
+ const char* layer2 = "animations/Arc3_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1764,7 +2097,27 @@ void ShowEffect23Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
- const char* layer2 = "Animations/Arc3_Mouse.chroma";
+ const char* layer2 = "animations/Arc3_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::CloseAnimationName(layer2);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::GetAnimation(layer2);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
+ // setup background color on the base layer
+ int background = ChromaAnimationAPI::GetRGB(127, 0, 0);
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+ // Add non zero colors from layer 2 to the base layer
+ ChromaAnimationAPI::AddNonZeroAllKeysAllFramesName(layer2, baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect23Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ const char* layer2 = "animations/Arc3_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1784,7 +2137,7 @@ void ShowEffect24()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Keyboard.chroma";
- const char* layer2 = "Animations/Arc3_Keyboard.chroma";
+ const char* layer2 = "animations/Arc3_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1804,7 +2157,7 @@ void ShowEffect24ChromaLink()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_ChromaLink.chroma";
- const char* layer2 = "Animations/Arc3_ChromaLink.chroma";
+ const char* layer2 = "animations/Arc3_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1824,7 +2177,7 @@ void ShowEffect24Headset()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Headset.chroma";
- const char* layer2 = "Animations/Arc3_Headset.chroma";
+ const char* layer2 = "animations/Arc3_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1844,7 +2197,7 @@ void ShowEffect24Mousepad()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mousepad.chroma";
- const char* layer2 = "Animations/Arc3_Mousepad.chroma";
+ const char* layer2 = "animations/Arc3_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1864,7 +2217,27 @@ void ShowEffect24Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
- const char* layer2 = "Animations/Arc3_Mouse.chroma";
+ const char* layer2 = "animations/Arc3_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::CloseAnimationName(layer2);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::GetAnimation(layer2);
+ int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
+ // setup background color on the base layer
+ int background = ChromaAnimationAPI::GetRGB(127, 0, 0);
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+ // Add non zero colors from layer 2 to the base layer
+ ChromaAnimationAPI::SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect24Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ const char* layer2 = "animations/Arc3_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::CloseAnimationName(layer2);
@@ -1904,21 +2277,11 @@ void ShowEffect25()
 }
 void ShowEffect25ChromaLink()
 {
- // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_ChromaLink.chroma";
- const char* layer2 = "animations/Rainbow_ChromaLink.chroma";
+ const char* baseLayer = "animations/Rainbow_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
- ChromaAnimationAPI::CloseAnimationName(layer2);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
- ChromaAnimationAPI::GetAnimation(layer2);
- int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
- ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
- // copy non zero colors from layer 2 to the base layer where the base layer was non zero
- ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
- // set a background color
- ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
  // set animation playback to 30 FPS
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  // play the animation on the dynamic canvas
@@ -1926,21 +2289,11 @@ void ShowEffect25ChromaLink()
 }
 void ShowEffect25Headset()
 {
- // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Headset.chroma";
- const char* layer2 = "animations/Rainbow_Headset.chroma";
+ const char* baseLayer = "animations/Rainbow_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
- ChromaAnimationAPI::CloseAnimationName(layer2);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
- ChromaAnimationAPI::GetAnimation(layer2);
- int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
- ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
- // copy non zero colors from layer 2 to the base layer where the base layer was non zero
- ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
- // set a background color
- ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
  // set animation playback to 30 FPS
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  // play the animation on the dynamic canvas
@@ -1948,21 +2301,11 @@ void ShowEffect25Headset()
 }
 void ShowEffect25Mousepad()
 {
- // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Mousepad.chroma";
- const char* layer2 = "animations/Rainbow_Mousepad.chroma";
+ const char* baseLayer = "animations/Rainbow_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
- ChromaAnimationAPI::CloseAnimationName(layer2);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
- ChromaAnimationAPI::GetAnimation(layer2);
- int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
- ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
- // copy non zero colors from layer 2 to the base layer where the base layer was non zero
- ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
- // set a background color
- ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
  // set animation playback to 30 FPS
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  // play the animation on the dynamic canvas
@@ -1970,21 +2313,23 @@ void ShowEffect25Mousepad()
 }
 void ShowEffect25Mouse()
 {
- // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Mouse.chroma";
- const char* layer2 = "animations/Rainbow_Mouse.chroma";
+ const char* baseLayer = "animations/Rainbow_Mouse.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
- ChromaAnimationAPI::CloseAnimationName(layer2);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
- ChromaAnimationAPI::GetAnimation(layer2);
- int frameCount = ChromaAnimationAPI::GetFrameCountName(layer2);
- ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
- // copy non zero colors from layer 2 to the base layer where the base layer was non zero
- ChromaAnimationAPI::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
- // set a background color
- ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect25Keypad()
+{
+ const char* baseLayer = "animations/Rainbow_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
  // set animation playback to 30 FPS
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  // play the animation on the dynamic canvas
@@ -1993,7 +2338,7 @@ void ShowEffect25Mouse()
 void ShowEffect26()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2004,7 +2349,7 @@ void ShowEffect26()
 void ShowEffect26ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2015,7 +2360,7 @@ void ShowEffect26ChromaLink()
 void ShowEffect26Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2026,7 +2371,7 @@ void ShowEffect26Headset()
 void ShowEffect26Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2037,7 +2382,18 @@ void ShowEffect26Mousepad()
 void ShowEffect26Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect26Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2048,7 +2404,7 @@ void ShowEffect26Mouse()
 void ShowEffect27()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2061,7 +2417,7 @@ void ShowEffect27()
 void ShowEffect27ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2074,7 +2430,7 @@ void ShowEffect27ChromaLink()
 void ShowEffect27Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2087,7 +2443,7 @@ void ShowEffect27Headset()
 void ShowEffect27Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2100,7 +2456,20 @@ void ShowEffect27Mousepad()
 void ShowEffect27Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect27Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2113,7 +2482,7 @@ void ShowEffect27Mouse()
 void ShowEffect28()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2128,7 +2497,7 @@ void ShowEffect28()
 void ShowEffect28ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2143,7 +2512,7 @@ void ShowEffect28ChromaLink()
 void ShowEffect28Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2158,7 +2527,7 @@ void ShowEffect28Headset()
 void ShowEffect28Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2173,7 +2542,22 @@ void ShowEffect28Mousepad()
 void ShowEffect28Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // reverse the order of frames
+ ChromaAnimationAPI::ReverseAllFramesName(baseLayer);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect28Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2188,7 +2572,7 @@ void ShowEffect28Mouse()
 void ShowEffect29()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2203,7 +2587,7 @@ void ShowEffect29()
 void ShowEffect29ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2218,7 +2602,7 @@ void ShowEffect29ChromaLink()
 void ShowEffect29Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2233,7 +2617,7 @@ void ShowEffect29Headset()
 void ShowEffect29Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2248,7 +2632,22 @@ void ShowEffect29Mousepad()
 void ShowEffect29Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // invert all the animation colors
+ ChromaAnimationAPI::InvertColorsAllFramesName(baseLayer);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect29Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2263,7 +2662,7 @@ void ShowEffect29Mouse()
 void ShowEffect30()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2278,7 +2677,7 @@ void ShowEffect30()
 void ShowEffect30ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2293,7 +2692,7 @@ void ShowEffect30ChromaLink()
 void ShowEffect30Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2308,7 +2707,7 @@ void ShowEffect30Headset()
 void ShowEffect30Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2323,7 +2722,22 @@ void ShowEffect30Mousepad()
 void ShowEffect30Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // duplicate and mirror
+ ChromaAnimationAPI::DuplicateMirrorFramesName(baseLayer);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect30Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2338,7 +2752,7 @@ void ShowEffect30Mouse()
 void ShowEffect31()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2355,7 +2769,7 @@ void ShowEffect31()
 void ShowEffect31ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2372,7 +2786,7 @@ void ShowEffect31ChromaLink()
 void ShowEffect31Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2389,7 +2803,7 @@ void ShowEffect31Headset()
 void ShowEffect31Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2406,7 +2820,24 @@ void ShowEffect31Mousepad()
 void ShowEffect31Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // insert a pause
+ int frameId = 50;
+ int delay = 20;
+ ChromaAnimationAPI::InsertDelayName(baseLayer, frameId, delay);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect31Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2423,7 +2854,7 @@ void ShowEffect31Mouse()
 void ShowEffect32()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2438,7 +2869,7 @@ void ShowEffect32()
 void ShowEffect32ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2453,7 +2884,7 @@ void ShowEffect32ChromaLink()
 void ShowEffect32Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2468,7 +2899,7 @@ void ShowEffect32Headset()
 void ShowEffect32Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2483,7 +2914,22 @@ void ShowEffect32Mousepad()
 void ShowEffect32Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // reduce half of the frames, remove every 2nd frame
+ ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect32Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2498,7 +2944,7 @@ void ShowEffect32Mouse()
 void ShowEffect33()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2513,7 +2959,7 @@ void ShowEffect33()
 void ShowEffect33ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2528,7 +2974,7 @@ void ShowEffect33ChromaLink()
 void ShowEffect33Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2543,7 +2989,7 @@ void ShowEffect33Headset()
 void ShowEffect33Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2558,7 +3004,22 @@ void ShowEffect33Mousepad()
 void ShowEffect33Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // double the number of the frames
+ ChromaAnimationAPI::DuplicateFramesName(baseLayer);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect33Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2573,7 +3034,7 @@ void ShowEffect33Mouse()
 void ShowEffect34()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2588,7 +3049,7 @@ void ShowEffect34()
 void ShowEffect34ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2603,7 +3064,7 @@ void ShowEffect34ChromaLink()
 void ShowEffect34Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2618,7 +3079,7 @@ void ShowEffect34Headset()
 void ShowEffect34Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2633,7 +3094,22 @@ void ShowEffect34Mousepad()
 void ShowEffect34Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // trim the start of the animation, so it starts at frame 10
+ ChromaAnimationAPI::TrimStartFramesName(baseLayer, 10);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect34Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2648,7 +3124,7 @@ void ShowEffect34Mouse()
 void ShowEffect35()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Keyboard.chroma";
+ const char* baseLayer = "animations/Movement_Keyboard.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2665,7 +3141,7 @@ void ShowEffect35()
 void ShowEffect35ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_ChromaLink.chroma";
+ const char* baseLayer = "animations/Movement_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2682,7 +3158,7 @@ void ShowEffect35ChromaLink()
 void ShowEffect35Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Headset.chroma";
+ const char* baseLayer = "animations/Movement_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2699,7 +3175,7 @@ void ShowEffect35Headset()
 void ShowEffect35Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mousepad.chroma";
+ const char* baseLayer = "animations/Movement_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2716,7 +3192,24 @@ void ShowEffect35Mousepad()
 void ShowEffect35Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/MovementUpLeft_Mouse.chroma";
+ const char* baseLayer = "animations/Movement_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // trim the start of the animation, so it starts at frame 10
+ ChromaAnimationAPI::TrimStartFramesName(baseLayer, 10);
+ // trim the end of the animation
+ ChromaAnimationAPI::TrimEndFramesName(baseLayer, 75);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect35Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "animations/Movement_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2748,11 +3241,13 @@ void ShowEffect36()
 void ShowEffect36ChromaLink()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_ChromaLink.chroma";
+ const char* baseLayer = "Animations/Blank_ChromaLink.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
+ // green
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
  int frameCount = 20;
  ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
  // set animation playback to 30 FPS
@@ -2763,11 +3258,13 @@ void ShowEffect36ChromaLink()
 void ShowEffect36Headset()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Headset.chroma";
+ const char* baseLayer = "Animations/Blank_Headset.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
+ // green
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
  int frameCount = 20;
  ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
  // set animation playback to 30 FPS
@@ -2778,11 +3275,13 @@ void ShowEffect36Headset()
 void ShowEffect36Mousepad()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Mousepad.chroma";
+ const char* baseLayer = "Animations/Blank_Mousepad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
+ // green
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
  int frameCount = 20;
  ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
  // set animation playback to 30 FPS
@@ -2793,11 +3292,30 @@ void ShowEffect36Mousepad()
 void ShowEffect36Mouse()
 {
  // start with a blank animation
- const char* baseLayer = "Animations/CircleSmall_Mouse.chroma";
+ const char* baseLayer = "Animations/Blank_Mouse.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
  ChromaAnimationAPI::GetAnimation(baseLayer);
+ // green
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+ int frameCount = 20;
+ ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
+ // set animation playback to 30 FPS
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect36Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // green
+ ChromaAnimationAPI::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
  int frameCount = 20;
  ChromaAnimationAPI::DuplicateFirstFrameName(baseLayer, frameCount);
  // set animation playback to 30 FPS
@@ -2881,6 +3399,24 @@ void ShowEffect37Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = 20;
+ // Start with blank frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+ // Fill all frames with black and white static
+ ChromaAnimationAPI::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+ // slow down the random frames so it can be seen
+ ChromaAnimationAPI::DuplicateFramesName(baseLayer);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect37Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3005,6 +3541,28 @@ void ShowEffect38Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect38Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = 20;
+ // Start with blank frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+ // Fill all frames with black and white static
+ ChromaAnimationAPI::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+ // slow down the random frames so it can be seen
+ ChromaAnimationAPI::DuplicateFramesName(baseLayer);
+ // make random colors more sparse using threshold
+ int threshold = 240;
+ // turn lower intensity colors to black
+ ChromaAnimationAPI::FillThresholdColorsAllFramesName(baseLayer, threshold, 0);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect39()
 {
  // start with a blank animation
@@ -3093,6 +3651,27 @@ void ShowEffect39Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = 20;
+ // Start with blank frames set to 30FPS
+ ChromaAnimationAPI::MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0);
+ // Fill all frames with black and white static
+ ChromaAnimationAPI::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+ // slow down the random frames so it can be seen
+ ChromaAnimationAPI::DuplicateFramesName(baseLayer);
+ int minThreshold = 240; //black
+ int maxThreshold = 240; //rain
+ ChromaAnimationAPI::FillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect39Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3225,6 +3804,29 @@ void ShowEffect40Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
 }
+void ShowEffect40Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ const char* idleAnimation = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::CloseAnimationName(idleAnimation);
+ // Set idle animation
+ ChromaAnimationAPI::SetIdleAnimationName(idleAnimation);
+ // Enable idle animation
+ ChromaAnimationAPI::UseIdleAnimation((int)EChromaSDKDeviceEnum::DE_Mouse, true);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // Transition from green to red and then stop
+ int frameCount = 30;
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
+ ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
+}
 void ShowEffect41()
 {
  // start with a blank animation
@@ -3316,6 +3918,21 @@ void ShowEffect41Mouse()
 {
  // start with a blank animation
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // solid color
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect41Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  // close the blank animation if it's already loaded, discarding any changes
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3427,6 +4044,21 @@ void ShowEffect42Mouse()
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect42Keypad()
+{
+ // start with a blank animation
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ // close the blank animation if it's already loaded, discarding any changes
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ // open the blank animation, passing a reference to the base animation when loading has completed
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ // the length of the animation
+ int frameCount = 50;
+ // solid color
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+ // play the animation on the dynamic canvas
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect43()
 {
  const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keyboard.chroma";
@@ -3505,6 +4137,19 @@ void ShowEffect43Mouse()
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect43Keypad()
+{
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
+ ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
+ ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 void ShowEffect44()
 {
  const char* baseLayer = "Animations/Spiral_Keyboard.chroma";
@@ -3573,6 +4218,19 @@ void ShowEffect44Mousepad()
 void ShowEffect44Mouse()
 {
  const char* baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma";
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
+ ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
+ ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect44Keypad()
+{
+ const char* baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
@@ -3675,6 +4333,21 @@ void ShowEffect45Mousepad()
 void ShowEffect45Mouse()
 {
  const char* baseLayer = "Animations/Blank_Mouse.chroma";
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = 50;
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
+void ShowEffect45Keypad()
+{
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
  ChromaAnimationAPI::CloseAnimationName(baseLayer);
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
@@ -3791,12 +4464,28 @@ void ShowEffect46Mouse()
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
 }
+void ShowEffect46Keypad()
+{
+ const char* baseLayer = "Animations/Blank_Keypad.chroma";
+ ChromaAnimationAPI::CloseAnimationName(baseLayer);
+ ChromaAnimationAPI::GetAnimation(baseLayer);
+ int frameCount = 50;
+ ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
+ ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+ ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
+ ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
+}
 #pragma endregion
 /*
 case 1:
 	ShowEffect1();
 	ShowEffect1ChromaLink();
 	ShowEffect1Headset();
+	ShowEffect1Keypad();
 	ShowEffect1Mousepad();
 	ShowEffect1Mouse();
 	break;
@@ -3804,6 +4493,7 @@ case 2:
 	ShowEffect2();
 	ShowEffect2ChromaLink();
 	ShowEffect2Headset();
+	ShowEffect2Keypad();
 	ShowEffect2Mousepad();
 	ShowEffect2Mouse();
 	break;
@@ -3811,6 +4501,7 @@ case 3:
 	ShowEffect3();
 	ShowEffect3ChromaLink();
 	ShowEffect3Headset();
+	ShowEffect3Keypad();
 	ShowEffect3Mousepad();
 	ShowEffect3Mouse();
 	break;
@@ -3818,6 +4509,7 @@ case 4:
 	ShowEffect4();
 	ShowEffect4ChromaLink();
 	ShowEffect4Headset();
+	ShowEffect4Keypad();
 	ShowEffect4Mousepad();
 	ShowEffect4Mouse();
 	break;
@@ -3825,6 +4517,7 @@ case 5:
 	ShowEffect5();
 	ShowEffect5ChromaLink();
 	ShowEffect5Headset();
+	ShowEffect5Keypad();
 	ShowEffect5Mousepad();
 	ShowEffect5Mouse();
 	break;
@@ -3832,6 +4525,7 @@ case 6:
 	ShowEffect6();
 	ShowEffect6ChromaLink();
 	ShowEffect6Headset();
+	ShowEffect6Keypad();
 	ShowEffect6Mousepad();
 	ShowEffect6Mouse();
 	break;
@@ -3839,6 +4533,7 @@ case 7:
 	ShowEffect7();
 	ShowEffect7ChromaLink();
 	ShowEffect7Headset();
+	ShowEffect7Keypad();
 	ShowEffect7Mousepad();
 	ShowEffect7Mouse();
 	break;
@@ -3846,6 +4541,7 @@ case 8:
 	ShowEffect8();
 	ShowEffect8ChromaLink();
 	ShowEffect8Headset();
+	ShowEffect8Keypad();
 	ShowEffect8Mousepad();
 	ShowEffect8Mouse();
 	break;
@@ -3853,6 +4549,7 @@ case 9:
 	ShowEffect9();
 	ShowEffect9ChromaLink();
 	ShowEffect9Headset();
+	ShowEffect9Keypad();
 	ShowEffect9Mousepad();
 	ShowEffect9Mouse();
 	break;
@@ -3860,6 +4557,7 @@ case 10:
 	ShowEffect10();
 	ShowEffect10ChromaLink();
 	ShowEffect10Headset();
+	ShowEffect10Keypad();
 	ShowEffect10Mousepad();
 	ShowEffect10Mouse();
 	break;
@@ -3867,6 +4565,7 @@ case 11:
 	ShowEffect11();
 	ShowEffect11ChromaLink();
 	ShowEffect11Headset();
+	ShowEffect11Keypad();
 	ShowEffect11Mousepad();
 	ShowEffect11Mouse();
 	break;
@@ -3874,6 +4573,7 @@ case 12:
 	ShowEffect12();
 	ShowEffect12ChromaLink();
 	ShowEffect12Headset();
+	ShowEffect12Keypad();
 	ShowEffect12Mousepad();
 	ShowEffect12Mouse();
 	break;
@@ -3881,6 +4581,7 @@ case 13:
 	ShowEffect13();
 	ShowEffect13ChromaLink();
 	ShowEffect13Headset();
+	ShowEffect13Keypad();
 	ShowEffect13Mousepad();
 	ShowEffect13Mouse();
 	break;
@@ -3888,6 +4589,7 @@ case 14:
 	ShowEffect14();
 	ShowEffect14ChromaLink();
 	ShowEffect14Headset();
+	ShowEffect14Keypad();
 	ShowEffect14Mousepad();
 	ShowEffect14Mouse();
 	break;
@@ -3895,6 +4597,7 @@ case 15:
 	ShowEffect15();
 	ShowEffect15ChromaLink();
 	ShowEffect15Headset();
+	ShowEffect15Keypad();
 	ShowEffect15Mousepad();
 	ShowEffect15Mouse();
 	break;

@@ -86,6 +86,23 @@ showEffect1Mouse.onclick = function () {
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect1");
+        showEffect1Keypad.onclick(); //show next device
+    });
+};
+
+showEffect1Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Sprite1_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect1");
     });
 };
 
@@ -94,7 +111,7 @@ showEffect2.onclick = function () {
     handleButtonClick(showEffect2);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -113,7 +130,7 @@ showEffect2ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -132,7 +149,7 @@ showEffect2Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -151,7 +168,7 @@ showEffect2Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -170,7 +187,25 @@ showEffect2Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect2");
+        showEffect2Keypad.onclick(); //show next device
+    });
+};
+
+showEffect2Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Trails_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -188,7 +223,7 @@ showEffect3.onclick = function () {
     handleButtonClick(showEffect3);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -214,7 +249,7 @@ showEffect3ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -240,7 +275,7 @@ showEffect3Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -266,7 +301,7 @@ showEffect3Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -292,7 +327,7 @@ showEffect3Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -309,6 +344,27 @@ showEffect3Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect3");
+        showEffect3Keypad.onclick(); //show next device
+    });
+};
+
+showEffect3Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // static color
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 255, 0, 0);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect3");
     });
 };
 
@@ -317,7 +373,7 @@ showEffect4.onclick = function () {
     handleButtonClick(showEffect4);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Keyboard.chroma';
+    var baseLayer = 'animations/ParticlesOut_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -336,7 +392,7 @@ showEffect4ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_ChromaLink.chroma';
+    var baseLayer = 'animations/ParticlesOut_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -355,7 +411,7 @@ showEffect4Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Headset.chroma';
+    var baseLayer = 'animations/ParticlesOut_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -374,7 +430,7 @@ showEffect4Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Mousepad.chroma';
+    var baseLayer = 'animations/ParticlesOut_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -393,7 +449,26 @@ showEffect4Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Mouse.chroma';
+    var baseLayer = 'animations/ParticlesOut_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect4");
+
+        showEffect4Keypad.onclick(); //show next device
+    });
+};
+
+showEffect4Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/ParticlesOut_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -411,7 +486,7 @@ showEffect5.onclick = function () {
     handleButtonClick(showEffect5);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Keyboard.chroma';
+    var baseLayer = 'animations/ParticlesOut_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -433,7 +508,7 @@ showEffect5ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_ChromaLink.chroma';
+    var baseLayer = 'animations/ParticlesOut_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -455,7 +530,7 @@ showEffect5Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Headset.chroma';
+    var baseLayer = 'animations/ParticlesOut_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -477,7 +552,7 @@ showEffect5Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Mousepad.chroma';
+    var baseLayer = 'animations/ParticlesOut_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -499,7 +574,29 @@ showEffect5Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/OutParticle1_Mouse.chroma';
+    var baseLayer = 'animations/ParticlesOut_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // turn grayscale particles to blue water
+        ChromaAnimation.multiplyIntensityAllFramesRGB(baseLayer, 0, 127, 255);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect5");
+
+        showEffect5Keypad.onclick(); //show next device
+    });
+};
+
+showEffect5Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/ParticlesOut_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -629,6 +726,33 @@ showEffect6Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // set all frames to white, with all frames set to 30FPS
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 255, 255, 255);
+
+        // fade the start of the animation starting at frame zero to 40
+        ChromaAnimation.fadeStartFrames(baseLayer, 40);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect6");
+
+        showEffect6Keypad.onclick(); //show next device
+    });
+};
+showEffect6Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -786,6 +910,34 @@ showEffect7Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect7");
+
+        showEffect7Keypad.onclick(); //show next device
+    });
+};
+
+showEffect7Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // set all frames to white, with all frames set to 30FPS
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 255, 255, 255);
+
+        // fade the end of the animation starting at frame length - 40 (60)
+        ChromaAnimation.fadeEndFrames(baseLayer, 40);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect7");
     });
 };
 
@@ -919,6 +1071,37 @@ showEffect8Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // set all frames to white, with all frames set to 30FPS
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 255, 255, 255);
+
+        // fade the start of the animation starting at frame zero to 40
+        ChromaAnimation.fadeStartFrames(baseLayer, 40);
+
+        // fade the end of the animation starting at frame length - 40 (60)
+        ChromaAnimation.fadeEndFrames(baseLayer, 40);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect8");
+
+        showEffect8Keypad.onclick(); //show next device
+    });
+};
+
+showEffect8Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1124,6 +1307,43 @@ showEffect9Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect9");
+
+        showEffect9Keypad.onclick(); //show next device
+    });
+};
+
+showEffect9Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // set all frames to white, with all frames set to 30FPS
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 255, 255, 255);
+
+        //integer number of times to blink during animation
+        var speed = 2;
+
+        // loop over all frames in the layer
+        for (var frameId = 0; frameId < frameCount; ++frameId) {
+            //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+            var t = 1 - Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / frameCount));
+
+            // multiply the frame by the 't' intensity
+            ChromaAnimation.multiplyIntensity(baseLayer, frameId, t);
+        }
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect9");
     });
 };
 
@@ -1132,7 +1352,7 @@ showEffect10.onclick = function () {
     handleButtonClick(showEffect10);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Keyboard.chroma';
+    var baseLayer = 'animations/Particles2_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1151,7 +1371,7 @@ showEffect10ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_ChromaLink.chroma';
+    var baseLayer = 'animations/Particles2_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1170,7 +1390,7 @@ showEffect10Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Headset.chroma';
+    var baseLayer = 'animations/Particles2_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1189,7 +1409,7 @@ showEffect10Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Mousepad.chroma';
+    var baseLayer = 'animations/Particles2_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1208,7 +1428,26 @@ showEffect10Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Mouse.chroma';
+    var baseLayer = 'animations/Particles2_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect10");
+
+        showEffect10Keypad.onclick(); //show next device
+    });
+};
+
+showEffect10Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Particles2_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1226,7 +1465,7 @@ showEffect11.onclick = function () {
     handleButtonClick(showEffect11);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Keyboard.chroma';
+    var baseLayer = 'animations/Particles2_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1248,7 +1487,7 @@ showEffect11ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_ChromaLink.chroma';
+    var baseLayer = 'animations/Particles2_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1270,7 +1509,7 @@ showEffect11Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Headset.chroma';
+    var baseLayer = 'animations/Particles2_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1292,7 +1531,7 @@ showEffect11Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Mousepad.chroma';
+    var baseLayer = 'animations/Particles2_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1314,7 +1553,29 @@ showEffect11Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Clouds1_Mouse.chroma';
+    var baseLayer = 'animations/Particles2_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // reduce the intensity of the layer
+        ChromaAnimation.multiplyIntensityAllFrames(baseLayer, 0.25);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect11");
+
+        showEffect11Keypad.onclick(); //show next device
+    });
+};
+
+showEffect11Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Particles2_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1412,6 +1673,25 @@ showEffect12Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect12");
+
+        showEffect12Keypad.onclick(); //show next device
+    });
+};
+
+showEffect12Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1560,6 +1840,34 @@ showEffect13Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect13");
+
+        showEffect13Keypad.onclick(); //show next device
+    });
+};
+
+showEffect13Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
+
+        // loop over all frames in the layer
+        for (var frameId = 0; frameId < frameCount; ++frameId) {
+
+            // give color to the layer
+            ChromaAnimation.multiplyIntensityRGB(baseLayer, frameId, 255, 255, 0); //yellow
+        }
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect13");
     });
 };
 
@@ -1653,6 +1961,27 @@ showEffect14Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        ChromaAnimation.multiplyIntensityAllFramesRGB(baseLayer, 0, 255, 255); //cyan
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect14");
+
+        showEffect14Keypad.onclick(); //show next device
+    });
+};
+
+showEffect14Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1863,6 +2192,46 @@ showEffect15Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect15");
+
+        showEffect15Keypad.onclick(); //show next device
+    });
+};
+
+showEffect15Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
+
+        var color1 = ChromaAnimation.getRGB(255, 0, 0); //red
+        var color2 = ChromaAnimation.getRGB(0, 255, 0); //green
+
+        //integer number of times to transition during animation
+        var speed = 2;
+
+        // loop over all frames in the layer
+        for (var frameId = 0; frameId < frameCount; ++frameId) {
+
+            //Math.cos gives a smooth 1 to 0 to 1 curve
+            var t = Math.abs(Math.cos(speed * Math.PI * (frameId + 1) / frameCount));
+
+            // use t to transition from color 1 to color 2
+            var color = ChromaAnimation.lerpColor(color1, color2, t);
+
+            // give color to the layer
+            ChromaAnimation.multiplyIntensityColor(baseLayer, frameId, color);
+        }
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect15");
     });
 };
 
@@ -1871,7 +2240,7 @@ showEffect16.onclick = function () {
     handleButtonClick(showEffect16);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1890,7 +2259,7 @@ showEffect16ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1909,7 +2278,7 @@ showEffect16Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1928,7 +2297,7 @@ showEffect16Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1947,7 +2316,26 @@ showEffect16Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect16");
+
+        showEffect16Keypad.onclick(); //show next device
+    });
+};
+
+showEffect16Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Trails_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1965,7 +2353,7 @@ showEffect17.onclick = function () {
     handleButtonClick(showEffect17);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -1995,7 +2383,7 @@ showEffect17ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2025,7 +2413,7 @@ showEffect17Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2055,7 +2443,7 @@ showEffect17Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2085,7 +2473,37 @@ showEffect17Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = ChromaAnimation.getFrameCount(baseLayer);
+
+        // loop over all frames in the layer
+        for (var frameId = 0; frameId < frameCount; ++frameId) {
+
+            var threshold = 100;
+
+            // give color to the layer
+            ChromaAnimation.fillThresholdColorsRGB(baseLayer, frameId, threshold, 255, 0, 0);
+        }
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect17");
+
+        showEffect17Keypad.onclick(); //show next device
+    });
+};
+
+showEffect17Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Trails_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2114,7 +2532,7 @@ showEffect18.onclick = function () {
     handleButtonClick(showEffect18);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2136,7 +2554,7 @@ showEffect18ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2158,7 +2576,7 @@ showEffect18Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2180,7 +2598,7 @@ showEffect18Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2202,7 +2620,29 @@ showEffect18Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var threshold = 50;
+        ChromaAnimation.fillThresholdColorsAllFramesRGB(baseLayer, threshold, 0, 64, 0); //dark green
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect18");
+
+        showEffect18Keypad.onclick(); //show next device
+    });
+};
+
+showEffect18Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Trails_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2223,7 +2663,7 @@ showEffect19.onclick = function () {
     handleButtonClick(showEffect19);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Keyboard.chroma';
+    var baseLayer = 'animations/Trails_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2246,7 +2686,7 @@ showEffect19ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_ChromaLink.chroma';
+    var baseLayer = 'animations/Trails_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2269,7 +2709,7 @@ showEffect19Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Headset.chroma';
+    var baseLayer = 'animations/Trails_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2292,7 +2732,7 @@ showEffect19Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mousepad.chroma';
+    var baseLayer = 'animations/Trails_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2315,7 +2755,30 @@ showEffect19Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Tongue1_Mouse.chroma';
+    var baseLayer = 'animations/Trails_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var minThreshold = 50; //dark cyan
+        var maxThreshold = 150; //purple
+        ChromaAnimation.fillThresholdColorsMinMaxAllFramesRGB(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect19");
+
+        showEffect19Keypad.onclick(); //show next device
+    });
+};
+
+showEffect19Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Trails_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2337,7 +2800,7 @@ showEffect20.onclick = function () {
     handleButtonClick(showEffect20);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Arc3_Keyboard.chroma';
+    var baseLayer = 'animations/Arc3_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2356,7 +2819,7 @@ showEffect20ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Arc3_ChromaLink.chroma';
+    var baseLayer = 'animations/Arc3_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2375,7 +2838,7 @@ showEffect20Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Arc3_Headset.chroma';
+    var baseLayer = 'animations/Arc3_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2394,7 +2857,7 @@ showEffect20Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Arc3_Mousepad.chroma';
+    var baseLayer = 'animations/Arc3_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2413,7 +2876,26 @@ showEffect20Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/Arc3_Mouse.chroma';
+    var baseLayer = 'animations/Arc3_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect20");
+
+        showEffect20Keypad.onclick(); //show next device
+    });
+};
+
+showEffect20Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Arc3_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2432,7 +2914,7 @@ showEffect21.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Keyboard.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Keyboard.chroma';
+    var layer2 = 'animations/Arc3_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2463,7 +2945,7 @@ showEffect21ChromaLink.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_ChromaLink.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_ChromaLink.chroma';
+    var layer2 = 'animations/Arc3_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2494,7 +2976,7 @@ showEffect21Headset.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Headset.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Headset.chroma';
+    var layer2 = 'animations/Arc3_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2525,7 +3007,7 @@ showEffect21Mousepad.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mousepad.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mousepad.chroma';
+    var layer2 = 'animations/Arc3_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2556,7 +3038,38 @@ showEffect21Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mouse.chroma';
+    var layer2 = 'animations/Arc3_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.closeAnimation(layer2);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
+
+            var background = ChromaAnimation.getRGB(127, 0, 0);
+
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
+            ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, background);
+
+            // copy non zero colors from layer 2 to the base layer
+            ChromaAnimation.copyNonZeroAllKeysAllFrames(layer2, baseLayer);
+
+            // play the animation on the dynamic canvas
+            displayAndPlayAnimation(baseLayer, "ShowEffect21");
+
+            showEffect21Keypad.onclick(); //show next device
+        });
+    });
+};
+
+showEffect21Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    var layer2 = 'animations/Arc3_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2586,7 +3099,7 @@ showEffect22.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Keyboard.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Keyboard.chroma';
+    var layer2 = 'animations/Arc3_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2621,7 +3134,7 @@ showEffect22ChromaLink.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_ChromaLink.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_ChromaLink.chroma';
+    var layer2 = 'animations/Arc3_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2656,7 +3169,7 @@ showEffect22Headset.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Headset.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Headset.chroma';
+    var layer2 = 'animations/Arc3_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2691,7 +3204,7 @@ showEffect22Mousepad.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mousepad.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mousepad.chroma';
+    var layer2 = 'animations/Arc3_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2726,7 +3239,42 @@ showEffect22Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mouse.chroma';
+    var layer2 = 'animations/Arc3_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.closeAnimation(layer2);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
+
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
+
+            // setup background color on the base layer
+            var background = ChromaAnimation.getRGB(127, 0, 0);
+            ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, background);
+
+            // replace darker colors with background color
+            ChromaAnimation.fillThresholdColorsAllFrames(layer2, 64, background);
+
+            // copy non zero colors from layer 2 to the base layer
+            ChromaAnimation.copyNonZeroAllKeysAllFrames(layer2, baseLayer);
+
+            // play the animation on the dynamic canvas
+            displayAndPlayAnimation(baseLayer, "ShowEffect22");
+
+            showEffect22Keypad.onclick(); //show next device
+        });
+    });
+};
+
+showEffect22Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    var layer2 = 'animations/Arc3_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2760,7 +3308,7 @@ showEffect23.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Keyboard.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Keyboard.chroma';
+    var layer2 = 'animations/Arc3_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2792,7 +3340,7 @@ showEffect23ChromaLink.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_ChromaLink.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_ChromaLink.chroma';
+    var layer2 = 'animations/Arc3_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2824,7 +3372,7 @@ showEffect23Headset.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Headset.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Headset.chroma';
+    var layer2 = 'animations/Arc3_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2856,7 +3404,7 @@ showEffect23Mousepad.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mousepad.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mousepad.chroma';
+    var layer2 = 'animations/Arc3_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2888,7 +3436,39 @@ showEffect23Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mouse.chroma';
+    var layer2 = 'animations/Arc3_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.closeAnimation(layer2);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
+
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
+
+            // setup background color on the base layer
+            var background = ChromaAnimation.getRGB(127, 0, 0);
+            ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, background);
+
+            // Add non zero colors from layer 2 to the base layer
+            ChromaAnimation.addNonZeroAllKeysAllFrames(layer2, baseLayer);
+
+            // play the animation on the dynamic canvas
+            displayAndPlayAnimation(baseLayer, "ShowEffect23");
+
+            showEffect23Keypad.onclick();
+        });
+    });
+};
+
+showEffect23Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    var layer2 = 'animations/Arc3_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2919,7 +3499,7 @@ showEffect24.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Keyboard.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Keyboard.chroma';
+    var layer2 = 'animations/Arc3_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2951,7 +3531,7 @@ showEffect24ChromaLink.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_ChromaLink.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_ChromaLink.chroma';
+    var layer2 = 'animations/Arc3_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -2983,7 +3563,7 @@ showEffect24Headset.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Headset.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Headset.chroma';
+    var layer2 = 'animations/Arc3_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3015,7 +3595,7 @@ showEffect24Mousepad.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mousepad.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mousepad.chroma';
+    var layer2 = 'animations/Arc3_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3047,7 +3627,39 @@ showEffect24Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
-    var layer2 = '../ChromaCommon/animations/Arc3_Mouse.chroma';
+    var layer2 = 'animations/Arc3_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.closeAnimation(layer2);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
+
+            var frameCount = ChromaAnimation.getFrameCount(layer2);
+
+            // setup background color on the base layer
+            var background = ChromaAnimation.getRGB(127, 0, 0);
+            ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, background);
+
+            // Add non zero colors from layer 2 to the base layer
+            ChromaAnimation.subtractNonZeroAllKeysAllFrames(layer2, baseLayer);
+
+            // play the animation on the dynamic canvas
+            displayAndPlayAnimation(baseLayer, "ShowEffect24");
+
+            showEffect24Keypad.onclick(); //show next device
+        });
+    });
+};
+
+showEffect24Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    var layer2 = 'animations/Arc3_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3111,138 +3723,103 @@ showEffect25.onclick = function () {
 showEffect25ChromaLink.onclick = function () {
     exampleReset();
 
-    // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_ChromaLink.chroma';
-    var layer2 = 'animations/Rainbow_ChromaLink.chroma';
+    var baseLayer = 'animations/Rainbow_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
-    ChromaAnimation.closeAnimation(layer2);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
-        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = ChromaAnimation.getFrameCount(layer2);
-            ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-            // copy non zero colors from layer 2 to the base layer where the base layer was non zero
-            ChromaAnimation.copyNonZeroTargetAllKeysAllFrames(layer2, baseLayer);
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect25");
 
-            // set a background color
-            ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 255, 0, 0);
-
-            // set animation playback to 30 FPS
-            ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-
-            // play the animation on the dynamic canvas
-            displayAndPlayAnimation(baseLayer, "ShowEffect25");
-
-            showEffect25Headset.onclick(); //show next device
-        });
+        showEffect25Headset.onclick(); //show next device
     });
 };
 
 showEffect25Headset.onclick = function () {
     exampleReset();
 
-    // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Headset.chroma';
-    var layer2 = 'animations/Rainbow_Headset.chroma';
+    var baseLayer = 'animations/Rainbow_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
-    ChromaAnimation.closeAnimation(layer2);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
-        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = ChromaAnimation.getFrameCount(layer2);
-            ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-            // copy non zero colors from layer 2 to the base layer where the base layer was non zero
-            ChromaAnimation.copyNonZeroTargetAllKeysAllFrames(layer2, baseLayer);
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect25");
 
-            // set a background color
-            ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 255, 0, 0);
-
-            // set animation playback to 30 FPS
-            ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-
-            // play the animation on the dynamic canvas
-            displayAndPlayAnimation(baseLayer, "ShowEffect25");
-
-            showEffect25Mousepad.onclick(); //show next device
-        });
+        showEffect25Mousepad.onclick(); //show next device
     });
 };
 
 showEffect25Mousepad.onclick = function () {
     exampleReset();
 
-    // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Mousepad.chroma';
-    var layer2 = 'animations/Rainbow_Mousepad.chroma';
+    var baseLayer = 'animations/Rainbow_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
-    ChromaAnimation.closeAnimation(layer2);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
-        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = ChromaAnimation.getFrameCount(layer2);
-            ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-            // copy non zero colors from layer 2 to the base layer where the base layer was non zero
-            ChromaAnimation.copyNonZeroTargetAllKeysAllFrames(layer2, baseLayer);
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect25");
 
-            // set a background color
-            ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 255, 0, 0);
-
-            // set animation playback to 30 FPS
-            ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-
-            // play the animation on the dynamic canvas
-            displayAndPlayAnimation(baseLayer, "ShowEffect25");
-
-            showEffect25Mouse.onclick(); //show next device
-        });
+        showEffect25Mouse.onclick(); //show next device
     });
 };
 
 showEffect25Mouse.onclick = function () {
     exampleReset();
 
-    // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Mouse.chroma';
-    var layer2 = 'animations/Rainbow_Mouse.chroma';
+    var baseLayer = 'animations/Rainbow_Mouse.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
-    ChromaAnimation.closeAnimation(layer2);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
-        ChromaAnimation.openAnimation(layer2, function (layer2Animation) {
 
-            var frameCount = ChromaAnimation.getFrameCount(layer2);
-            ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-            // copy non zero colors from layer 2 to the base layer where the base layer was non zero
-            ChromaAnimation.copyNonZeroTargetAllKeysAllFrames(layer2, baseLayer);
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect25");
 
-            // set a background color
-            ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 255, 0, 0);
+        showEffect25Keypad.onclick(); //show next device
+    });
+};
 
-            // set animation playback to 30 FPS
-            ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+showEffect25Keypad.onclick = function () {
+    exampleReset();
 
-            // play the animation on the dynamic canvas
-            displayAndPlayAnimation(baseLayer, "ShowEffect25");
-        });
+    var baseLayer = 'animations/Rainbow_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect25");
     });
 };
 
@@ -3251,7 +3828,7 @@ showEffect26.onclick = function () {
     handleButtonClick(showEffect26);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3270,7 +3847,7 @@ showEffect26ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3289,7 +3866,7 @@ showEffect26Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3308,7 +3885,7 @@ showEffect26Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3327,7 +3904,26 @@ showEffect26Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect26");
+
+        showEffect26Keypad.onclick(); //show next device
+    });
+};
+
+showEffect26Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3345,7 +3941,7 @@ showEffect27.onclick = function () {
     handleButtonClick(showEffect27);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3367,7 +3963,7 @@ showEffect27ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3389,7 +3985,7 @@ showEffect27Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3411,7 +4007,7 @@ showEffect27Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3433,7 +4029,29 @@ showEffect27Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect27");
+
+        showEffect27Keypad.onclick(); //show next device
+    });
+};
+
+showEffect27Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3454,7 +4072,7 @@ showEffect28.onclick = function () {
     handleButtonClick(showEffect28);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3479,7 +4097,7 @@ showEffect28ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3504,7 +4122,7 @@ showEffect28Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3529,7 +4147,7 @@ showEffect28Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3554,7 +4172,32 @@ showEffect28Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // reverse the order of frames
+        ChromaAnimation.reverseAllFrames(baseLayer);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect28");
+
+        showEffect28Keypad.onclick(); //show next device
+    });
+};
+
+showEffect28Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3578,7 +4221,7 @@ showEffect29.onclick = function () {
     handleButtonClick(showEffect29);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3603,7 +4246,7 @@ showEffect29ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3628,7 +4271,7 @@ showEffect29Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3653,7 +4296,7 @@ showEffect29Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3678,7 +4321,32 @@ showEffect29Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // invert all the animation colors
+        ChromaAnimation.invertColorsAllFrames(baseLayer);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect29");
+
+        showEffect29Keypad.onclick(); //show next device
+    });
+};
+
+showEffect29Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3702,7 +4370,7 @@ showEffect30.onclick = function () {
     handleButtonClick(showEffect30);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3727,7 +4395,7 @@ showEffect30ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3752,7 +4420,7 @@ showEffect30Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3777,7 +4445,7 @@ showEffect30Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3802,7 +4470,32 @@ showEffect30Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // duplicate and mirror
+        ChromaAnimation.duplicateMirrorFrames(baseLayer);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect30");
+
+        showEffect30Keypad.onclick(); //show next device
+    });
+};
+
+showEffect30Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3826,7 +4519,7 @@ showEffect31.onclick = function () {
     handleButtonClick(showEffect31);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3853,7 +4546,7 @@ showEffect31ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3880,7 +4573,7 @@ showEffect31Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3907,7 +4600,7 @@ showEffect31Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3934,7 +4627,34 @@ showEffect31Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // insert a pause
+        var frameId = 50;
+        var delay = 20;
+        ChromaAnimation.insertDelay(baseLayer, frameId, delay);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect31");
+
+        showEffect31Keypad.onclick(); //show next device
+    });
+};
+
+showEffect31Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3960,7 +4680,7 @@ showEffect32.onclick = function () {
     handleButtonClick(showEffect32);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -3985,7 +4705,7 @@ showEffect32ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4010,7 +4730,7 @@ showEffect32Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4035,7 +4755,7 @@ showEffect32Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4060,7 +4780,32 @@ showEffect32Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // reduce half of the frames, remove every 2nd frame
+        ChromaAnimation.reduceFrames(baseLayer, 2);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect32");
+
+        showEffect32Keypad.onclick(); //show next device
+    });
+};
+
+showEffect32Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4084,7 +4829,7 @@ showEffect33.onclick = function () {
     handleButtonClick(showEffect33);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4109,7 +4854,7 @@ showEffect33ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4134,7 +4879,7 @@ showEffect33Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4159,7 +4904,7 @@ showEffect33Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4184,7 +4929,32 @@ showEffect33Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // double the number of the frames
+        ChromaAnimation.duplicateFrames(baseLayer);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect33");
+
+        showEffect33Keypad.onclick(); //show next device
+    });
+};
+
+showEffect33Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4208,7 +4978,7 @@ showEffect34.onclick = function () {
     handleButtonClick(showEffect34);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4233,7 +5003,7 @@ showEffect34ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4258,7 +5028,7 @@ showEffect34Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4283,7 +5053,7 @@ showEffect34Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4308,7 +5078,32 @@ showEffect34Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // trim the start of the animation, so it starts at frame 10
+        ChromaAnimation.trimStartFrames(baseLayer, 10);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect34");
+
+        showEffect34Keypad.onclick(); //show next device
+    });
+};
+
+showEffect34Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4332,7 +5127,7 @@ showEffect35.onclick = function () {
     handleButtonClick(showEffect35);
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Keyboard.chroma';
+    var baseLayer = 'animations/Movement_Keyboard.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4360,7 +5155,7 @@ showEffect35ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_ChromaLink.chroma';
+    var baseLayer = 'animations/Movement_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4388,7 +5183,7 @@ showEffect35Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Headset.chroma';
+    var baseLayer = 'animations/Movement_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4416,7 +5211,7 @@ showEffect35Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mousepad.chroma';
+    var baseLayer = 'animations/Movement_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4444,7 +5239,35 @@ showEffect35Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/MovementUpLeft_Mouse.chroma';
+    var baseLayer = 'animations/Movement_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // trim the start of the animation, so it starts at frame 10
+        ChromaAnimation.trimStartFrames(baseLayer, 10);
+
+        // trim the end of the animation
+        ChromaAnimation.trimEndFrames(baseLayer, 75);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect35");
+
+        showEffect35Keypad.onclick(); //show next device
+    });
+};
+
+showEffect35Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = 'animations/Movement_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4496,13 +5319,16 @@ showEffect36ChromaLink.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_ChromaLink.chroma';
+    var baseLayer = '../ChromaCommon/animations/Blank_ChromaLink.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // green
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 0, 255, 0);
 
         var frameCount = 20;
         ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
@@ -4521,13 +5347,16 @@ showEffect36Headset.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Headset.chroma';
+    var baseLayer = '../ChromaCommon/animations/Blank_Headset.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // green
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 0, 255, 0);
 
         var frameCount = 20;
         ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
@@ -4546,13 +5375,16 @@ showEffect36Mousepad.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Mousepad.chroma';
+    var baseLayer = '../ChromaCommon/animations/Blank_Mousepad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // green
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 0, 255, 0);
 
         var frameCount = 20;
         ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
@@ -4571,13 +5403,44 @@ showEffect36Mouse.onclick = function () {
     exampleReset();
 
     // start with a blank animation
-    var baseLayer = '../ChromaCommon/animations/CircleSmall_Mouse.chroma';
+    var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
 
     // open the blank animation, passing a reference to the base animation when loading has completed
     ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // green
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 0, 255, 0);
+
+        var frameCount = 20;
+        ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
+
+        // set animation playback to 30 FPS
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect36");
+
+        showEffect36Keypad.onclick(); //show next device
+    });
+};
+
+showEffect36Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // green
+        ChromaAnimation.fillZeroColorAllFramesRGB(baseLayer, 0, 255, 0);
 
         var frameCount = 20;
         ChromaAnimation.duplicateFirstFrame(baseLayer, frameCount);
@@ -4716,6 +5579,36 @@ showEffect37Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = 20;
+
+        // Start with blank frames set to 30FPS
+        ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, 0);
+
+        // Fill all frames with black and white static
+        ChromaAnimation.fillRandomColorsBlackAndWhiteAllFrames(baseLayer);
+
+        // slow down the random frames so it can be seen
+        ChromaAnimation.duplicateFrames(baseLayer);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect37");
+
+        showEffect37Keypad.onclick(); //show next device
+    });
+};
+
+showEffect37Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -4915,6 +5808,42 @@ showEffect38Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect38");
+
+        showEffect38Keypad.onclick(); //show next device
+    });
+};
+
+showEffect38Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = 20;
+
+        // Start with blank frames set to 30FPS
+        ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, 0);
+
+        // Fill all frames with black and white static
+        ChromaAnimation.fillRandomColorsBlackAndWhiteAllFrames(baseLayer);
+
+        // slow down the random frames so it can be seen
+        ChromaAnimation.duplicateFrames(baseLayer);
+
+        // make random colors more sparse using threshold
+        var threshold = 240;
+
+        // turn lower intensity colors to black
+        ChromaAnimation.fillThresholdColorsAllFrames(baseLayer, threshold, 0);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect38");
     });
 };
 
@@ -5060,6 +5989,40 @@ showEffect39Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = 20;
+
+        // Start with blank frames set to 30FPS
+        ChromaAnimation.makeBlankFrames(baseLayer, frameCount, 0.033, 0);
+
+        // Fill all frames with black and white static
+        ChromaAnimation.fillRandomColorsBlackAndWhiteAllFrames(baseLayer);
+
+        // slow down the random frames so it can be seen
+        ChromaAnimation.duplicateFrames(baseLayer);
+
+        var minThreshold = 240; //black
+        var maxThreshold = 240; //rain
+        ChromaAnimation.fillThresholdColorsMinMaxAllFramesRGB(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect39");
+
+        showEffect39Keypad.onclick(); //show next device
+    });
+}
+
+showEffect39Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -5253,8 +6216,43 @@ showEffect40Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect40", false);
+
+        showEffect40Keypad.onclick(); //show next device
     });
 };
+
+showEffect40Keypad.onclick = function () {
+    exampleReset(true);
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    var idleAnimation = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.closeAnimation(idleAnimation);
+
+    // Set idle animation
+    ChromaAnimation.setIdleAnimation(idleAnimation);
+
+    // Enable idle animation
+    ChromaAnimation.useIdleAnimation(EChromaSDKDeviceEnum.DE_Mouse, true);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // Transition from green to red and then stop
+        var frameCount = 30;
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.1, 255, 255, 255);
+        var color1 = ChromaAnimation.getRGB(0, 255, 0);
+        var color2 = ChromaAnimation.getRGB(255, 0, 0);
+        ChromaAnimation.multiplyColorLerpAllFrames(baseLayer, color1, color2);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect40", false);
+    });
+};
+
 showEffect41.onclick = function () {
     exampleReset();
     handleButtonClick(showEffect41);
@@ -5389,6 +6387,30 @@ showEffect41Mouse.onclick = function () {
 
     // start with a blank animation
     var baseLayer = '../ChromaCommon/animations/Blank_Mouse.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // solid color
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 64, 255, 64);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect41");
+
+        showEffect41Keypad.onclick(); //show next device
+    });
+};
+showEffect41Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
 
     // close the blank animation if it's already loaded, discarding any changes
     ChromaAnimation.closeAnimation(baseLayer);
@@ -5556,6 +6578,31 @@ showEffect42Mouse.onclick = function () {
 
         // play the animation on the dynamic canvas
         displayAndPlayAnimation(baseLayer, "ShowEffect42");
+
+        showEffect42Keypad.onclick(); //show next device
+    });
+};
+
+showEffect42Keypad.onclick = function () {
+    exampleReset();
+
+    // start with a blank animation
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+
+    // close the blank animation if it's already loaded, discarding any changes
+    ChromaAnimation.closeAnimation(baseLayer);
+
+    // open the blank animation, passing a reference to the base animation when loading has completed
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        // the length of the animation
+        var frameCount = 50;
+
+        // solid color
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.033, 64, 255, 64);
+
+        // play the animation on the dynamic canvas
+        displayAndPlayAnimation(baseLayer, "ShowEffect42");
     });
 };
 
@@ -5643,7 +6690,7 @@ showEffect43Mousepad.onclick = function () {
         ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-        displayAndPlayAnimationMousepad(baseLayer, "ShowEffect43");
+        displayAndPlayAnimation(baseLayer, "ShowEffect43");
         showEffect43Mouse.onclick();
     });
 }
@@ -5661,7 +6708,26 @@ showEffect43Mouse.onclick = function () {
         ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-        displayAndPlayAnimationMouse(baseLayer, "ShowEffect43");
+        displayAndPlayAnimation(baseLayer, "ShowEffect43");
+
+        showEffect43Keypad.onclick(); //show next device
+    });
+}
+showEffect43Keypad.onclick = function () {
+    exampleReset();
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        ChromaAnimation.reduceFrames(baseLayer, 2);
+        ChromaAnimation.reduceFrames(baseLayer, 2);
+
+        var color1 = ChromaAnimation.getRGB(64, 64, 0);
+        var color2 = ChromaAnimation.getRGB(64, 0, 64);
+        ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
+
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+        displayAndPlayAnimation(baseLayer, "ShowEffect43");
     });
 }
 
@@ -5749,7 +6815,7 @@ showEffect44Mousepad.onclick = function () {
         ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-        displayAndPlayAnimationMousepad(baseLayer, "ShowEffect44");
+        displayAndPlayAnimation(baseLayer, "ShowEffect44");
         showEffect44Mouse.onclick();
     });
 }
@@ -5767,7 +6833,26 @@ showEffect44Mouse.onclick = function () {
         ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
-        displayAndPlayAnimationMouse(baseLayer, "ShowEffect44");
+        displayAndPlayAnimation(baseLayer, "ShowEffect44");
+
+        showEffect44Keypad.onclick(); //show next device
+    });
+}
+showEffect44Keypad.onclick = function () {
+    exampleReset();
+    var baseLayer = '../ChromaCommon/animations/BlackAndWhiteRainbow_Keypad.chroma';
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        ChromaAnimation.reduceFrames(baseLayer, 2);
+        ChromaAnimation.reduceFrames(baseLayer, 2);
+
+        var color1 = ChromaAnimation.getRGB(32, 32, 32);
+        var color2 = ChromaAnimation.getRGB(64, 64, 64);
+        ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
+
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+        displayAndPlayAnimation(baseLayer, "ShowEffect44");
     });
 }
 
@@ -5885,7 +6970,7 @@ showEffect45Mousepad.onclick = function () {
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-        displayAndPlayAnimationMousepad(baseLayer, "ShowEffect45");
+        displayAndPlayAnimation(baseLayer, "ShowEffect45");
         showEffect45Mouse.onclick();
     });
 }
@@ -5907,7 +6992,30 @@ showEffect45Mouse.onclick = function () {
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-        displayAndPlayAnimationMouse(baseLayer, "ShowEffect45");
+        displayAndPlayAnimation(baseLayer, "ShowEffect45");
+
+        showEffect45Keypad.onclick(); //show next device
+    });
+}
+showEffect45Keypad.onclick = function () {
+    exampleReset();
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = 50;
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.1, 255, 255, 255);
+
+        ChromaAnimation.fadeStartFrames(baseLayer, frameCount / 2);
+        ChromaAnimation.fadeEndFrames(baseLayer, frameCount / 2);
+
+        var color1 = ChromaAnimation.getRGB(0, 64, 0);
+        var color2 = ChromaAnimation.getRGB(0, 255, 0);
+        ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
+
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        displayAndPlayAnimation(baseLayer, "ShowEffect45");
     });
 }
 
@@ -6025,7 +7133,7 @@ showEffect46Mousepad.onclick = function () {
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-        displayAndPlayAnimationMousepad(baseLayer, "ShowEffect46");
+        displayAndPlayAnimation(baseLayer, "ShowEffect46");
         showEffect46Mouse.onclick();
     });
 }
@@ -6047,6 +7155,29 @@ showEffect46Mouse.onclick = function () {
 
         ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
 
-        displayAndPlayAnimationMouse(baseLayer, "ShowEffect46");
+        displayAndPlayAnimation(baseLayer, "ShowEffect46");
+
+        showEffect46Keypad.onclick(); //show next device
+    });
+}
+showEffect46Keypad.onclick = function () {
+    exampleReset();
+    var baseLayer = '../ChromaCommon/animations/Blank_Keypad.chroma';
+    ChromaAnimation.closeAnimation(baseLayer);
+    ChromaAnimation.openAnimation(baseLayer, function (baseAnimation) {
+
+        var frameCount = 50;
+        ChromaAnimation.makeBlankFramesRGB(baseLayer, frameCount, 0.1, 255, 255, 255);
+
+        ChromaAnimation.fadeStartFrames(baseLayer, frameCount / 2);
+        ChromaAnimation.fadeEndFrames(baseLayer, frameCount / 2);
+
+        var color1 = ChromaAnimation.getRGB(64, 64, 0);
+        var color2 = ChromaAnimation.getRGB(255, 255, 0);
+        ChromaAnimation.multiplyTargetColorLerpAllFrames(baseLayer, color1, color2);
+
+        ChromaAnimation.overrideFrameDuration(baseLayer, 0.033);
+
+        displayAndPlayAnimation(baseLayer, "ShowEffect46");
     });
 }

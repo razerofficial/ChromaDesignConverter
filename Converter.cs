@@ -546,6 +546,7 @@ namespace ChromaDesignConverter
                     sw.WriteLine("\tShowEffect{0}();", effect);
                     sw.WriteLine("\tShowEffect{0}ChromaLink();", effect);
                     sw.WriteLine("\tShowEffect{0}Headset();", effect);
+                    sw.WriteLine("\tShowEffect{0}Keypad();", effect);
                     sw.WriteLine("\tShowEffect{0}Mousepad();", effect);
                     sw.WriteLine("\tShowEffect{0}Mouse();", effect);
                     sw.WriteLine("\tbreak;");
@@ -974,6 +975,7 @@ __BUTTONS__}";
         U__GAME__ChromaBP::__GAME__ShowEffect__ID__();
         U__GAME__ChromaBP::__GAME__ShowEffect__ID__ChromaLink();
         U__GAME__ChromaBP::__GAME__ShowEffect__ID__Headset();
+        U__GAME__ChromaBP::__GAME__ShowEffect__ID__Keypad();
         U__GAME__ChromaBP::__GAME__ShowEffect__ID__Mousepad();
         U__GAME__ChromaBP::__GAME__ShowEffect__ID__Mouse();
     }

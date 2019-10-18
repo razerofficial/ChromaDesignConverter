@@ -130,10 +130,22 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect1Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Sprite1_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect2()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -145,7 +157,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect2ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -157,7 +169,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect2Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -169,7 +181,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect2Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -181,7 +193,19 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect2Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect2Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Trails_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -193,7 +217,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect3()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -210,7 +234,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect3ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -227,7 +251,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect3Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -244,7 +268,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect3Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -261,7 +285,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect3Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -275,10 +299,24 @@ UChromaSDKPluginBPLibrary::FillThresholdColorsMinMaxAllFramesRGBName(baseLayer, 
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect3Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// static color
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect4()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -290,7 +328,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect4ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -302,7 +340,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect4Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -314,7 +352,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect4Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -326,7 +364,19 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect4Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect4Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -338,7 +388,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect5()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -352,7 +402,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect5ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -366,7 +416,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect5Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -380,7 +430,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect5Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -394,7 +444,21 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect5Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/OutParticle1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// turn grayscale particles to blue water
+UChromaSDKPluginBPLibrary::MultiplyIntensityAllFramesRGBName(baseLayer, 0, 127, 255);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect5Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/ParticlesOut_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -481,6 +545,24 @@ void USampleAppChromaBP::SampleAppShowEffect6Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+// fade the start of the animation starting at frame zero to 40
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, 40);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect6Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -585,6 +667,24 @@ UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, 40);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect7Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+// fade the end of the animation starting at frame length - 40 (60)
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, 40);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect8()
 {
 // start with a blank animation
@@ -669,6 +769,26 @@ void USampleAppChromaBP::SampleAppShowEffect8Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+// fade the start of the animation starting at frame zero to 40
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, 40);
+// fade the end of the animation starting at frame length - 40 (60)
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, 40);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect8Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -810,10 +930,35 @@ UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect9Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// set all frames to white, with all frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
+//integer number of times to blink during animation
+int speed = 2;
+// loop over all frames in the layer
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+//Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
+float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+// multiply the frame by the 't' intensity
+UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
+}
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect10()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -825,7 +970,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect10ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -837,7 +982,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect10Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -849,7 +994,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect10Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -861,7 +1006,19 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect10Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect10Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Particles2_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -873,7 +1030,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect11()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -887,7 +1044,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect11ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -901,7 +1058,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect11Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -915,7 +1072,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect11Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -929,7 +1086,21 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect11Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Clouds1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Particles2_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// reduce the intensity of the layer
+UChromaSDKPluginBPLibrary::MultiplyIntensityAllFramesName(baseLayer, 0.25f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect11Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Particles2_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -992,6 +1163,18 @@ void USampleAppChromaBP::SampleAppShowEffect12Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect12Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1090,6 +1273,24 @@ UChromaSDKPluginBPLibrary::MultiplyIntensityRGBName(baseLayer, frameId, 255, 255
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect13Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
+// loop over all frames in the layer
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+// give color to the layer
+UChromaSDKPluginBPLibrary::MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0); //yellow
+}
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect14()
 {
 // start with a blank animation
@@ -1146,6 +1347,19 @@ void USampleAppChromaBP::SampleAppShowEffect14Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::MultiplyIntensityAllFramesRGBName(baseLayer, 0, 255, 255); //cyan
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect14Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1285,10 +1499,36 @@ UChromaSDKPluginBPLibrary::MultiplyIntensityColorName(baseLayer, frameId, color)
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect15Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
+//integer number of times to transition during animation
+int speed = 2;
+// loop over all frames in the layer
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+//Math.cos gives a smooth 1 to 0 to 1 curve
+float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+// use t to transition from color 1 to color 2
+FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
+// give color to the layer
+UChromaSDKPluginBPLibrary::MultiplyIntensityColorName(baseLayer, frameId, color);
+}
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect16()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1300,7 +1540,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect16ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1312,7 +1552,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect16Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1324,7 +1564,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect16Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1336,7 +1576,19 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect16Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect16Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Trails_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1348,7 +1600,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect17()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1367,7 +1619,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect17ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1386,7 +1638,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect17Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1405,7 +1657,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect17Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1424,7 +1676,26 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect17Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
+// loop over all frames in the layer
+for (int frameId = 0; frameId < frameCount; ++frameId) {
+int threshold = 100;
+// give color to the layer
+UChromaSDKPluginBPLibrary::FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0);
+}
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect17Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Trails_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1443,7 +1714,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect18()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1457,7 +1728,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect18ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1471,7 +1742,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect18Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1485,7 +1756,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect18Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1499,7 +1770,21 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect18Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int threshold = 50;
+UChromaSDKPluginBPLibrary::FillThresholdColorsAllFramesRGBName(baseLayer, threshold, 0, 64, 0); //dark green
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect18Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Trails_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1513,7 +1798,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect19()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1528,7 +1813,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect19ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1543,7 +1828,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect19Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1558,7 +1843,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect19Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1573,7 +1858,22 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect19Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/Tongue1_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Trails_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int minThreshold = 50; //dark cyan
+int maxThreshold = 150; //purple
+UChromaSDKPluginBPLibrary::FillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 63, 63, maxThreshold, 127, 0, 127);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect19Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Trails_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1637,6 +1937,18 @@ void USampleAppChromaBP::SampleAppShowEffect20Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Arc3_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect20Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Arc3_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -1730,6 +2042,26 @@ void USampleAppChromaBP::SampleAppShowEffect21Mouse()
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
 FString layer2 = "SampleAppAnimations/Arc3_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(layer2);
+FLinearColor background = UChromaSDKPluginBPLibrary::GetRGB(127, 0, 0);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+// copy non zero colors from layer 2 to the base layer
+UChromaSDKPluginBPLibrary::CopyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect21Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+FString layer2 = "SampleAppAnimations/Arc3_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
@@ -1860,6 +2192,29 @@ UChromaSDKPluginBPLibrary::CopyNonZeroAllKeysAllFramesName(layer2, baseLayer);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect22Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+FString layer2 = "SampleAppAnimations/Arc3_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(layer2);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
+// setup background color on the base layer
+FLinearColor background = UChromaSDKPluginBPLibrary::GetRGB(127, 0, 0);
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+// replace darker colors with background color
+UChromaSDKPluginBPLibrary::FillThresholdColorsAllFramesName(layer2, 64, background);
+// copy non zero colors from layer 2 to the base layer
+UChromaSDKPluginBPLibrary::CopyNonZeroAllKeysAllFramesName(layer2, baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect23()
 {
 // start with a blank animation
@@ -1949,6 +2304,27 @@ void USampleAppChromaBP::SampleAppShowEffect23Mouse()
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
 FString layer2 = "SampleAppAnimations/Arc3_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(layer2);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
+// setup background color on the base layer
+FLinearColor background = UChromaSDKPluginBPLibrary::GetRGB(127, 0, 0);
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+// Add non zero colors from layer 2 to the base layer
+UChromaSDKPluginBPLibrary::AddNonZeroAllKeysAllFramesName(layer2, baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect23Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+FString layer2 = "SampleAppAnimations/Arc3_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
@@ -2070,6 +2446,27 @@ UChromaSDKPluginBPLibrary::SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect24Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+FString layer2 = "SampleAppAnimations/Arc3_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(layer2);
+int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
+// setup background color on the base layer
+FLinearColor background = UChromaSDKPluginBPLibrary::GetRGB(127, 0, 0);
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, background);
+// Add non zero colors from layer 2 to the base layer
+UChromaSDKPluginBPLibrary::SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect25()
 {
 // start with a blank animation
@@ -2095,21 +2492,11 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 
 void USampleAppChromaBP::SampleAppShowEffect25ChromaLink()
 {
-// start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_ChromaLink.chroma";
-FString layer2 = "SampleAppAnimations/Rainbow_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Rainbow_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
-UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
-UChromaSDKPluginBPLibrary::GetAnimation(layer2);
-int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
-UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
-// copy non zero colors from layer 2 to the base layer where the base layer was non zero
-UChromaSDKPluginBPLibrary::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
-// set a background color
-UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
 // set animation playback to 30 FPS
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 // play the animation on the dynamic canvas
@@ -2118,21 +2505,11 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 
 void USampleAppChromaBP::SampleAppShowEffect25Headset()
 {
-// start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Headset.chroma";
-FString layer2 = "SampleAppAnimations/Rainbow_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Rainbow_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
-UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
-UChromaSDKPluginBPLibrary::GetAnimation(layer2);
-int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
-UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
-// copy non zero colors from layer 2 to the base layer where the base layer was non zero
-UChromaSDKPluginBPLibrary::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
-// set a background color
-UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
 // set animation playback to 30 FPS
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 // play the animation on the dynamic canvas
@@ -2141,21 +2518,11 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 
 void USampleAppChromaBP::SampleAppShowEffect25Mousepad()
 {
-// start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Mousepad.chroma";
-FString layer2 = "SampleAppAnimations/Rainbow_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Rainbow_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
-UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
-UChromaSDKPluginBPLibrary::GetAnimation(layer2);
-int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
-UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
-// copy non zero colors from layer 2 to the base layer where the base layer was non zero
-UChromaSDKPluginBPLibrary::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
-// set a background color
-UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
 // set animation playback to 30 FPS
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 // play the animation on the dynamic canvas
@@ -2164,21 +2531,24 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 
 void USampleAppChromaBP::SampleAppShowEffect25Mouse()
 {
-// start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Mouse.chroma";
-FString layer2 = "SampleAppAnimations/Rainbow_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Rainbow_Mouse.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
-UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
-UChromaSDKPluginBPLibrary::GetAnimation(layer2);
-int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(layer2);
-UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
-// copy non zero colors from layer 2 to the base layer where the base layer was non zero
-UChromaSDKPluginBPLibrary::CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer);
-// set a background color
-UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect25Keypad()
+{
+FString baseLayer = "SampleAppAnimations/Rainbow_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // set animation playback to 30 FPS
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 // play the animation on the dynamic canvas
@@ -2188,7 +2558,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect26()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2200,7 +2570,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect26ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2212,7 +2582,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect26Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2224,7 +2594,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect26Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2236,7 +2606,19 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect26Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect26Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2248,7 +2630,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect27()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2262,7 +2644,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect27ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2276,7 +2658,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect27Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2290,7 +2672,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect27Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2304,7 +2686,21 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect27Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect27Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2318,7 +2714,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect28()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2334,7 +2730,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect28ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2350,7 +2746,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect28Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2366,7 +2762,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect28Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2382,7 +2778,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect28Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// reverse the order of frames
+UChromaSDKPluginBPLibrary::ReverseAllFramesName(baseLayer);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect28Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2398,7 +2810,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect29()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2414,7 +2826,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect29ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2430,7 +2842,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect29Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2446,7 +2858,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect29Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2462,7 +2874,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect29Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// invert all the animation colors
+UChromaSDKPluginBPLibrary::InvertColorsAllFramesName(baseLayer);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect29Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2478,7 +2906,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect30()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2494,7 +2922,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect30ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2510,7 +2938,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect30Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2526,7 +2954,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect30Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2542,7 +2970,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect30Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// duplicate and mirror
+UChromaSDKPluginBPLibrary::DuplicateMirrorFramesName(baseLayer);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect30Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2558,7 +3002,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect31()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2576,7 +3020,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect31ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2594,7 +3038,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect31Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2612,7 +3056,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect31Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2630,7 +3074,25 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect31Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// insert a pause
+int frameId = 50;
+int delay = 20;
+UChromaSDKPluginBPLibrary::InsertDelayName(baseLayer, frameId, delay);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect31Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2648,7 +3110,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect32()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2664,7 +3126,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect32ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2680,7 +3142,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect32Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2696,7 +3158,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect32Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2712,7 +3174,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect32Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// reduce half of the frames, remove every 2nd frame
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect32Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2728,7 +3206,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect33()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2744,7 +3222,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect33ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2760,7 +3238,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect33Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2776,7 +3254,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect33Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2792,7 +3270,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect33Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// double the number of the frames
+UChromaSDKPluginBPLibrary::DuplicateFramesName(baseLayer);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect33Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2808,7 +3302,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect34()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2824,7 +3318,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect34ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2840,7 +3334,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect34Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2856,7 +3350,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect34Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2872,7 +3366,23 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect34Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// trim the start of the animation, so it starts at frame 10
+UChromaSDKPluginBPLibrary::TrimStartFramesName(baseLayer, 10);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect34Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2888,7 +3398,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect35()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Keyboard.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Keyboard.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2906,7 +3416,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect35ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2924,7 +3434,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect35Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2942,7 +3452,7 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect35Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2960,7 +3470,25 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect35Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/MovementUpLeft_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Movement_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// trim the start of the animation, so it starts at frame 10
+UChromaSDKPluginBPLibrary::TrimStartFramesName(baseLayer, 10);
+// trim the end of the animation
+UChromaSDKPluginBPLibrary::TrimEndFramesName(baseLayer, 75);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect35Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Movement_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -2994,11 +3522,13 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect36ChromaLink()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_ChromaLink.chroma";
+FString baseLayer = "SampleAppAnimations/Blank_ChromaLink.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// green
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
 int frameCount = 20;
 UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
 // set animation playback to 30 FPS
@@ -3010,11 +3540,13 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect36Headset()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Headset.chroma";
+FString baseLayer = "SampleAppAnimations/Blank_Headset.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// green
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
 int frameCount = 20;
 UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
 // set animation playback to 30 FPS
@@ -3026,11 +3558,13 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect36Mousepad()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Mousepad.chroma";
+FString baseLayer = "SampleAppAnimations/Blank_Mousepad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// green
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
 int frameCount = 20;
 UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
 // set animation playback to 30 FPS
@@ -3042,11 +3576,31 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect36Mouse()
 {
 // start with a blank animation
-FString baseLayer = "SampleAppAnimations/CircleSmall_Mouse.chroma";
+FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// green
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
+int frameCount = 20;
+UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
+// set animation playback to 30 FPS
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect36Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// green
+UChromaSDKPluginBPLibrary::FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0);
 int frameCount = 20;
 UChromaSDKPluginBPLibrary::DuplicateFirstFrameName(baseLayer, frameCount);
 // set animation playback to 30 FPS
@@ -3135,6 +3689,25 @@ void USampleAppChromaBP::SampleAppShowEffect37Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 20;
+// Start with blank frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, UChromaSDKPluginBPLibrary::ToLinearColor(0));
+// Fill all frames with black and white static
+UChromaSDKPluginBPLibrary::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+// slow down the random frames so it can be seen
+UChromaSDKPluginBPLibrary::DuplicateFramesName(baseLayer);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect37Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3265,6 +3838,29 @@ UChromaSDKPluginBPLibrary::FillThresholdColorsAllFramesName(baseLayer, threshold
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect38Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 20;
+// Start with blank frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, UChromaSDKPluginBPLibrary::ToLinearColor(0));
+// Fill all frames with black and white static
+UChromaSDKPluginBPLibrary::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+// slow down the random frames so it can be seen
+UChromaSDKPluginBPLibrary::DuplicateFramesName(baseLayer);
+// make random colors more sparse using threshold
+int threshold = 240;
+// turn lower intensity colors to black
+UChromaSDKPluginBPLibrary::FillThresholdColorsAllFramesName(baseLayer, threshold, UChromaSDKPluginBPLibrary::ToLinearColor(0));
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect39()
 {
 // start with a blank animation
@@ -3357,6 +3953,28 @@ void USampleAppChromaBP::SampleAppShowEffect39Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 20;
+// Start with blank frames set to 30FPS
+UChromaSDKPluginBPLibrary::MakeBlankFramesName(baseLayer, frameCount, 0.033f, UChromaSDKPluginBPLibrary::ToLinearColor(0));
+// Fill all frames with black and white static
+UChromaSDKPluginBPLibrary::FillRandomColorsBlackAndWhiteAllFramesName(baseLayer);
+// slow down the random frames so it can be seen
+UChromaSDKPluginBPLibrary::DuplicateFramesName(baseLayer);
+int minThreshold = 240; //black
+int maxThreshold = 240; //rain
+UChromaSDKPluginBPLibrary::FillThresholdColorsMinMaxAllFramesRGBName(baseLayer, minThreshold, 0, 0, 0, maxThreshold, 0, 127, 255);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect39Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3495,6 +4113,30 @@ UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, col
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect40Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+FString idleAnimation = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::CloseAnimationName(idleAnimation);
+// Set idle animation
+UChromaSDKPluginBPLibrary::SetIdleAnimationName(idleAnimation);
+// Enable idle animation
+UChromaSDKPluginBPLibrary::UseIdleAnimation(EChromaSDKDeviceEnum::DE_Mouse, true);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// Transition from green to red and then stop
+int frameCount = 30;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect41()
 {
 // start with a blank animation
@@ -3590,6 +4232,22 @@ void USampleAppChromaBP::SampleAppShowEffect41Mouse()
 {
 // start with a blank animation
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect41Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 // close the blank animation if it's already loaded, discarding any changes
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 // open the blank animation, passing a reference to the base animation when loading has completed
@@ -3707,6 +4365,22 @@ UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f,
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect42Keypad()
+{
+// start with a blank animation
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+// close the blank animation if it's already loaded, discarding any changes
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+// open the blank animation, passing a reference to the base animation when loading has completed
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+// the length of the animation
+int frameCount = 50;
+// solid color
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64);
+// play the animation on the dynamic canvas
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect43()
 {
 FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keyboard.chroma";
@@ -3791,6 +4465,20 @@ UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
 
+void USampleAppChromaBP::SampleAppShowEffect43Keypad()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
 void USampleAppChromaBP::SampleAppShowEffect44()
 {
 FString baseLayer = "SampleAppAnimations/Spiral_Keyboard.chroma";
@@ -3864,6 +4552,20 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect44Mouse()
 {
 FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect44Keypad()
+{
+FString baseLayer = "SampleAppAnimations/BlackAndWhiteRainbow_Keypad.chroma";
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
@@ -3973,6 +4675,22 @@ UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 void USampleAppChromaBP::SampleAppShowEffect45Mouse()
 {
 FString baseLayer = "SampleAppAnimations/Blank_Mouse.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
+
+void USampleAppChromaBP::SampleAppShowEffect45Keypad()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
 UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
@@ -4096,12 +4814,29 @@ UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
 }
+
+void USampleAppChromaBP::SampleAppShowEffect46Keypad()
+{
+FString baseLayer = "SampleAppAnimations/Blank_Keypad.chroma";
+UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
+UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
+int frameCount = 50;
+UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
+UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
+UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
+}
 #pragma endregion
 /*
 case 1:
 ShowEffect1();
 ShowEffect1ChromaLink();
 ShowEffect1Headset();
+ShowEffect1Keypad();
 ShowEffect1Mousepad();
 ShowEffect1Mouse();
 break;
@@ -4109,6 +4844,7 @@ case 2:
 ShowEffect2();
 ShowEffect2ChromaLink();
 ShowEffect2Headset();
+ShowEffect2Keypad();
 ShowEffect2Mousepad();
 ShowEffect2Mouse();
 break;
@@ -4116,6 +4852,7 @@ case 3:
 ShowEffect3();
 ShowEffect3ChromaLink();
 ShowEffect3Headset();
+ShowEffect3Keypad();
 ShowEffect3Mousepad();
 ShowEffect3Mouse();
 break;
@@ -4123,6 +4860,7 @@ case 4:
 ShowEffect4();
 ShowEffect4ChromaLink();
 ShowEffect4Headset();
+ShowEffect4Keypad();
 ShowEffect4Mousepad();
 ShowEffect4Mouse();
 break;
@@ -4130,6 +4868,7 @@ case 5:
 ShowEffect5();
 ShowEffect5ChromaLink();
 ShowEffect5Headset();
+ShowEffect5Keypad();
 ShowEffect5Mousepad();
 ShowEffect5Mouse();
 break;
@@ -4137,6 +4876,7 @@ case 6:
 ShowEffect6();
 ShowEffect6ChromaLink();
 ShowEffect6Headset();
+ShowEffect6Keypad();
 ShowEffect6Mousepad();
 ShowEffect6Mouse();
 break;
@@ -4144,6 +4884,7 @@ case 7:
 ShowEffect7();
 ShowEffect7ChromaLink();
 ShowEffect7Headset();
+ShowEffect7Keypad();
 ShowEffect7Mousepad();
 ShowEffect7Mouse();
 break;
@@ -4151,6 +4892,7 @@ case 8:
 ShowEffect8();
 ShowEffect8ChromaLink();
 ShowEffect8Headset();
+ShowEffect8Keypad();
 ShowEffect8Mousepad();
 ShowEffect8Mouse();
 break;
@@ -4158,6 +4900,7 @@ case 9:
 ShowEffect9();
 ShowEffect9ChromaLink();
 ShowEffect9Headset();
+ShowEffect9Keypad();
 ShowEffect9Mousepad();
 ShowEffect9Mouse();
 break;
@@ -4165,6 +4908,7 @@ case 10:
 ShowEffect10();
 ShowEffect10ChromaLink();
 ShowEffect10Headset();
+ShowEffect10Keypad();
 ShowEffect10Mousepad();
 ShowEffect10Mouse();
 break;
@@ -4172,6 +4916,7 @@ case 11:
 ShowEffect11();
 ShowEffect11ChromaLink();
 ShowEffect11Headset();
+ShowEffect11Keypad();
 ShowEffect11Mousepad();
 ShowEffect11Mouse();
 break;
@@ -4179,6 +4924,7 @@ case 12:
 ShowEffect12();
 ShowEffect12ChromaLink();
 ShowEffect12Headset();
+ShowEffect12Keypad();
 ShowEffect12Mousepad();
 ShowEffect12Mouse();
 break;
@@ -4186,6 +4932,7 @@ case 13:
 ShowEffect13();
 ShowEffect13ChromaLink();
 ShowEffect13Headset();
+ShowEffect13Keypad();
 ShowEffect13Mousepad();
 ShowEffect13Mouse();
 break;
@@ -4193,6 +4940,7 @@ case 14:
 ShowEffect14();
 ShowEffect14ChromaLink();
 ShowEffect14Headset();
+ShowEffect14Keypad();
 ShowEffect14Mousepad();
 ShowEffect14Mouse();
 break;
@@ -4200,6 +4948,7 @@ case 15:
 ShowEffect15();
 ShowEffect15ChromaLink();
 ShowEffect15Headset();
+ShowEffect15Keypad();
 ShowEffect15Mousepad();
 ShowEffect15Mouse();
 break;
