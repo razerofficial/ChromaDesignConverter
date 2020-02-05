@@ -3839,8 +3839,8 @@ void ShowEffect41()
  int frameCount = 50;
  // set all frames to white, with all frames set to 30FPS
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
- int maxRow = ChromaAnimationAPI::getMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard);
- int maxColumn = ChromaAnimationAPI::getMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard);
+ int maxRow = ChromaAnimationAPI::GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard);
+ int maxColumn = ChromaAnimationAPI::GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard);
  int startColumn = floor(Math.random() * maxColumn) % 22;
  int startRow = floor(Math.random() * maxRow) % 6;
  int color = ChromaAnimationAPI::GetRGB(0, 255, 0);
@@ -3956,8 +3956,8 @@ void ShowEffect42()
  int frameCount = 1;
  // set all frames to white, with all frames set to 30FPS
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
- int maxRow = ChromaAnimationAPI::getMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard);
- int maxColumn = ChromaAnimationAPI::getMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard);
+ int maxRow = ChromaAnimationAPI::GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard);
+ int maxColumn = ChromaAnimationAPI::GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard);
  // pick first key
  int pointAColumn = floor(Math.random() * maxColumn) % 22;
  int pointARow = floor(Math.random() * maxRow) % 6;
@@ -3971,8 +3971,8 @@ void ShowEffect42()
  int color = ChromaAnimationAPI::GetRGB(0, 255, 0);
  int frameIndex = 0;
  for (int i = 0.0; i <= 1.0; i += 0.04) { // 1.0/22.0
-  int r = floor(ChromaAnimationAPI::lerp(pointARow, pointBRow, i));
-  int c = floor(ChromaAnimationAPI::lerp(pointAColumn, pointBColumn, i));
+  int r = floor(ChromaAnimationAPI::Lerp(pointARow, pointBRow, i));
+  int c = floor(ChromaAnimationAPI::Lerp(pointAColumn, pointBColumn, i));
   if (r >= 0 && r < maxRow &&
   c >= 0 && c < maxColumn) {
    int key = (r << 8) | c;
@@ -4600,5 +4600,253 @@ case 15:
 	ShowEffect15Keypad();
 	ShowEffect15Mousepad();
 	ShowEffect15Mouse();
+	break;
+case 16:
+	ShowEffect16();
+	ShowEffect16ChromaLink();
+	ShowEffect16Headset();
+	ShowEffect16Keypad();
+	ShowEffect16Mousepad();
+	ShowEffect16Mouse();
+	break;
+case 17:
+	ShowEffect17();
+	ShowEffect17ChromaLink();
+	ShowEffect17Headset();
+	ShowEffect17Keypad();
+	ShowEffect17Mousepad();
+	ShowEffect17Mouse();
+	break;
+case 18:
+	ShowEffect18();
+	ShowEffect18ChromaLink();
+	ShowEffect18Headset();
+	ShowEffect18Keypad();
+	ShowEffect18Mousepad();
+	ShowEffect18Mouse();
+	break;
+case 19:
+	ShowEffect19();
+	ShowEffect19ChromaLink();
+	ShowEffect19Headset();
+	ShowEffect19Keypad();
+	ShowEffect19Mousepad();
+	ShowEffect19Mouse();
+	break;
+case 20:
+	ShowEffect20();
+	ShowEffect20ChromaLink();
+	ShowEffect20Headset();
+	ShowEffect20Keypad();
+	ShowEffect20Mousepad();
+	ShowEffect20Mouse();
+	break;
+case 21:
+	ShowEffect21();
+	ShowEffect21ChromaLink();
+	ShowEffect21Headset();
+	ShowEffect21Keypad();
+	ShowEffect21Mousepad();
+	ShowEffect21Mouse();
+	break;
+case 22:
+	ShowEffect22();
+	ShowEffect22ChromaLink();
+	ShowEffect22Headset();
+	ShowEffect22Keypad();
+	ShowEffect22Mousepad();
+	ShowEffect22Mouse();
+	break;
+case 23:
+	ShowEffect23();
+	ShowEffect23ChromaLink();
+	ShowEffect23Headset();
+	ShowEffect23Keypad();
+	ShowEffect23Mousepad();
+	ShowEffect23Mouse();
+	break;
+case 24:
+	ShowEffect24();
+	ShowEffect24ChromaLink();
+	ShowEffect24Headset();
+	ShowEffect24Keypad();
+	ShowEffect24Mousepad();
+	ShowEffect24Mouse();
+	break;
+case 25:
+	ShowEffect25();
+	ShowEffect25ChromaLink();
+	ShowEffect25Headset();
+	ShowEffect25Keypad();
+	ShowEffect25Mousepad();
+	ShowEffect25Mouse();
+	break;
+case 26:
+	ShowEffect26();
+	ShowEffect26ChromaLink();
+	ShowEffect26Headset();
+	ShowEffect26Keypad();
+	ShowEffect26Mousepad();
+	ShowEffect26Mouse();
+	break;
+case 27:
+	ShowEffect27();
+	ShowEffect27ChromaLink();
+	ShowEffect27Headset();
+	ShowEffect27Keypad();
+	ShowEffect27Mousepad();
+	ShowEffect27Mouse();
+	break;
+case 28:
+	ShowEffect28();
+	ShowEffect28ChromaLink();
+	ShowEffect28Headset();
+	ShowEffect28Keypad();
+	ShowEffect28Mousepad();
+	ShowEffect28Mouse();
+	break;
+case 29:
+	ShowEffect29();
+	ShowEffect29ChromaLink();
+	ShowEffect29Headset();
+	ShowEffect29Keypad();
+	ShowEffect29Mousepad();
+	ShowEffect29Mouse();
+	break;
+case 30:
+	ShowEffect30();
+	ShowEffect30ChromaLink();
+	ShowEffect30Headset();
+	ShowEffect30Keypad();
+	ShowEffect30Mousepad();
+	ShowEffect30Mouse();
+	break;
+case 31:
+	ShowEffect31();
+	ShowEffect31ChromaLink();
+	ShowEffect31Headset();
+	ShowEffect31Keypad();
+	ShowEffect31Mousepad();
+	ShowEffect31Mouse();
+	break;
+case 32:
+	ShowEffect32();
+	ShowEffect32ChromaLink();
+	ShowEffect32Headset();
+	ShowEffect32Keypad();
+	ShowEffect32Mousepad();
+	ShowEffect32Mouse();
+	break;
+case 33:
+	ShowEffect33();
+	ShowEffect33ChromaLink();
+	ShowEffect33Headset();
+	ShowEffect33Keypad();
+	ShowEffect33Mousepad();
+	ShowEffect33Mouse();
+	break;
+case 34:
+	ShowEffect34();
+	ShowEffect34ChromaLink();
+	ShowEffect34Headset();
+	ShowEffect34Keypad();
+	ShowEffect34Mousepad();
+	ShowEffect34Mouse();
+	break;
+case 35:
+	ShowEffect35();
+	ShowEffect35ChromaLink();
+	ShowEffect35Headset();
+	ShowEffect35Keypad();
+	ShowEffect35Mousepad();
+	ShowEffect35Mouse();
+	break;
+case 36:
+	ShowEffect36();
+	ShowEffect36ChromaLink();
+	ShowEffect36Headset();
+	ShowEffect36Keypad();
+	ShowEffect36Mousepad();
+	ShowEffect36Mouse();
+	break;
+case 37:
+	ShowEffect37();
+	ShowEffect37ChromaLink();
+	ShowEffect37Headset();
+	ShowEffect37Keypad();
+	ShowEffect37Mousepad();
+	ShowEffect37Mouse();
+	break;
+case 38:
+	ShowEffect38();
+	ShowEffect38ChromaLink();
+	ShowEffect38Headset();
+	ShowEffect38Keypad();
+	ShowEffect38Mousepad();
+	ShowEffect38Mouse();
+	break;
+case 39:
+	ShowEffect39();
+	ShowEffect39ChromaLink();
+	ShowEffect39Headset();
+	ShowEffect39Keypad();
+	ShowEffect39Mousepad();
+	ShowEffect39Mouse();
+	break;
+case 40:
+	ShowEffect40();
+	ShowEffect40ChromaLink();
+	ShowEffect40Headset();
+	ShowEffect40Keypad();
+	ShowEffect40Mousepad();
+	ShowEffect40Mouse();
+	break;
+case 41:
+	ShowEffect41();
+	ShowEffect41ChromaLink();
+	ShowEffect41Headset();
+	ShowEffect41Keypad();
+	ShowEffect41Mousepad();
+	ShowEffect41Mouse();
+	break;
+case 42:
+	ShowEffect42();
+	ShowEffect42ChromaLink();
+	ShowEffect42Headset();
+	ShowEffect42Keypad();
+	ShowEffect42Mousepad();
+	ShowEffect42Mouse();
+	break;
+case 43:
+	ShowEffect43();
+	ShowEffect43ChromaLink();
+	ShowEffect43Headset();
+	ShowEffect43Keypad();
+	ShowEffect43Mousepad();
+	ShowEffect43Mouse();
+	break;
+case 44:
+	ShowEffect44();
+	ShowEffect44ChromaLink();
+	ShowEffect44Headset();
+	ShowEffect44Keypad();
+	ShowEffect44Mousepad();
+	ShowEffect44Mouse();
+	break;
+case 45:
+	ShowEffect45();
+	ShowEffect45ChromaLink();
+	ShowEffect45Headset();
+	ShowEffect45Keypad();
+	ShowEffect45Mousepad();
+	ShowEffect45Mouse();
+	break;
+case 46:
+	ShowEffect46();
+	ShowEffect46ChromaLink();
+	ShowEffect46Headset();
+	ShowEffect46Keypad();
+	ShowEffect46Mousepad();
+	ShowEffect46Mouse();
 	break;
 */

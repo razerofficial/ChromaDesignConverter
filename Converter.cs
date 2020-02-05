@@ -405,6 +405,15 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::setIdleAnimation(", "ChromaAnimationAPI::SetIdleAnimationName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::getMaxRow(", "ChromaAnimationAPI::GetMaxRow("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::getMaxColumn(", "ChromaAnimationAPI::GetMaxColumn("))
+                            {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::lerp(", "ChromaAnimationAPI::Lerp("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::offsetColorsWithColorAllFrames(", "ChromaAnimationAPI::OffsetColorsWithColorAllFramesName("))
                             {
                             }
