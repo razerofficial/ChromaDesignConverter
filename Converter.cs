@@ -1217,6 +1217,14 @@ namespace ChromaDesignConverter
                             {
                             }
 
+                            if (Replace(ref line, "(int)ChromaAnimationAPI.Device1D", "ChromaAnimationAPI.Device1D"))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)ChromaAnimationAPI.Device2D", "ChromaAnimationAPI.Device2D"))
+                            {
+                            }
+
                             sw.WriteLine(line);
                         }
                         while (line != null);

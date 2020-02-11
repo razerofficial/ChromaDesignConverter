@@ -3839,8 +3839,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
-int maxRow = ChromaAnimationAPI.GetMaxRow((int)ChromaAnimationAPI.Device2D.Keyboard);
-int maxColumn = ChromaAnimationAPI.GetMaxColumn((int)ChromaAnimationAPI.Device2D.Keyboard);
+int maxRow = ChromaAnimationAPI.GetMaxRow(ChromaAnimationAPI.Device2D.Keyboard);
+int maxColumn = ChromaAnimationAPI.GetMaxColumn(ChromaAnimationAPI.Device2D.Keyboard);
 int startColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
 int startRow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
 int color = ChromaAnimationAPI.GetRGB(0,255,0);
@@ -3956,8 +3956,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 1;
 // set all frames to white, with all frames set to 30FPS
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
-int maxRow = ChromaAnimationAPI.GetMaxRow((int)ChromaAnimationAPI.Device2D.Keyboard);
-int maxColumn = ChromaAnimationAPI.GetMaxColumn((int)ChromaAnimationAPI.Device2D.Keyboard);
+int maxRow = ChromaAnimationAPI.GetMaxRow(ChromaAnimationAPI.Device2D.Keyboard);
+int maxColumn = ChromaAnimationAPI.GetMaxColumn(ChromaAnimationAPI.Device2D.Keyboard);
 // pick first key
 int pointAColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
 int pointARow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
