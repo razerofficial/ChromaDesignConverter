@@ -818,11 +818,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -843,11 +843,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -868,11 +868,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -893,11 +893,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -918,11 +918,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -943,11 +943,11 @@ int frameCount = 50;
 // set all frames to white, with all frames set to 30FPS
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255);
 //integer number of times to blink during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = 1 - fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // multiply the frame by the 't' intensity
 UChromaSDKPluginBPLibrary::MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -1381,11 +1381,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1407,11 +1407,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1433,11 +1433,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1459,11 +1459,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1485,11 +1485,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -1511,11 +1511,11 @@ int frameCount = UChromaSDKPluginBPLibrary::GetFrameCountName(baseLayer);
 FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0); //red
 FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0); //green
 //integer number of times to transition during animation
-int speed = 2;
+float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = fabsf(cos(speed * PI * (frameId + 1) / (float)frameCount));
+float t = fabsf(cos(speed * PI * (frameId+1)/ (float)frameCount));
 // use t to transition from color 1 to color 2
 FLinearColor color = UChromaSDKPluginBPLibrary::LerpColor(color1, color2, t);
 // give color to the layer
@@ -4010,8 +4010,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4034,8 +4034,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4058,8 +4058,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4082,8 +4082,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4106,8 +4106,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4130,8 +4130,8 @@ UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 0, 0);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,0,0);
 UChromaSDKPluginBPLibrary::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, false);
@@ -4153,16 +4153,16 @@ int maxRow = UChromaSDKPluginBPLibrary::GetMaxRow(EChromaSDKDevice2DEnum::DE_Key
 int maxColumn = UChromaSDKPluginBPLibrary::GetMaxColumn(EChromaSDKDevice2DEnum::DE_Keyboard);
 int startColumn = floor(Math.random() * maxColumn) % 22;
 int startRow = floor(Math.random() * maxRow) % 6;
-FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
-int radius = 0;
-int speed = 25 / (float)frameCount;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
+float radius = 0.0;
+float speed = 25.0 / (float)frameCount;
 int lineWidth = 2;
 for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
-int stroke = radius;
+float stroke = radius;
 for (int t = 0; t < lineWidth; ++t) {
 for (int i = 0; i < 360; ++i) {
-int angle = i * PI / 180;
-int r = floor(startRow + stroke * Math.sin(angle));
+float angle = i * PI / 180.0f;
+int r = floor(startRow + stroke * sin(angle));
 int c = floor(startColumn + stroke * cos(angle));
 if (r >= 0 && r < maxRow &&
 c >= 0 && c < maxColumn) {
@@ -4284,7 +4284,7 @@ do {
 pointBColumn = floor(Math.random() * maxColumn) % 22;
 pointBRow = floor(Math.random() * maxRow) % 6;
 } while (pointAColumn == pointBColumn && pointARow == pointBRow);
-FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 int frameIndex = 0;
 for (int i = 0.0; i <= 1.0; i += 0.04) { // 1.0/22.0
 int r = floor(UChromaSDKPluginBPLibrary::Lerp(pointARow, pointBRow, i));
@@ -4388,8 +4388,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 {
 TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
@@ -4401,7 +4401,7 @@ keys.Add(EChromaSDKKeyboardKey::KK_P);
 keys.Add(EChromaSDKKeyboardKey::KK_M);
 keys.Add(EChromaSDKKeyboardKey::KK_F1);
 };
-FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::SetKeysColorAllFramesName(baseLayer,  keys, color);
 UChromaSDKPluginBPLibrary::SetChromaCustomFlagName(baseLayer, true);
 UChromaSDKPluginBPLibrary::SetChromaCustomColorAllFramesName(baseLayer);
@@ -4416,8 +4416,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4430,8 +4430,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4444,8 +4444,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4458,8 +4458,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4472,8 +4472,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 0, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,0,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4487,8 +4487,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::CloseAnimationName(layer2);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(layer2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 {
 TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
@@ -4514,8 +4514,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4528,8 +4528,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4542,8 +4542,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4556,8 +4556,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4570,8 +4570,8 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
 UChromaSDKPluginBPLibrary::ReduceFramesName(baseLayer, 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32, 32, 32);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 64);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(32,32,32);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(64,64,64);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4591,7 +4591,7 @@ keys.Add(EChromaSDKKeyboardKey::KK_A);
 keys.Add(EChromaSDKKeyboardKey::KK_S);
 keys.Add(EChromaSDKKeyboardKey::KK_D);
 };
-UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255,  255,  0);
+UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255, 255, 0);
 {
 TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
 keys.Add(EChromaSDKKeyboardKey::KK_F1);
@@ -4602,14 +4602,14 @@ keys.Add(EChromaSDKKeyboardKey::KK_F5);
 keys.Add(EChromaSDKKeyboardKey::KK_F6);
 };
 float t = 0;
-int speed = 0.05;
+float speed = 0.05;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
-int hp = fabsf(cos(PI / 2 + t));
+float hp = fabsf(cos(PI / 2.0f + t));
 for (int i = 0; i < keys.length; ++i) {
-int ratio = (i + 1) / keys.length;
-FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255 * (1 - hp), 0);
-if ((i + 1) / (keys.length + 1) < hp) {
+int ratio = (i+1) / keys.length;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0, 255*(1-hp), 0);
+if ((i+1) / (keys.length+1) < hp) {
 color = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
 } else {
 color = UChromaSDKPluginBPLibrary::GetRGB(0, 100, 0);
@@ -4631,10 +4631,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4647,10 +4647,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4663,10 +4663,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4679,10 +4679,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4695,10 +4695,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(0,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4718,7 +4718,7 @@ keys.Add(EChromaSDKKeyboardKey::KK_A);
 keys.Add(EChromaSDKKeyboardKey::KK_S);
 keys.Add(EChromaSDKKeyboardKey::KK_D);
 };
-UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255,  0,  0);
+UChromaSDKPluginBPLibrary::SetKeysColorAllFramesRGBName(baseLayer,  keys, 255, 0, 0);
 {
 TArray<TEnumAsByte<EChromaSDKKeyboardKey::Type>> keys;
 keys.Add(EChromaSDKKeyboardKey::KK_F7);
@@ -4729,14 +4729,14 @@ keys.Add(EChromaSDKKeyboardKey::KK_F11);
 keys.Add(EChromaSDKKeyboardKey::KK_F12);
 };
 float t = 0;
-int speed = 0.05;
+float speed = 0.05;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
-int hp = fabsf(cos(PI / 2 + t));
+float hp = fabsf(cos(PI / 2.0f + t));
 for (int i = 0; i < keys.length; ++i) {
-int ratio = (i + 1) / keys.length;
-FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(255 * (1 - hp), 255 * (1 - hp), 0);
-if ((i + 1) / (keys.length + 1) < hp) {
+int ratio = (i+1) / keys.length;
+FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(255*(1-hp), 255*(1-hp), 0);
+if ((i+1) / (keys.length+1) < hp) {
 color = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
 } else {
 color = UChromaSDKPluginBPLibrary::GetRGB(100, 100, 0);
@@ -4758,10 +4758,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4774,10 +4774,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4790,10 +4790,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4806,10 +4806,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);
@@ -4822,10 +4822,10 @@ UChromaSDKPluginBPLibrary::CloseAnimationName(baseLayer);
 UChromaSDKPluginBPLibrary::GetAnimation(baseLayer);
 int frameCount = 50;
 UChromaSDKPluginBPLibrary::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount / 2);
-UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount / 2);
-FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64, 64, 0);
-FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255, 255, 0);
+UChromaSDKPluginBPLibrary::FadeStartFramesName(baseLayer, frameCount/2);
+UChromaSDKPluginBPLibrary::FadeEndFramesName(baseLayer, frameCount/2);
+FLinearColor color1 = UChromaSDKPluginBPLibrary::GetRGB(64,64,0);
+FLinearColor color2 = UChromaSDKPluginBPLibrary::GetRGB(255,255,0);
 UChromaSDKPluginBPLibrary::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 UChromaSDKPluginBPLibrary::OverrideFrameDurationName(baseLayer, 0.033f);
 UChromaSDKPluginBPLibrary::PlayAnimationName(baseLayer, true);

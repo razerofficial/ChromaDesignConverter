@@ -3,7 +3,7 @@
     class Program
     {
         const string GAME_NAME = "SampleApp";
-        const int EFFECT_COUNT = 15;
+        const int EFFECT_COUNT = 46;
 
         static void Main(string[] args)
         {

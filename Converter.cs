@@ -150,12 +150,34 @@ namespace ChromaDesignConverter
                             if (SwapStart(ref line, "var t ", "float t "))
                             {
                             }
+                            if (SwapStart(ref line, "var speed ", "float speed "))
+                            {
+                            }
+                            if (SwapStart(ref line, "var radius ", "float radius "))
+                            {
+                            }
+                            if (SwapStart(ref line, "var stroke ", "float stroke "))
+                            {
+                            }
+                            if (SwapStart(ref line, "var angle ", "float angle "))
+                            {
+                            }
+                            if (SwapStart(ref line, "var hp ", "float hp "))
+                            {
+                            }
                             if (SwapStart(ref line, "for (var ", "for (int "))
                             {
                             }
                             if (SwapStart(ref line, "var ", "int "))
                             {
                             }
+                            if (Replace(ref line, "/ 180;", "/ 180.0f;"))
+                            {
+                            }
+                            if (Replace(ref line, "/ 2 ", "/ 2.0f "))
+                            {
+                            }
+
                             if (Replace(ref line, "ChromaAnimation.", "ChromaAnimationAPI::"))
                             {
                             }
@@ -439,10 +461,16 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "Math.cos(", "cos("))
                             {
                             }
+                            if (Replace(ref line, "Math.sin(", "sin("))
+                            {
+                            }
                             if (Replace(ref line, "Math.floor(", "floor("))
                             {
                             }
                             if (Replace(ref line, "Math.PI", "MATH_PI"))
+                            {
+                            }
+                            if (Replace(ref line, "/frameCount", "/ (float)frameCount"))
                             {
                             }
                             if (Replace(ref line, "/ frameCount", "/ (float)frameCount"))
@@ -706,15 +734,23 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "MATH_PI", "Math.PI"))
+                            if (Replace(ref line, "MATH_PI", "Mathf.PI"))
                             {
                             }
 
-                            if (Replace(ref line, "fabsf", "Math.Floor"))
+                            if (Replace(ref line, "cos(", "Mathf.Cos("))
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            if (Replace(ref line, "sin(", "Mathf.Sin("))
+                            {
+                            }
+
+                            if (Replace(ref line, "floor(", "(int)Mathf.Floor("))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "Mathf.Abs"))
                             {
                             }
 
@@ -726,10 +762,45 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            /*
-                            // key array
-                            Platform::Array<int>^ keysArray = ref new Platform::Array<int>(keys, (int)size(keys));
-                            */
+                            if (Replace(ref line, "ChromaSDK::Keyboard::RZKEY::", "(int)Keyboard.RZKEY."))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)size(keys)", "keys.Length"))
+                            {
+                            }
+
+                            if (Replace(ref line, ", keys);", ", keys, keys.Length);"))
+                            {
+                            }
+
+                            if (Replace(ref line, "int keys[] = {", "int[] keys = {"))
+                            {
+                            }
+
+                            if (Replace(ref line, "keys[] = {", "keys = new int[] {"))
+                            {
+                            }
+
+                            if (Replace(ref line, "keys.length", "keys.Length"))
+                            {
+                            }
+
+                            if (Replace(ref line, "Math.random()", "Random.Range(0, 1)"))
+                            {
+                            }
+
+                            if (Replace(ref line, "EChromaSDKDeviceEnum::DE_", "ChromaAnimationAPI.Device."))
+                            {
+                            }
+
+                            if (Replace(ref line, "EChromaSDKDevice1DEnum::DE_", "ChromaAnimationAPI.Device1D."))
+                            {
+                            }
+
+                            if (Replace(ref line, "EChromaSDKDevice2DEnum::DE_", "ChromaAnimationAPI.Device2D."))
+                            {
+                            }
 
                             sw.WriteLine(line);
                         }
@@ -778,11 +849,19 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "fabsf", "Math.Floor"))
+                            if (Replace(ref line, "cos(", "Math.Cos("))
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            if (Replace(ref line, "cos(", "Math.Sin("))
+                            {
+                            }
+
+                            if (Replace(ref line, "floor(", "Math.Floor("))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "Math.Abs"))
                             {
                             }
 
