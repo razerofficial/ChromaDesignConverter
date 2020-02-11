@@ -4154,7 +4154,7 @@ int maxColumn = UChromaSDKPluginBPLibrary::GetMaxColumn(EChromaSDKDevice2DEnum::
 int startColumn = floor(Math.random() * maxColumn) % 22;
 int startRow = floor(Math.random() * maxRow) % 6;
 FLinearColor color = UChromaSDKPluginBPLibrary::GetRGB(0,255,0);
-float radius = 0.0;
+float radius = 0.0f;
 float speed = 25.0 / (float)frameCount;
 int lineWidth = 2;
 for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
@@ -4602,7 +4602,7 @@ keys.Add(EChromaSDKKeyboardKey::KK_F5);
 keys.Add(EChromaSDKKeyboardKey::KK_F6);
 };
 float t = 0;
-float speed = 0.05;
+float speed = 0.05f;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = fabsf(cos(PI / 2.0f + t));
@@ -4729,7 +4729,7 @@ keys.Add(EChromaSDKKeyboardKey::KK_F11);
 keys.Add(EChromaSDKKeyboardKey::KK_F12);
 };
 float t = 0;
-float speed = 0.05;
+float speed = 0.05f;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = fabsf(cos(PI / 2.0f + t));

@@ -3844,7 +3844,7 @@ int maxColumn = ChromaAnimationAPI.GetMaxColumn((int)ChromaAnimationAPI.Device2D
 int startColumn = (int)Mathf.Floor(Random.Range(0, 1) * maxColumn) % 22;
 int startRow = (int)Mathf.Floor(Random.Range(0, 1) * maxRow) % 6;
 int color = ChromaAnimationAPI.GetRGB(0,255,0);
-float radius = 0.0;
+float radius = 0.0f;
 float speed = 25.0 / (float)frameCount;
 int lineWidth = 2;
 for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
@@ -4264,7 +4264,7 @@ keys = new int[] {
 (int)Keyboard.RZKEY.RZKEY_F6,
 };
 float t = 0;
-float speed = 0.05;
+float speed = 0.05f;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = Mathf.Abs(Mathf.Cos(Mathf.PI / 2.0f + t));
@@ -4383,7 +4383,7 @@ keys = new int[] {
 (int)Keyboard.RZKEY.RZKEY_F12,
 };
 float t = 0;
-float speed = 0.05;
+float speed = 0.05f;
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = Mathf.Abs(Mathf.Cos(Mathf.PI / 2.0f + t));

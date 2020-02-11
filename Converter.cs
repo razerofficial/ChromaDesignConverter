@@ -55,6 +55,212 @@ namespace ChromaDesignConverter
             }
         }
 
+        public enum Pattern
+        {
+            DECIMAL,
+            DECIMAL_F,
+            EQUAL,
+            FLOAT,
+            OPTIONAL_WHITESPACE,
+            SEMI_COLON,
+            SPACE,
+            VAR,
+            VARIABLE_NAME,
+        }
+
+        static bool SwapPattern(ref string line, Pattern[] input, Pattern[] output)
+        {
+            int patternIndex = 0;
+            int searchIndex = 0;
+            string varName = null;
+            string number = null;
+            bool isDecimal = false;
+            while (searchIndex < line.Length &&
+                patternIndex < input.Length)
+            {
+                string remaining = line.Substring(searchIndex);
+                Pattern pattern = input[patternIndex];
+                if (pattern == Pattern.OPTIONAL_WHITESPACE)
+                {
+                    if (char.IsWhiteSpace(line[searchIndex]))
+                    {
+                        ++searchIndex;
+                        continue;
+                    }
+                    else
+                    {
+                        ++patternIndex; //optional pattern complete
+                        continue;
+                    }
+                }
+                else if (pattern == Pattern.VAR)
+                {
+                    const string token = "var";
+                    if (remaining.StartsWith(token + " "))
+                    {
+                        searchIndex += token.Length;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.VARIABLE_NAME)
+                {
+                    if (varName == null)
+                    {
+                        if (char.IsLetter(line[searchIndex]))
+                        {
+                            varName = line[searchIndex].ToString();
+                            ++searchIndex;
+                            continue;
+                        }
+                        else
+                        {
+                            return false; //no match
+                        }
+                    }
+                    else
+                    {
+                        if (char.IsLetterOrDigit(line[searchIndex]))
+                        {
+                            varName += line[searchIndex].ToString();
+                            ++searchIndex;
+                            continue;
+                        }
+                        else
+                        {
+                            ++patternIndex; //pattern complete
+                            continue;
+                        }
+                    }
+                }
+                else if (pattern == Pattern.EQUAL)
+                {
+                    if (line[searchIndex] == '=')
+                    {
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.SEMI_COLON)
+                {
+                    if (line[searchIndex] == ';')
+                    {
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.DECIMAL)
+                {
+                    if (number == null)
+                    {
+                        if (char.IsNumber(line[searchIndex]))
+                        {
+                            number = line[searchIndex].ToString();
+                            ++searchIndex;
+                            continue;
+                        }
+                        else
+                        {
+                            return false; //no match
+                        }
+                    }
+                    else
+                    {
+                        if (line[searchIndex] == '.')
+                        {
+                            isDecimal = true;
+                        }
+                        if (char.IsNumber(line[searchIndex]) ||
+                            line[searchIndex] == '.')
+                        {
+                            number += line[searchIndex].ToString();
+                            ++searchIndex;
+                            continue;
+                        }
+                        else
+                        {
+                            if (isDecimal)
+                            {
+                                ++patternIndex; //pattern complete
+                                continue;
+                            }
+                            else
+                            {
+                                return false; // no match
+                            }
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    return false; //unexpected
+                }
+            }
+
+            string newLine = string.Empty;
+            patternIndex = 0;
+            while (patternIndex < output.Length)
+            {
+                Pattern pattern = output[patternIndex];
+                if (pattern == Pattern.FLOAT)
+                {
+                    newLine += "float";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.SPACE)
+                {
+                    newLine += " ";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.VARIABLE_NAME)
+                {
+                    newLine += varName;
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.EQUAL)
+                {
+                    newLine += "=";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.DECIMAL)
+                {
+                    newLine += number;
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.DECIMAL_F)
+                {
+                    newLine += "f";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.SEMI_COLON)
+                {
+                    newLine += ";";
+                    ++patternIndex;
+                }
+                else
+                {
+                    return false; //unexpected
+                }
+            }
+            line = newLine;
+            return true;
+        }
+
         static void ProcessHTML5(string filename, StreamWriter sw, int effectCount)
         {
             try
@@ -140,6 +346,32 @@ namespace ChromaDesignConverter
                             if (SwapStart(ref line, "var idleAnimation", "const char* idleAnimation"))
                             {
                                 Replace(ref line, "../ChromaCommon/a", "A");
+                            }
+                            if (SwapPattern(ref line, new Pattern[] {
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.VAR,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.VARIABLE_NAME,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.EQUAL,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.DECIMAL,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.SEMI_COLON,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                },
+                                new Pattern[] {
+                                    Pattern.FLOAT,
+                                    Pattern.SPACE,
+                                    Pattern.VARIABLE_NAME,
+                                    Pattern.SPACE,
+                                    Pattern.EQUAL,
+                                    Pattern.SPACE,
+                                    Pattern.DECIMAL,
+                                    Pattern.DECIMAL_F,
+                                    Pattern.SEMI_COLON
+                                }))
+                            {
                             }
                             if (SwapStart(ref line, "var frameCount", "int frameCount"))
                             {

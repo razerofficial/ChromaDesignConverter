@@ -3844,7 +3844,7 @@ void ShowEffect41()
  int startColumn = floor(Math.random() * maxColumn) % 22;
  int startRow = floor(Math.random() * maxRow) % 6;
  int color = ChromaAnimationAPI::GetRGB(0,255,0);
- float radius = 0.0;
+ float radius = 0.0f;
  float speed = 25.0 / (float)frameCount;
  int lineWidth = 2;
  for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
@@ -4264,7 +4264,7 @@ void ShowEffect45()
   Keyboard::RZKEY::RZKEY_F6,
  };
  float t = 0;
- float speed = 0.05;
+ float speed = 0.05f;
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   t += speed;
   float hp = fabsf(cos(MATH_PI / 2.0f + t));
@@ -4383,7 +4383,7 @@ void ShowEffect46()
   Keyboard::RZKEY::RZKEY_F12,
  };
  float t = 0;
- float speed = 0.05;
+ float speed = 0.05f;
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   t += speed;
   float hp = fabsf(cos(MATH_PI / 2.0f + t));
