@@ -1201,7 +1201,7 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "Math.random()", "Random.Range(0, 1)"))
+                            if (Replace(ref line, "Math.random()", "Random.Range(0.0f, 1.0f)"))
                             {
                             }
 

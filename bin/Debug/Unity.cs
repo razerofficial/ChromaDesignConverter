@@ -3841,8 +3841,8 @@ int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64);
 int maxRow = ChromaAnimationAPI.GetMaxRow((int)ChromaAnimationAPI.Device2D.Keyboard);
 int maxColumn = ChromaAnimationAPI.GetMaxColumn((int)ChromaAnimationAPI.Device2D.Keyboard);
-int startColumn = (int)Mathf.Floor(Random.Range(0, 1) * maxColumn) % 22;
-int startRow = (int)Mathf.Floor(Random.Range(0, 1) * maxRow) % 6;
+int startColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
+int startRow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
 int color = ChromaAnimationAPI.GetRGB(0,255,0);
 float radius = 0.0f;
 float speed = 25.0 / (float)frameCount;
@@ -3959,14 +3959,14 @@ ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 
 int maxRow = ChromaAnimationAPI.GetMaxRow((int)ChromaAnimationAPI.Device2D.Keyboard);
 int maxColumn = ChromaAnimationAPI.GetMaxColumn((int)ChromaAnimationAPI.Device2D.Keyboard);
 // pick first key
-int pointAColumn = (int)Mathf.Floor(Random.Range(0, 1) * maxColumn) % 22;
-int pointARow = (int)Mathf.Floor(Random.Range(0, 1) * maxRow) % 6;
+int pointAColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
+int pointARow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
 // pick a different second key
 int pointBColumn;
 int pointBRow;
 do {
-pointBColumn = (int)Mathf.Floor(Random.Range(0, 1) * maxColumn) % 22;
-pointBRow = (int)Mathf.Floor(Random.Range(0, 1) * maxRow) % 6;
+pointBColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
+pointBRow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
 } while (pointAColumn == pointBColumn && pointARow == pointBRow);
 int color = ChromaAnimationAPI.GetRGB(0,255,0);
 int frameIndex = 0;
