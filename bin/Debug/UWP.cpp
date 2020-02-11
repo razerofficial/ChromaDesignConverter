@@ -3970,7 +3970,7 @@ pointBRow = floor(Math.random() * maxRow) % 6;
 } while (pointAColumn == pointBColumn && pointARow == pointBRow);
 int color = ChromaAnimationAPI::GetRGB(0,255,0);
 int frameIndex = 0;
-for (int i = 0.0; i <= 1.0; i += 0.04) { // 1.0/22.0
+for (float i = 0.0f; i <= 1.0; i += 0.04) { // 1.0/22.0
 int r = floor(ChromaAnimationAPI::Lerp(pointARow, pointBRow, i));
 int c = floor(ChromaAnimationAPI::Lerp(pointAColumn, pointBColumn, i));
 if (r >= 0 && r < maxRow &&

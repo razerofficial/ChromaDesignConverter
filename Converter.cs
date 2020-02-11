@@ -57,30 +57,57 @@ namespace ChromaDesignConverter
 
         public enum Pattern
         {
+            CLOSE_PARENS,
             DECIMAL,
             DECIMAL_F,
             EQUAL,
             FLOAT,
+            FOR,
+            WILD_NON_NUMBER,
+            OPEN_PARENS,
             OPTIONAL_WHITESPACE,
+            WILD_REMAINING,
             SEMI_COLON,
             SPACE,
             VAR,
             VARIABLE_NAME,
         }
 
-        static bool SwapPattern(ref string line, Pattern[] input, Pattern[] output)
+        static bool SwapPattern(out int searchIndex, ref string line, Pattern[] input, Pattern[] output)
         {
+            searchIndex = 0;
             int patternIndex = 0;
-            int searchIndex = 0;
             string varName = null;
             string number = null;
             bool isDecimal = false;
-            while (searchIndex < line.Length &&
-                patternIndex < input.Length)
+            string wildNonNumber = string.Empty;
+            while (patternIndex < input.Length)
             {
-                string remaining = line.Substring(searchIndex);
                 Pattern pattern = input[patternIndex];
-                if (pattern == Pattern.OPTIONAL_WHITESPACE)
+                if (searchIndex >= line.Length)
+                {
+                    if (pattern == Pattern.OPTIONAL_WHITESPACE)
+                    {
+                        ++patternIndex;
+                    }
+                    break;
+                }
+                string remaining = line.Substring(searchIndex);
+                if (pattern == Pattern.WILD_NON_NUMBER)
+                {
+                    if (!char.IsNumber(line[searchIndex]))
+                    {
+                        wildNonNumber += line[searchIndex];
+                        ++searchIndex;
+                        continue;
+                    }
+                    else
+                    {
+                        ++patternIndex; //optional pattern complete
+                        continue;
+                    }
+                }
+                else if (pattern == Pattern.OPTIONAL_WHITESPACE)
                 {
                     if (char.IsWhiteSpace(line[searchIndex]))
                     {
@@ -96,6 +123,20 @@ namespace ChromaDesignConverter
                 else if (pattern == Pattern.VAR)
                 {
                     const string token = "var";
+                    if (remaining.StartsWith(token + " "))
+                    {
+                        searchIndex += token.Length;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.FOR)
+                {
+                    const string token = "for";
                     if (remaining.StartsWith(token + " "))
                     {
                         searchIndex += token.Length;
@@ -163,6 +204,32 @@ namespace ChromaDesignConverter
                         return false; //no match
                     }
                 }
+                else if (pattern == Pattern.OPEN_PARENS)
+                {
+                    if (line[searchIndex] == '(')
+                    {
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.CLOSE_PARENS)
+                {
+                    if (line[searchIndex] == ')')
+                    {
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
                 else if (pattern == Pattern.DECIMAL)
                 {
                     if (number == null)
@@ -212,12 +279,22 @@ namespace ChromaDesignConverter
                 }
             }
 
+            if (patternIndex < input.Length)
+            {
+                return false; //unmatched
+            }
+
             string newLine = string.Empty;
             patternIndex = 0;
             while (patternIndex < output.Length)
             {
                 Pattern pattern = output[patternIndex];
-                if (pattern == Pattern.FLOAT)
+                if (pattern == Pattern.WILD_NON_NUMBER)
+                {
+                    newLine += wildNonNumber;
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.FLOAT)
                 {
                     newLine += "float";
                     ++patternIndex;
@@ -225,6 +302,21 @@ namespace ChromaDesignConverter
                 else if (pattern == Pattern.SPACE)
                 {
                     newLine += " ";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.OPEN_PARENS)
+                {
+                    newLine += "(";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.CLOSE_PARENS)
+                {
+                    newLine += ")";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.FOR)
+                {
+                    newLine += "for";
                     ++patternIndex;
                 }
                 else if (pattern == Pattern.VARIABLE_NAME)
@@ -250,6 +342,13 @@ namespace ChromaDesignConverter
                 else if (pattern == Pattern.SEMI_COLON)
                 {
                     newLine += ";";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.WILD_REMAINING)
+                {
+                    //searchIndex = newLine.Length;
+
+                    newLine += line.Substring(searchIndex);
                     ++patternIndex;
                 }
                 else
@@ -347,7 +446,11 @@ namespace ChromaDesignConverter
                             {
                                 Replace(ref line, "../ChromaCommon/a", "A");
                             }
-                            if (SwapPattern(ref line, new Pattern[] {
+
+                            int searchIndex;
+
+                            // case: var varName = 23.0;
+                            if (SwapPattern(out searchIndex, ref line, new Pattern[] {
                                 Pattern.OPTIONAL_WHITESPACE,
                                 Pattern.VAR,
                                 Pattern.OPTIONAL_WHITESPACE,
@@ -373,6 +476,86 @@ namespace ChromaDesignConverter
                                 }))
                             {
                             }
+
+                            // case: for(var varName = 2.5;
+                            else if (SwapPattern(out searchIndex, ref line, new Pattern[] {
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.FOR,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.OPEN_PARENS,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.VAR,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.VARIABLE_NAME,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.EQUAL,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.DECIMAL,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.SEMI_COLON,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                },
+                                new Pattern[] {
+                                    Pattern.FOR,
+                                    Pattern.SPACE,
+                                    Pattern.OPEN_PARENS,
+                                    Pattern.FLOAT,
+                                    Pattern.SPACE,
+                                    Pattern.VARIABLE_NAME,
+                                    Pattern.SPACE,
+                                    Pattern.EQUAL,
+                                    Pattern.SPACE,
+                                    Pattern.DECIMAL,
+                                    Pattern.DECIMAL_F,
+                                    Pattern.SEMI_COLON,
+                                    Pattern.SPACE,
+                                    Pattern.WILD_REMAINING
+                                }))
+                            {
+                            }
+
+                            /*
+                            // case 123.45;
+                            string subline = line;
+                            string cat = string.Empty;
+                            string goWith = string.Empty;
+                            while (SwapPattern(out searchIndex, ref subline, new Pattern[] {
+                                Pattern.WILD_NON_NUMBER,
+                                Pattern.DECIMAL,
+                                Pattern.SEMI_COLON,
+                                },
+                                new Pattern[] {
+                                    Pattern.WILD_NON_NUMBER,
+                                    Pattern.DECIMAL,
+                                    Pattern.DECIMAL_F,
+                                    Pattern.SEMI_COLON,
+                                    Pattern.WILD_REMAINING
+                                }))
+                            {
+                                cat += subline.Substring(0, searchIndex);
+                                subline = subline.Substring(searchIndex);
+                                line = cat + " " + subline;
+                            }
+                            */
+
+                            /*
+                            // case 123.45)
+                            while (SwapPattern(out searchIndex, ref line, new Pattern[] {
+                                Pattern.WILD_NON_NUMBER,
+                                Pattern.DECIMAL,
+                                Pattern.CLOSE_PARENS,
+                                },
+                                new Pattern[] {
+                                    Pattern.WILD_NON_NUMBER,
+                                    Pattern.DECIMAL,
+                                    Pattern.DECIMAL_F,
+                                    Pattern.CLOSE_PARENS,
+                                    Pattern.WILD_REMAINING
+                                }))
+                            {
+                            }
+                            */
+
                             if (SwapStart(ref line, "var frameCount", "int frameCount"))
                             {
                             }
