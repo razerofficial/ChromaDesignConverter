@@ -57,7 +57,9 @@ namespace ChromaDesignConverter
 
         public enum Pattern
         {
+            ASSIGNMENTS,
             CLOSE_PARENS,
+            CLOSE_PARENS_OR_SEMI_COLON,
             DECIMAL,
             DECIMAL_F,
             EQUAL,
@@ -80,6 +82,8 @@ namespace ChromaDesignConverter
             string varName = null;
             string number = null;
             bool isDecimal = false;
+            string assignments = null;
+            string closeParensOrSemiColon = null;
             string wildNonNumber = string.Empty;
             while (patternIndex < input.Length)
             {
@@ -191,6 +195,27 @@ namespace ChromaDesignConverter
                         return false; //no match
                     }
                 }
+                else if (pattern == Pattern.ASSIGNMENTS)
+                {
+                    if (remaining.StartsWith("="))
+                    {
+                        assignments = "=";
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else if (remaining.StartsWith("+="))
+                    {
+                        assignments = "+=";
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
                 else if (pattern == Pattern.SEMI_COLON)
                 {
                     if (line[searchIndex] == ';')
@@ -221,6 +246,21 @@ namespace ChromaDesignConverter
                 {
                     if (line[searchIndex] == ')')
                     {
+                        ++searchIndex;
+                        ++patternIndex; //pattern complete
+                        continue;
+                    }
+                    else
+                    {
+                        return false; //no match
+                    }
+                }
+                else if (pattern == Pattern.CLOSE_PARENS_OR_SEMI_COLON)
+                {
+                    if (line[searchIndex] == ')' ||
+                        line[searchIndex] == ';')
+                    {
+                        closeParensOrSemiColon = line[searchIndex].ToString();
                         ++searchIndex;
                         ++patternIndex; //pattern complete
                         continue;
@@ -314,6 +354,14 @@ namespace ChromaDesignConverter
                     newLine += ")";
                     ++patternIndex;
                 }
+                else if (pattern == Pattern.CLOSE_PARENS_OR_SEMI_COLON)
+                {
+                    if (closeParensOrSemiColon != null)
+                    {
+                        newLine += closeParensOrSemiColon.ToString();
+                    }
+                    ++patternIndex;
+                }
                 else if (pattern == Pattern.FOR)
                 {
                     newLine += "for";
@@ -327,6 +375,14 @@ namespace ChromaDesignConverter
                 else if (pattern == Pattern.EQUAL)
                 {
                     newLine += "=";
+                    ++patternIndex;
+                }
+                else if (pattern == Pattern.ASSIGNMENTS)
+                {
+                    if (assignments != null)
+                    {
+                        newLine += assignments;
+                    }
                     ++patternIndex;
                 }
                 else if (pattern == Pattern.DECIMAL)
@@ -478,7 +534,7 @@ namespace ChromaDesignConverter
                             }
 
                             // case: for(var varName = 2.5;
-                            else if (SwapPattern(out searchIndex, ref line, new Pattern[] {
+                            if (SwapPattern(out searchIndex, ref line, new Pattern[] {
                                 Pattern.OPTIONAL_WHITESPACE,
                                 Pattern.FOR,
                                 Pattern.OPTIONAL_WHITESPACE,
@@ -506,7 +562,6 @@ namespace ChromaDesignConverter
                                     Pattern.EQUAL,
                                     Pattern.SPACE,
                                     Pattern.DECIMAL,
-                                    Pattern.DECIMAL_F,
                                     Pattern.SEMI_COLON,
                                     Pattern.SPACE,
                                     Pattern.WILD_REMAINING
@@ -514,47 +569,30 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            /*
-                            // case 123.45;
+                            // case: 123.45;
+                            // and
+                            // case: 123.45)
                             string subline = line;
                             string cat = string.Empty;
                             string goWith = string.Empty;
                             while (SwapPattern(out searchIndex, ref subline, new Pattern[] {
                                 Pattern.WILD_NON_NUMBER,
                                 Pattern.DECIMAL,
-                                Pattern.SEMI_COLON,
+                                Pattern.OPTIONAL_WHITESPACE,
+                                Pattern.CLOSE_PARENS_OR_SEMI_COLON,
                                 },
                                 new Pattern[] {
                                     Pattern.WILD_NON_NUMBER,
                                     Pattern.DECIMAL,
                                     Pattern.DECIMAL_F,
-                                    Pattern.SEMI_COLON,
+                                    Pattern.CLOSE_PARENS_OR_SEMI_COLON,
                                     Pattern.WILD_REMAINING
                                 }))
                             {
                                 cat += subline.Substring(0, searchIndex);
                                 subline = subline.Substring(searchIndex);
-                                line = cat + " " + subline;
+                                line = cat + subline;
                             }
-                            */
-
-                            /*
-                            // case 123.45)
-                            while (SwapPattern(out searchIndex, ref line, new Pattern[] {
-                                Pattern.WILD_NON_NUMBER,
-                                Pattern.DECIMAL,
-                                Pattern.CLOSE_PARENS,
-                                },
-                                new Pattern[] {
-                                    Pattern.WILD_NON_NUMBER,
-                                    Pattern.DECIMAL,
-                                    Pattern.DECIMAL_F,
-                                    Pattern.CLOSE_PARENS,
-                                    Pattern.WILD_REMAINING
-                                }))
-                            {
-                            }
-                            */
 
                             if (SwapStart(ref line, "var frameCount", "int frameCount"))
                             {

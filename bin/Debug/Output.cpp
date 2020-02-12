@@ -704,7 +704,7 @@ void ShowEffect9()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -728,7 +728,7 @@ void ShowEffect9ChromaLink()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -752,7 +752,7 @@ void ShowEffect9Headset()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -776,7 +776,7 @@ void ShowEffect9Mousepad()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -800,7 +800,7 @@ void ShowEffect9Mouse()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -824,7 +824,7 @@ void ShowEffect9Keypad()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = 1 - fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // multiply the frame by the 't' intensity
   ChromaAnimationAPI::MultiplyIntensityName(baseLayer, frameId, t);
  }
@@ -1231,7 +1231,7 @@ void ShowEffect15()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -1256,7 +1256,7 @@ void ShowEffect15ChromaLink()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -1281,7 +1281,7 @@ void ShowEffect15Headset()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -1306,7 +1306,7 @@ void ShowEffect15Mousepad()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -1331,7 +1331,7 @@ void ShowEffect15Mouse()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -1356,7 +1356,7 @@ void ShowEffect15Keypad()
  // loop over all frames in the layer
  for (int frameId = 0; frameId < frameCount; ++frameId) {
   //Math.cos gives a smooth 1 to 0 to 1 curve
-  float t = fabsf(cos(speed * MATH_PI * (frameId+1)/ (float)frameCount));
+  float t = fabsf(cos(speed * MATH_PI * (frameId + 1) / (float)frameCount));
   // use t to transition from color 1 to color 2
   int color = ChromaAnimationAPI::LerpColor(color1, color2, t);
   // give color to the layer
@@ -3706,8 +3706,8 @@ void ShowEffect40()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3729,8 +3729,8 @@ void ShowEffect40ChromaLink()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3752,8 +3752,8 @@ void ShowEffect40Headset()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3775,8 +3775,8 @@ void ShowEffect40Mousepad()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3798,8 +3798,8 @@ void ShowEffect40Mouse()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3821,8 +3821,8 @@ void ShowEffect40Keypad()
  // Transition from green to red and then stop
  int frameCount = 30;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- int color1 = ChromaAnimationAPI::GetRGB(0,255,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,0,0);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 0, 0);
  ChromaAnimationAPI::MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
  // play the animation on the dynamic canvas
  ChromaAnimationAPI::PlayAnimationName(baseLayer, false);
@@ -3843,9 +3843,9 @@ void ShowEffect41()
  int maxColumn = ChromaAnimationAPI::GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard);
  int startColumn = floor(Math.random() * maxColumn) % 22;
  int startRow = floor(Math.random() * maxRow) % 6;
- int color = ChromaAnimationAPI::GetRGB(0,255,0);
- float radius = 0.0f;
- float speed = 25.0 / (float)frameCount;
+ int color = ChromaAnimationAPI::GetRGB(0, 255, 0);
+ float radius = 0;
+ float speed = 25 / (float)frameCount;
  int lineWidth = 2;
  for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
   float stroke = radius;
@@ -3968,9 +3968,9 @@ void ShowEffect42()
   pointBColumn = floor(Math.random() * maxColumn) % 22;
   pointBRow = floor(Math.random() * maxRow) % 6;
  } while (pointAColumn == pointBColumn && pointARow == pointBRow);
- int color = ChromaAnimationAPI::GetRGB(0,255,0);
+ int color = ChromaAnimationAPI::GetRGB(0, 255, 0);
  int frameIndex = 0;
- for (float i = 0.0f; i <= 1.0; i += 0.04) { // 1.0/22.0
+ for (float i = 0.0f; i <= 1.0f; i += 0.04f) { // 1.0/22.0
   int r = floor(ChromaAnimationAPI::Lerp(pointARow, pointBRow, i));
   int c = floor(ChromaAnimationAPI::Lerp(pointAColumn, pointBColumn, i));
   if (r >= 0 && r < maxRow &&
@@ -4066,8 +4066,8 @@ void ShowEffect43()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  int keys[] = {
   Keyboard::RZKEY::RZKEY_W,
@@ -4078,7 +4078,7 @@ void ShowEffect43()
   Keyboard::RZKEY::RZKEY_M,
   Keyboard::RZKEY::RZKEY_F1,
  };
- int color = ChromaAnimationAPI::GetRGB(0,255,0);
+ int color = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::SetKeysColorAllFramesName(baseLayer,  keys, (int)size(keys),  color);
  ChromaAnimationAPI::SetChromaCustomFlagName(baseLayer, true);
  ChromaAnimationAPI::SetChromaCustomColorAllFramesName(baseLayer);
@@ -4092,8 +4092,8 @@ void ShowEffect43ChromaLink()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4105,8 +4105,8 @@ void ShowEffect43Headset()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4118,8 +4118,8 @@ void ShowEffect43Mousepad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4131,8 +4131,8 @@ void ShowEffect43Mouse()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4144,8 +4144,8 @@ void ShowEffect43Keypad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(64,0,64);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 0, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4158,8 +4158,8 @@ void ShowEffect44()
  ChromaAnimationAPI::CloseAnimationName(layer2);
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::GetAnimation(layer2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  int keys[] = {
   Keyboard::RZKEY::RZKEY_W,
@@ -4183,8 +4183,8 @@ void ShowEffect44ChromaLink()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4196,8 +4196,8 @@ void ShowEffect44Headset()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4209,8 +4209,8 @@ void ShowEffect44Mousepad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4222,8 +4222,8 @@ void ShowEffect44Mouse()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4235,8 +4235,8 @@ void ShowEffect44Keypad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
  ChromaAnimationAPI::ReduceFramesName(baseLayer, 2);
- int color1 = ChromaAnimationAPI::GetRGB(32,32,32);
- int color2 = ChromaAnimationAPI::GetRGB(64,64,64);
+ int color1 = ChromaAnimationAPI::GetRGB(32, 32, 32);
+ int color2 = ChromaAnimationAPI::GetRGB(64, 64, 64);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4254,7 +4254,7 @@ void ShowEffect45()
   Keyboard::RZKEY::RZKEY_S,
   Keyboard::RZKEY::RZKEY_D,
  };
- ChromaAnimationAPI::SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255, 255, 0);
+ ChromaAnimationAPI::SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  255,  0);
  keys[] = {
   Keyboard::RZKEY::RZKEY_F1,
   Keyboard::RZKEY::RZKEY_F2,
@@ -4269,9 +4269,9 @@ void ShowEffect45()
   t += speed;
   float hp = fabsf(cos(MATH_PI / 2.0f + t));
   for (int i = 0; i < keys.length; ++i) {
-   int ratio = (i+1) / keys.length;
-   int color = ChromaAnimationAPI::GetRGB(0, 255*(1-hp), 0);
-   if ((i+1) / (keys.length+1) < hp) {
+   int ratio = (i + 1) / keys.length;
+   int color = ChromaAnimationAPI::GetRGB(0, 255 * (1 - hp), 0);
+   if ((i + 1) / (keys.length + 1) < hp) {
     color = ChromaAnimationAPI::GetRGB(0, 255, 0);
    } else {
     color = ChromaAnimationAPI::GetRGB(0, 100, 0);
@@ -4292,10 +4292,10 @@ void ShowEffect45ChromaLink()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(0,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(0,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4307,10 +4307,10 @@ void ShowEffect45Headset()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(0,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(0,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4322,10 +4322,10 @@ void ShowEffect45Mousepad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(0,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(0,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4337,10 +4337,10 @@ void ShowEffect45Mouse()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(0,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(0,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4352,10 +4352,10 @@ void ShowEffect45Keypad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(0,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(0,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(0, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(0, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4373,7 +4373,7 @@ void ShowEffect46()
   Keyboard::RZKEY::RZKEY_S,
   Keyboard::RZKEY::RZKEY_D,
  };
- ChromaAnimationAPI::SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255, 0, 0);
+ ChromaAnimationAPI::SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  0,  0);
  keys[] = {
   Keyboard::RZKEY::RZKEY_F7,
   Keyboard::RZKEY::RZKEY_F8,
@@ -4388,9 +4388,9 @@ void ShowEffect46()
   t += speed;
   float hp = fabsf(cos(MATH_PI / 2.0f + t));
   for (int i = 0; i < keys.length; ++i) {
-   int ratio = (i+1) / keys.length;
-   int color = ChromaAnimationAPI::GetRGB(255*(1-hp), 255*(1-hp), 0);
-   if ((i+1) / (keys.length+1) < hp) {
+   int ratio = (i + 1) / keys.length;
+   int color = ChromaAnimationAPI::GetRGB(255 * (1 - hp), 255 * (1 - hp), 0);
+   if ((i + 1) / (keys.length + 1) < hp) {
     color = ChromaAnimationAPI::GetRGB(255, 255, 0);
    } else {
     color = ChromaAnimationAPI::GetRGB(100, 100, 0);
@@ -4411,10 +4411,10 @@ void ShowEffect46ChromaLink()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4426,10 +4426,10 @@ void ShowEffect46Headset()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4441,10 +4441,10 @@ void ShowEffect46Mousepad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4456,10 +4456,10 @@ void ShowEffect46Mouse()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);
@@ -4471,10 +4471,10 @@ void ShowEffect46Keypad()
  ChromaAnimationAPI::GetAnimation(baseLayer);
  int frameCount = 50;
  ChromaAnimationAPI::MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
- ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount/2);
- ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount/2);
- int color1 = ChromaAnimationAPI::GetRGB(64,64,0);
- int color2 = ChromaAnimationAPI::GetRGB(255,255,0);
+ ChromaAnimationAPI::FadeStartFramesName(baseLayer, frameCount / 2);
+ ChromaAnimationAPI::FadeEndFramesName(baseLayer, frameCount / 2);
+ int color1 = ChromaAnimationAPI::GetRGB(64, 64, 0);
+ int color2 = ChromaAnimationAPI::GetRGB(255, 255, 0);
  ChromaAnimationAPI::MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
  ChromaAnimationAPI::OverrideFrameDurationName(baseLayer, 0.033f);
  ChromaAnimationAPI::PlayAnimationName(baseLayer, true);

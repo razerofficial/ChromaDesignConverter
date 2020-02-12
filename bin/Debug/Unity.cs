@@ -704,7 +704,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -728,7 +728,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -752,7 +752,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -776,7 +776,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -800,7 +800,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -824,7 +824,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = 1 - Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // multiply the frame by the 't' intensity
 ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t);
 }
@@ -1231,7 +1231,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -1256,7 +1256,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -1281,7 +1281,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -1306,7 +1306,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -1331,7 +1331,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -1356,7 +1356,7 @@ float speed = 2;
 // loop over all frames in the layer
 for (int frameId = 0; frameId < frameCount; ++frameId) {
 //Math.cos gives a smooth 1 to 0 to 1 curve
-float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId+1)/ (float)frameCount));
+float t = Mathf.Abs(Mathf.Cos(speed * Mathf.PI * (frameId + 1) / (float)frameCount));
 // use t to transition from color 1 to color 2
 int color = ChromaAnimationAPI.LerpColor(color1, color2, t);
 // give color to the layer
@@ -3706,8 +3706,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3729,8 +3729,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3752,8 +3752,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3775,8 +3775,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3798,8 +3798,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3821,8 +3821,8 @@ ChromaAnimationAPI.GetAnimation(baseLayer);
 // Transition from green to red and then stop
 int frameCount = 30;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-int color1 = ChromaAnimationAPI.GetRGB(0,255,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,0,0);
+int color1 = ChromaAnimationAPI.GetRGB(0, 255, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 0, 0);
 ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2);
 // play the animation on the dynamic canvas
 ChromaAnimationAPI.PlayAnimationName(baseLayer, false);
@@ -3843,9 +3843,9 @@ int maxRow = ChromaAnimationAPI.GetMaxRow(ChromaAnimationAPI.Device2D.Keyboard);
 int maxColumn = ChromaAnimationAPI.GetMaxColumn(ChromaAnimationAPI.Device2D.Keyboard);
 int startColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
 int startRow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
-int color = ChromaAnimationAPI.GetRGB(0,255,0);
-float radius = 0.0f;
-float speed = 25.0 / (float)frameCount;
+int color = ChromaAnimationAPI.GetRGB(0, 255, 0);
+float radius = 0;
+float speed = 25 / (float)frameCount;
 int lineWidth = 2;
 for (int frameIndex = 0; frameIndex < frameCount; ++frameIndex) {
 float stroke = radius;
@@ -3968,9 +3968,9 @@ do {
 pointBColumn = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxColumn) % 22;
 pointBRow = (int)Mathf.Floor(Random.Range(0.0f, 1.0f) * maxRow) % 6;
 } while (pointAColumn == pointBColumn && pointARow == pointBRow);
-int color = ChromaAnimationAPI.GetRGB(0,255,0);
+int color = ChromaAnimationAPI.GetRGB(0, 255, 0);
 int frameIndex = 0;
-for (float i = 0.0f; i <= 1.0; i += 0.04) { // 1.0/22.0
+for (float i = 0.0f; i <= 1.0f; i += 0.04f) { // 1.0/22.0
 int r = (int)Mathf.Floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i));
 int c = (int)Mathf.Floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i));
 if (r >= 0 && r < maxRow &&
@@ -4066,8 +4066,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 int[] keys = {
 (int)Keyboard.RZKEY.RZKEY_W,
@@ -4078,7 +4078,7 @@ int[] keys = {
 (int)Keyboard.RZKEY.RZKEY_M,
 (int)Keyboard.RZKEY.RZKEY_F1,
 };
-int color = ChromaAnimationAPI.GetRGB(0,255,0);
+int color = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, keys.Length,  color);
 ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true);
 ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer);
@@ -4092,8 +4092,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4105,8 +4105,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4118,8 +4118,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4131,8 +4131,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4144,8 +4144,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(64,0,64);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(64, 0, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4158,8 +4158,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.CloseAnimationName(layer2);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.GetAnimation(layer2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 int[] keys = {
 (int)Keyboard.RZKEY.RZKEY_W,
@@ -4183,8 +4183,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4196,8 +4196,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4209,8 +4209,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4222,8 +4222,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4235,8 +4235,8 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
 ChromaAnimationAPI.ReduceFramesName(baseLayer, 2);
-int color1 = ChromaAnimationAPI.GetRGB(32,32,32);
-int color2 = ChromaAnimationAPI.GetRGB(64,64,64);
+int color1 = ChromaAnimationAPI.GetRGB(32, 32, 32);
+int color2 = ChromaAnimationAPI.GetRGB(64, 64, 64);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4254,7 +4254,7 @@ int[] keys = {
 (int)Keyboard.RZKEY.RZKEY_S,
 (int)Keyboard.RZKEY.RZKEY_D,
 };
-ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, keys.Length,  255, 255, 0);
+ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, keys.Length,  255,  255,  0);
 keys = new int[] {
 (int)Keyboard.RZKEY.RZKEY_F1,
 (int)Keyboard.RZKEY.RZKEY_F2,
@@ -4269,9 +4269,9 @@ for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = Mathf.Abs(Mathf.Cos(Mathf.PI / 2.0f + t));
 for (int i = 0; i < keys.Length; ++i) {
-int ratio = (i+1) / keys.Length;
-int color = ChromaAnimationAPI.GetRGB(0, 255*(1-hp), 0);
-if ((i+1) / (keys.Length+1) < hp) {
+int ratio = (i + 1) / keys.Length;
+int color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0);
+if ((i + 1) / (keys.Length + 1) < hp) {
 color = ChromaAnimationAPI.GetRGB(0, 255, 0);
 } else {
 color = ChromaAnimationAPI.GetRGB(0, 100, 0);
@@ -4292,10 +4292,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(0,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(0,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(0, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4307,10 +4307,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(0,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(0,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(0, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4322,10 +4322,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(0,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(0,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(0, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4337,10 +4337,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(0,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(0,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(0, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4352,10 +4352,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(0,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(0,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(0, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(0, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4373,7 +4373,7 @@ int[] keys = {
 (int)Keyboard.RZKEY.RZKEY_S,
 (int)Keyboard.RZKEY.RZKEY_D,
 };
-ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, keys.Length,  255, 0, 0);
+ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, keys.Length,  255,  0,  0);
 keys = new int[] {
 (int)Keyboard.RZKEY.RZKEY_F7,
 (int)Keyboard.RZKEY.RZKEY_F8,
@@ -4388,9 +4388,9 @@ for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = Mathf.Abs(Mathf.Cos(Mathf.PI / 2.0f + t));
 for (int i = 0; i < keys.Length; ++i) {
-int ratio = (i+1) / keys.Length;
-int color = ChromaAnimationAPI.GetRGB(255*(1-hp), 255*(1-hp), 0);
-if ((i+1) / (keys.Length+1) < hp) {
+int ratio = (i + 1) / keys.Length;
+int color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0);
+if ((i + 1) / (keys.Length + 1) < hp) {
 color = ChromaAnimationAPI.GetRGB(255, 255, 0);
 } else {
 color = ChromaAnimationAPI.GetRGB(100, 100, 0);
@@ -4411,10 +4411,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4426,10 +4426,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4441,10 +4441,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4456,10 +4456,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
@@ -4471,10 +4471,10 @@ ChromaAnimationAPI.CloseAnimationName(baseLayer);
 ChromaAnimationAPI.GetAnimation(baseLayer);
 int frameCount = 50;
 ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255);
-ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount/2);
-ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount/2);
-int color1 = ChromaAnimationAPI.GetRGB(64,64,0);
-int color2 = ChromaAnimationAPI.GetRGB(255,255,0);
+ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2);
+ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2);
+int color1 = ChromaAnimationAPI.GetRGB(64, 64, 0);
+int color2 = ChromaAnimationAPI.GetRGB(255, 255, 0);
 ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2);
 ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f);
 ChromaAnimationAPI.PlayAnimationName(baseLayer, true);
