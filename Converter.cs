@@ -1364,6 +1364,54 @@ namespace ChromaDesignConverter
             }
         }
 
+        static bool ConvertFloatArgumentsRemoveSuffix(ref string line)
+        {
+            string newLine = string.Empty;
+            bool hadCommaOrParents = false;
+            bool hadWhiteSpace = false;
+            bool isNumber = false;
+            foreach (char c in line)
+            {
+                if (char.IsWhiteSpace(c))
+                {
+                    hadWhiteSpace = true;
+                }
+                else if (c == ',' ||
+                    c == '(')
+                {
+                    hadWhiteSpace = false;
+                    isNumber = false;
+                    hadCommaOrParents = true;
+                }
+                else if ((hadWhiteSpace || hadCommaOrParents) &&
+                    char.IsDigit(c))
+                {
+                    isNumber = true;
+                }
+                else if (isNumber &&
+                    (c == 'f' ||
+                    c == 'F' ||
+                    c == '.'))
+                {
+                    if (c == 'f' ||
+                        c == 'F')
+                    {
+                        continue; //skip
+                    }
+                }
+                else
+                {
+                    isNumber = false;
+                    hadWhiteSpace = false;
+                    hadCommaOrParents = false;
+                }
+                newLine += c;
+            }
+
+            line = newLine;
+            return true;
+        }
+
         static void ProcessGodot(string filename, StreamWriter sw, int effectCount)
         {
             try
@@ -1447,7 +1495,7 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            if (ConvertFloatArgumentsRemoveSuffix(ref line))
                             {
                             }
 

@@ -317,8 +317,8 @@ func showEffect6():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -332,8 +332,8 @@ func showEffect6ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -347,8 +347,8 @@ func showEffect6Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -362,8 +362,8 @@ func showEffect6Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -377,8 +377,8 @@ func showEffect6Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -392,8 +392,8 @@ func showEffect6Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -407,8 +407,8 @@ func showEffect7():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -422,8 +422,8 @@ func showEffect7ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -437,8 +437,8 @@ func showEffect7Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -452,8 +452,8 @@ func showEffect7Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -467,8 +467,8 @@ func showEffect7Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -482,8 +482,8 @@ func showEffect7Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the end of the animation starting at frame length - 40 (60)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, 40)
 	# play the animation on the dynamic canvas
@@ -497,8 +497,8 @@ func showEffect8():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -514,8 +514,8 @@ func showEffect8ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -531,8 +531,8 @@ func showEffect8Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -548,8 +548,8 @@ func showEffect8Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -565,8 +565,8 @@ func showEffect8Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -582,8 +582,8 @@ func showEffect8Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	# fade the start of the animation starting at frame zero to 40
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, 40)
 	# fade the end of the animation starting at frame length - 40 (60)
@@ -599,8 +599,8 @@ func showEffect9():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -619,8 +619,8 @@ func showEffect9ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -639,8 +639,8 @@ func showEffect9Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -659,8 +659,8 @@ func showEffect9Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -679,8 +679,8 @@ func showEffect9Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -699,8 +699,8 @@ func showEffect9Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 255, 255, 255)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 255, 255, 255)
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
@@ -772,7 +772,7 @@ func showEffect11():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect11ChromaLink():
@@ -783,7 +783,7 @@ func showEffect11ChromaLink():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect11Headset():
@@ -794,7 +794,7 @@ func showEffect11Headset():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect11Mousepad():
@@ -805,7 +805,7 @@ func showEffect11Mousepad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect11Mouse():
@@ -816,7 +816,7 @@ func showEffect11Mouse():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect11Keypad():
@@ -827,7 +827,7 @@ func showEffect11Keypad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce the intensity of the layer
-	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25f)
+	ChromaAnimationAPI.MultiplyIntensityAllFramesName(baseLayer, 0.25)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect12():
@@ -1490,7 +1490,7 @@ func showEffect21():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1507,7 +1507,7 @@ func showEffect21ChromaLink():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1524,7 +1524,7 @@ func showEffect21Headset():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1541,7 +1541,7 @@ func showEffect21Mousepad():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1558,7 +1558,7 @@ func showEffect21Mouse():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1575,7 +1575,7 @@ func showEffect21Keypad():
 	ChromaAnimationAPI.GetAnimation(layer2)
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# copy non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.CopyNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1593,7 +1593,7 @@ func showEffect22():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1613,7 +1613,7 @@ func showEffect22ChromaLink():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1633,7 +1633,7 @@ func showEffect22Headset():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1653,7 +1653,7 @@ func showEffect22Mousepad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1673,7 +1673,7 @@ func showEffect22Mouse():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1693,7 +1693,7 @@ func showEffect22Keypad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# replace darker colors with background color
 	ChromaAnimationAPI.FillThresholdColorsAllFramesName(layer2, 64, background)
 	# copy non zero colors from layer 2 to the base layer
@@ -1713,7 +1713,7 @@ func showEffect23():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1731,7 +1731,7 @@ func showEffect23ChromaLink():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1749,7 +1749,7 @@ func showEffect23Headset():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1767,7 +1767,7 @@ func showEffect23Mousepad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1785,7 +1785,7 @@ func showEffect23Mouse():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1803,7 +1803,7 @@ func showEffect23Keypad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.AddNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1821,7 +1821,7 @@ func showEffect24():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1839,7 +1839,7 @@ func showEffect24ChromaLink():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1857,7 +1857,7 @@ func showEffect24Headset():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1875,7 +1875,7 @@ func showEffect24Mousepad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1893,7 +1893,7 @@ func showEffect24Mouse():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1911,7 +1911,7 @@ func showEffect24Keypad():
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(layer2)
 	# setup background color on the base layer
 	var background = ChromaAnimationAPI.GetRGB(127, 0, 0)
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, background)
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, background)
 	# Add non zero colors from layer 2 to the base layer
 	ChromaAnimationAPI.SubtractNonZeroAllKeysAllFramesName(layer2, baseLayer)
 	# play the animation on the dynamic canvas
@@ -1932,8 +1932,8 @@ func showEffect25():
 	ChromaAnimationAPI.CopyNonZeroTargetAllKeysAllFramesName(layer2, baseLayer)
 	# set a background color
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 255, 0, 0)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect25ChromaLink():
@@ -1942,8 +1942,8 @@ func showEffect25ChromaLink():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect25Headset():
@@ -1952,8 +1952,8 @@ func showEffect25Headset():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect25Mousepad():
@@ -1962,8 +1962,8 @@ func showEffect25Mousepad():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect25Mouse():
@@ -1972,8 +1972,8 @@ func showEffect25Mouse():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect25Keypad():
@@ -1982,8 +1982,8 @@ func showEffect25Keypad():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect26():
@@ -2047,8 +2047,8 @@ func showEffect27():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect27ChromaLink():
@@ -2058,8 +2058,8 @@ func showEffect27ChromaLink():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect27Headset():
@@ -2069,8 +2069,8 @@ func showEffect27Headset():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect27Mousepad():
@@ -2080,8 +2080,8 @@ func showEffect27Mousepad():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect27Mouse():
@@ -2091,8 +2091,8 @@ func showEffect27Mouse():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect27Keypad():
@@ -2102,8 +2102,8 @@ func showEffect27Keypad():
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28():
@@ -2115,8 +2115,8 @@ func showEffect28():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28ChromaLink():
@@ -2128,8 +2128,8 @@ func showEffect28ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28Headset():
@@ -2141,8 +2141,8 @@ func showEffect28Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28Mousepad():
@@ -2154,8 +2154,8 @@ func showEffect28Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28Mouse():
@@ -2167,8 +2167,8 @@ func showEffect28Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect28Keypad():
@@ -2180,8 +2180,8 @@ func showEffect28Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reverse the order of frames
 	ChromaAnimationAPI.ReverseAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29():
@@ -2193,8 +2193,8 @@ func showEffect29():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29ChromaLink():
@@ -2206,8 +2206,8 @@ func showEffect29ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29Headset():
@@ -2219,8 +2219,8 @@ func showEffect29Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29Mousepad():
@@ -2232,8 +2232,8 @@ func showEffect29Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29Mouse():
@@ -2245,8 +2245,8 @@ func showEffect29Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect29Keypad():
@@ -2258,8 +2258,8 @@ func showEffect29Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# invert all the animation colors
 	ChromaAnimationAPI.InvertColorsAllFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30():
@@ -2271,8 +2271,8 @@ func showEffect30():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30ChromaLink():
@@ -2284,8 +2284,8 @@ func showEffect30ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30Headset():
@@ -2297,8 +2297,8 @@ func showEffect30Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30Mousepad():
@@ -2310,8 +2310,8 @@ func showEffect30Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30Mouse():
@@ -2323,8 +2323,8 @@ func showEffect30Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect30Keypad():
@@ -2336,8 +2336,8 @@ func showEffect30Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# duplicate and mirror
 	ChromaAnimationAPI.DuplicateMirrorFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31():
@@ -2351,8 +2351,8 @@ func showEffect31():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31ChromaLink():
@@ -2366,8 +2366,8 @@ func showEffect31ChromaLink():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31Headset():
@@ -2381,8 +2381,8 @@ func showEffect31Headset():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31Mousepad():
@@ -2396,8 +2396,8 @@ func showEffect31Mousepad():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31Mouse():
@@ -2411,8 +2411,8 @@ func showEffect31Mouse():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect31Keypad():
@@ -2426,8 +2426,8 @@ func showEffect31Keypad():
 	var frameId = 50;
 	var delay = 20;
 	ChromaAnimationAPI.InsertDelayName(baseLayer, frameId, delay)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32():
@@ -2439,8 +2439,8 @@ func showEffect32():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32ChromaLink():
@@ -2452,8 +2452,8 @@ func showEffect32ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32Headset():
@@ -2465,8 +2465,8 @@ func showEffect32Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32Mousepad():
@@ -2478,8 +2478,8 @@ func showEffect32Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32Mouse():
@@ -2491,8 +2491,8 @@ func showEffect32Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect32Keypad():
@@ -2504,8 +2504,8 @@ func showEffect32Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# reduce half of the frames, remove every 2nd frame
 	ChromaAnimationAPI.ReduceFramesName(baseLayer, 2)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33():
@@ -2517,8 +2517,8 @@ func showEffect33():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33ChromaLink():
@@ -2530,8 +2530,8 @@ func showEffect33ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33Headset():
@@ -2543,8 +2543,8 @@ func showEffect33Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33Mousepad():
@@ -2556,8 +2556,8 @@ func showEffect33Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33Mouse():
@@ -2569,8 +2569,8 @@ func showEffect33Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect33Keypad():
@@ -2582,8 +2582,8 @@ func showEffect33Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# double the number of the frames
 	ChromaAnimationAPI.DuplicateFramesName(baseLayer)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34():
@@ -2595,8 +2595,8 @@ func showEffect34():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34ChromaLink():
@@ -2608,8 +2608,8 @@ func showEffect34ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34Headset():
@@ -2621,8 +2621,8 @@ func showEffect34Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34Mousepad():
@@ -2634,8 +2634,8 @@ func showEffect34Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34Mouse():
@@ -2647,8 +2647,8 @@ func showEffect34Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect34Keypad():
@@ -2660,8 +2660,8 @@ func showEffect34Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# trim the start of the animation, so it starts at frame 10
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35():
@@ -2675,8 +2675,8 @@ func showEffect35():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35ChromaLink():
@@ -2690,8 +2690,8 @@ func showEffect35ChromaLink():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35Headset():
@@ -2705,8 +2705,8 @@ func showEffect35Headset():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35Mousepad():
@@ -2720,8 +2720,8 @@ func showEffect35Mousepad():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35Mouse():
@@ -2735,8 +2735,8 @@ func showEffect35Mouse():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect35Keypad():
@@ -2750,8 +2750,8 @@ func showEffect35Keypad():
 	ChromaAnimationAPI.TrimStartFramesName(baseLayer, 10)
 	# trim the end of the animation
 	ChromaAnimationAPI.TrimEndFramesName(baseLayer, 75)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36():
@@ -2763,8 +2763,8 @@ func showEffect36():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36ChromaLink():
@@ -2778,8 +2778,8 @@ func showEffect36ChromaLink():
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36Headset():
@@ -2793,8 +2793,8 @@ func showEffect36Headset():
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36Mousepad():
@@ -2808,8 +2808,8 @@ func showEffect36Mousepad():
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36Mouse():
@@ -2823,8 +2823,8 @@ func showEffect36Mouse():
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect36Keypad():
@@ -2838,8 +2838,8 @@ func showEffect36Keypad():
 	ChromaAnimationAPI.FillZeroColorAllFramesRGBName(baseLayer, 0, 255, 0)
 	var frameCount = 20;
 	ChromaAnimationAPI.DuplicateFirstFrameName(baseLayer, frameCount)
-	# set animation playback to 30 FPS
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	# set animation playback to 30 PS
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect37():
@@ -2850,8 +2850,8 @@ func showEffect37():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2866,8 +2866,8 @@ func showEffect37ChromaLink():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2882,8 +2882,8 @@ func showEffect37Headset():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2898,8 +2898,8 @@ func showEffect37Mousepad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2914,8 +2914,8 @@ func showEffect37Mouse():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2930,8 +2930,8 @@ func showEffect37Keypad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2946,8 +2946,8 @@ func showEffect38():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2966,8 +2966,8 @@ func showEffect38ChromaLink():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -2986,8 +2986,8 @@ func showEffect38Headset():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3006,8 +3006,8 @@ func showEffect38Mousepad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3026,8 +3026,8 @@ func showEffect38Mouse():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3046,8 +3046,8 @@ func showEffect38Keypad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3066,8 +3066,8 @@ func showEffect39():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3085,8 +3085,8 @@ func showEffect39ChromaLink():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3104,8 +3104,8 @@ func showEffect39Headset():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3123,8 +3123,8 @@ func showEffect39Mousepad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3142,8 +3142,8 @@ func showEffect39Mouse():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3161,8 +3161,8 @@ func showEffect39Keypad():
 	# open the blank animation, passing a reference to the base animation when loading has completed
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 20;
-	# Start with blank frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033f, 0)
+	# Start with blank frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesName(baseLayer, frameCount, 0.033, 0)
 	# Fill all frames with black and white static
 	ChromaAnimationAPI.FillRandomColorsBlackAndWhiteAllFramesName(baseLayer)
 	# slow down the random frames so it can be seen
@@ -3187,7 +3187,7 @@ func showEffect40():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3208,7 +3208,7 @@ func showEffect40ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3229,7 +3229,7 @@ func showEffect40Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3250,7 +3250,7 @@ func showEffect40Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3271,7 +3271,7 @@ func showEffect40Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3292,7 +3292,7 @@ func showEffect40Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# Transition from green to red and then stop
 	var frameCount = 30;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 0, 0)
 	ChromaAnimationAPI.MultiplyColorLerpAllFramesName(baseLayer, color1, color2)
@@ -3307,8 +3307,8 @@ func showEffect41():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 50;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
 	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	var startColumn = Math.Floor(Math.random() * maxColumn) % 22;
@@ -3318,7 +3318,7 @@ func showEffect41():
 	var speed = 25 / (float)frameCount;
 	var lineWidth = 2;
 		var stroke = radius;
-				var angle = i * Math.PI / 180.0f;
+				var angle = i * Math.PI / 180.0;
 				var r = Math.Floor(startRow + stroke * sin(angle))
 				var c = Math.Floor(startColumn + stroke * Math.Cos(angle))
 				if (r >= 0 && r < maxRow &&
@@ -3327,7 +3327,7 @@ func showEffect41():
 			stroke += speed;
 		radius += speed;
 	# play at top speed
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect41ChromaLink():
@@ -3340,7 +3340,7 @@ func showEffect41ChromaLink():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect41Headset():
@@ -3353,7 +3353,7 @@ func showEffect41Headset():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect41Mousepad():
@@ -3366,7 +3366,7 @@ func showEffect41Mousepad():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect41Mouse():
@@ -3379,7 +3379,7 @@ func showEffect41Mouse():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect41Keypad():
@@ -3392,7 +3392,7 @@ func showEffect41Keypad():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42():
@@ -3404,8 +3404,8 @@ func showEffect42():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	# the length of the animation
 	var frameCount = 1;
-	# set all frames to white, with all frames set to 30FPS
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 0, 64)
+	# set all frames to white, with all frames set to 30PS
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
 	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	# pick first key
@@ -3424,7 +3424,7 @@ func showEffect42():
 			var key = (r << 8) | c;
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameIndex, key, color)
 	# play at top speed
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42ChromaLink():
@@ -3437,7 +3437,7 @@ func showEffect42ChromaLink():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42Headset():
@@ -3450,7 +3450,7 @@ func showEffect42Headset():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42Mousepad():
@@ -3463,7 +3463,7 @@ func showEffect42Mousepad():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42Mouse():
@@ -3476,7 +3476,7 @@ func showEffect42Mouse():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect42Keypad():
@@ -3489,7 +3489,7 @@ func showEffect42Keypad():
 	# the length of the animation
 	var frameCount = 50;
 	# solid color
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033f, 64, 255, 64)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 255, 64)
 	# play the animation on the dynamic canvas
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43():
@@ -3501,18 +3501,18 @@ func showEffect43():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_W,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_A,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_S,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_D,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_P,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_M,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F1,
+		Keyboard::RZKEY::RZKEY_W,
+		Keyboard::RZKEY::RZKEY_A,
+		Keyboard::RZKEY::RZKEY_S,
+		Keyboard::RZKEY::RZKEY_D,
+		Keyboard::RZKEY::RZKEY_P,
+		Keyboard::RZKEY::RZKEY_M,
+		Keyboard::RZKEY::RZKEY_F1,
 	var color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, (int)size(keys),  color)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43ChromaLink():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_ChromaLink.chroma";
@@ -3523,7 +3523,7 @@ func showEffect43ChromaLink():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43Headset():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Headset.chroma";
@@ -3534,7 +3534,7 @@ func showEffect43Headset():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43Mousepad():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Mousepad.chroma";
@@ -3545,7 +3545,7 @@ func showEffect43Mousepad():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43Mouse():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma";
@@ -3556,7 +3556,7 @@ func showEffect43Mouse():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect43Keypad():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
@@ -3567,7 +3567,7 @@ func showEffect43Keypad():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44():
 	var baseLayer = "Animations/Spiral_Keyboard.chroma";
@@ -3579,17 +3579,17 @@ func showEffect44():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_W,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_A,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_S,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_D,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_P,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_M,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F1,
+		Keyboard::RZKEY::RZKEY_W,
+		Keyboard::RZKEY::RZKEY_A,
+		Keyboard::RZKEY::RZKEY_S,
+		Keyboard::RZKEY::RZKEY_D,
+		Keyboard::RZKEY::RZKEY_P,
+		Keyboard::RZKEY::RZKEY_M,
+		Keyboard::RZKEY::RZKEY_F1,
 	ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44ChromaLink():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_ChromaLink.chroma";
@@ -3600,7 +3600,7 @@ func showEffect44ChromaLink():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44Headset():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Headset.chroma";
@@ -3611,7 +3611,7 @@ func showEffect44Headset():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44Mousepad():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Mousepad.chroma";
@@ -3622,7 +3622,7 @@ func showEffect44Mousepad():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44Mouse():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Mouse.chroma";
@@ -3633,7 +3633,7 @@ func showEffect44Mouse():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect44Keypad():
 	var baseLayer = "Animations/BlackAndWhiteRainbow_Keypad.chroma";
@@ -3644,29 +3644,29 @@ func showEffect44Keypad():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45():
 	var baseLayer = "Animations/Blank_Keyboard.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 120;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_W,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_A,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_S,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_D,
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+		Keyboard::RZKEY::RZKEY_W,
+		Keyboard::RZKEY::RZKEY_A,
+		Keyboard::RZKEY::RZKEY_S,
+		Keyboard::RZKEY::RZKEY_D,
 	ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  255,  0)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F1,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F2,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F3,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F4,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F5,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F6,
+		Keyboard::RZKEY::RZKEY_F1,
+		Keyboard::RZKEY::RZKEY_F2,
+		Keyboard::RZKEY::RZKEY_F3,
+		Keyboard::RZKEY::RZKEY_F4,
+		Keyboard::RZKEY::RZKEY_F5,
+		Keyboard::RZKEY::RZKEY_F6,
 	var t = 0;
-	var speed = 0.05f;
+	var speed = 0.05;
 		t += speed;
-		var hp = Math.Abs(Math.Cos(Math.PI / 2.0f + t))
+		var hp = Math.Abs(Math.Cos(Math.PI / 2.0 + t))
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
 				color = ChromaAnimationAPI.GetRGB(0, 255, 0)
@@ -3675,94 +3675,94 @@ func showEffect45():
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45ChromaLink():
 	var baseLayer = "Animations/Blank_ChromaLink.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45Headset():
 	var baseLayer = "Animations/Blank_Headset.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45Mousepad():
 	var baseLayer = "Animations/Blank_Mousepad.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45Mouse():
 	var baseLayer = "Animations/Blank_Mouse.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect45Keypad():
 	var baseLayer = "Animations/Blank_Keypad.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(0, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46():
 	var baseLayer = "Animations/Blank_Keyboard.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 120;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 64, 64, 64)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_W,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_A,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_S,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_D,
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+		Keyboard::RZKEY::RZKEY_W,
+		Keyboard::RZKEY::RZKEY_A,
+		Keyboard::RZKEY::RZKEY_S,
+		Keyboard::RZKEY::RZKEY_D,
 	ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  0,  0)
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F7,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F8,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F9,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F10,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F11,
-		ChromaSDK::Keyboard::RZKEY::RZKEY_F12,
+		Keyboard::RZKEY::RZKEY_F7,
+		Keyboard::RZKEY::RZKEY_F8,
+		Keyboard::RZKEY::RZKEY_F9,
+		Keyboard::RZKEY::RZKEY_F10,
+		Keyboard::RZKEY::RZKEY_F11,
+		Keyboard::RZKEY::RZKEY_F12,
 	var t = 0;
-	var speed = 0.05f;
+	var speed = 0.05;
 		t += speed;
-		var hp = Math.Abs(Math.Cos(Math.PI / 2.0f + t))
+		var hp = Math.Abs(Math.Cos(Math.PI / 2.0 + t))
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0)
 				color = ChromaAnimationAPI.GetRGB(255, 255, 0)
@@ -3771,72 +3771,72 @@ func showEffect46():
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46ChromaLink():
 	var baseLayer = "Animations/Blank_ChromaLink.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46Headset():
 	var baseLayer = "Animations/Blank_Headset.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46Mousepad():
 	var baseLayer = "Animations/Blank_Mousepad.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46Mouse():
 	var baseLayer = "Animations/Blank_Mouse.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 func showEffect46Keypad():
 	var baseLayer = "Animations/Blank_Keypad.chroma";
 	ChromaAnimationAPI.CloseAnimationName(baseLayer)
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 50;
-	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1f, 255, 255, 255)
+	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 255, 255, 255)
 	ChromaAnimationAPI.FadeStartFramesName(baseLayer, frameCount / 2)
 	ChromaAnimationAPI.FadeEndFramesName(baseLayer, frameCount / 2)
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(255, 255, 0)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
-	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033f)
+	ChromaAnimationAPI.OverrideFrameDurationName(baseLayer, 0.033)
 	ChromaAnimationAPI.PlayAnimationName(baseLayer, true)
 /*
 case 1:
