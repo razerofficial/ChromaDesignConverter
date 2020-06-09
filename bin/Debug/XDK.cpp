@@ -4269,6 +4269,7 @@ for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = fabsf(cos(M_PI / 2.0f + t));
 for (int i = 0; i < keys.length; ++i) {
+int ratio = (i + 1) / keys.length;
 int color = ChromaAnimationAPI::GetRGB(0, 255 * (1 - hp), 0);
 if ((i + 1) / (keys.length + 1) < hp) {
 color = ChromaAnimationAPI::GetRGB(0, 255, 0);
@@ -4387,6 +4388,7 @@ for (int frameId = 0; frameId < frameCount; ++frameId) {
 t += speed;
 float hp = fabsf(cos(M_PI / 2.0f + t));
 for (int i = 0; i < keys.length; ++i) {
+int ratio = (i + 1) / keys.length;
 int color = ChromaAnimationAPI::GetRGB(255 * (1 - hp), 255 * (1 - hp), 0);
 if ((i + 1) / (keys.length + 1) < hp) {
 color = ChromaAnimationAPI::GetRGB(255, 255, 0);

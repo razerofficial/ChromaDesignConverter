@@ -6889,6 +6889,7 @@ showEffect45.onclick = function () {
             var hp = Math.abs(Math.cos(Math.PI / 2 + t));
 
             for (var i = 0; i < keys.length; ++i) {
+                var ratio = (i + 1) / keys.length;
                 var color = ChromaAnimation.getRGB(0, 255 * (1 - hp), 0);
                 if ((i + 1) / (keys.length + 1) < hp) {
                     color = ChromaAnimation.getRGB(0, 255, 0);
@@ -7051,6 +7052,7 @@ showEffect46.onclick = function () {
             var hp = Math.abs(Math.cos(Math.PI / 2 + t));
 
             for (var i = 0; i < keys.length; ++i) {
+                var ratio = (i + 1) / keys.length;
                 var color = ChromaAnimation.getRGB(255 * (1 - hp), 255 * (1 - hp), 0);
                 if ((i + 1) / (keys.length + 1) < hp) {
                     color = ChromaAnimation.getRGB(255, 255, 0);

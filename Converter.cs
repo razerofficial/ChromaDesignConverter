@@ -1364,6 +1364,142 @@ namespace ChromaDesignConverter
             }
         }
 
+        static void ProcessGodot(string filename, StreamWriter sw, int effectCount)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        int tabs = 0;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+                            if (line.StartsWith("#"))
+                            {
+                                continue;
+                            }
+                            foreach (char c in line)
+                            {
+                                if (c == '{')
+                                {
+                                    ++tabs;
+                                }
+                                if (c == '}')
+                                {
+                                    --tabs;
+                                }
+                            }
+                            if (line.Contains("{"))
+                            {
+                                continue;
+                            }
+                            if (line.Contains("}"))
+                            {
+                                continue;
+                            }
+
+                            if (Replace(ref line, "const char*", "var"))
+                            {
+                            }
+
+                            if (Replace(ref line, "int ", "var "))
+                            {
+                            }
+
+                            if (Replace(ref line, "float ", "var "))
+                            {
+                            }
+
+                            if (Replace(ref line, "MATH_PI", "Math.PI"))
+                            {
+                            }
+
+                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            {
+                            }
+
+                            if (Replace(ref line, "cos(", "Math.Sin("))
+                            {
+                            }
+
+                            if (Replace(ref line, "floor(", "Math.Floor("))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "Math.Abs"))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "Keyboard::RZKEY::RZKEY_", "ChromaSDK::Keyboard::RZKEY::RZKEY_"))
+                            {
+                            }
+
+                            if (Replace(ref line, "void ShowEffect", "func showEffect"))
+                            {
+                                line += ":";
+                            }
+
+                            if (Replace(ref line, "\"animations/", "\"Animations/"))
+                            {
+                            }
+
+                            if (Replace(ref line, "ChromaAnimationAPI::", "ChromaAnimationAPI."))
+                            {
+                            }
+
+                            if (Replace(ref line, ");", ")"))
+                            {
+                            }
+
+                            if (Replace(ref line, "//", "#"))
+                            {
+                            }
+
+                            for (int tab = 0; tab < tabs; ++tab)
+                            {
+                                sw.Write("\t");
+                            }
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+
+                        for (int effect = 1; effect <= effectCount; ++effect)
+                        {
+                            sw.WriteLine("func _on_ButtonEffect{0}_button_up():", effect);
+                            sw.WriteLine("\tif (IsChromaInitialized()):");
+                            sw.WriteLine("\t\tshowEffect{0}()", effect);
+                            sw.WriteLine("\t\tshowEffect{0}ChromaLink()", effect);
+                            sw.WriteLine("\t\tshowEffect{0}Headset()", effect);
+                            sw.WriteLine("\t\tshowEffect{0}Keypad()", effect);
+                            sw.WriteLine("\t\tshowEffect{0}Mouse()", effect);
+                            sw.WriteLine("\t\tshowEffect{0}Mousepad()", effect);
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
+
         static void ProcessUE4Header(string filename, StreamWriter sw, string gameName)
         {
             try
@@ -1911,6 +2047,21 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
                     ProcessJava(input, sw);
+                }
+            }
+        }
+
+        public static void ConvertToGodot(string input, string outputFile, int effectCount)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessGodot(input, sw, effectCount);
                 }
             }
         }
