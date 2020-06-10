@@ -606,7 +606,7 @@ func showEffect9():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -627,7 +627,7 @@ func showEffect9ChromaLink():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -648,7 +648,7 @@ func showEffect9Headset():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -669,7 +669,7 @@ func showEffect9Mousepad():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -690,7 +690,7 @@ func showEffect9Mouse():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -711,7 +711,7 @@ func showEffect9Keypad():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -1049,7 +1049,7 @@ func showEffect15():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1071,7 +1071,7 @@ func showEffect15ChromaLink():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1093,7 +1093,7 @@ func showEffect15Headset():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1115,7 +1115,7 @@ func showEffect15Mousepad():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1137,7 +1137,7 @@ func showEffect15Mouse():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1159,7 +1159,7 @@ func showEffect15Keypad():
 	# loop over all frames in the layer
 	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
+		var t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -3333,8 +3333,8 @@ func showEffect41():
 	var frameCount = 50;
 	# set all frames to white, with all frames set to 30PS
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
-	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
-	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
+	var maxRow = ChromaAnimationAPI.GetMaxRow(EChromaSDKDevice2DEnum.DE_Keyboard)
+	var maxColumn = ChromaAnimationAPI.GetMaxColumn(EChromaSDKDevice2DEnum.DE_Keyboard)
 	var startColumn = floor(Math.random() * maxColumn) % 22;
 	var startRow = floor(Math.random() * maxRow) % 6;
 	var color = ChromaAnimationAPI.GetRGB(0, 255, 0)
@@ -3347,7 +3347,7 @@ func showEffect41():
 			for i in range(0, 360, 1):
 				var angle = i * PI / 180.0;
 				var r = floor(startRow + stroke * sin(angle))
-				var c = floor(startColumn + stroke * sin(angle))
+				var c = floor(startColumn + stroke * cos(angle))
 				if (r >= 0 && r < maxRow &&
 					c >= 0 && c < maxColumn) {
 					var key = (r << 8) | c;
@@ -3434,8 +3434,8 @@ func showEffect42():
 	var frameCount = 1;
 	# set all frames to white, with all frames set to 30PS
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
-	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
-	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
+	var maxRow = ChromaAnimationAPI.GetMaxRow(EChromaSDKDevice2DEnum.DE_Keyboard)
+	var maxColumn = ChromaAnimationAPI.GetMaxColumn(EChromaSDKDevice2DEnum.DE_Keyboard)
 	# pick first key
 	var pointAColumn = floor(Math.random() * maxColumn) % 22;
 	var pointARow = floor(Math.random() * maxRow) % 6;
@@ -3707,7 +3707,7 @@ func showEffect45():
 	var speed = 0.05;
 	for frameId in range(0, frameCount, 1):
 		t += speed;
-		var hp = abs(sin(PI / 2.0 + t))
+		var hp = abs(cos(PI / 2.0 + t))
 		for i in range(0, keys.length, 1):
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
@@ -3811,7 +3811,7 @@ func showEffect46():
 	var speed = 0.05;
 	for frameId in range(0, frameCount, 1):
 		t += speed;
-		var hp = abs(sin(PI / 2.0 + t))
+		var hp = abs(cos(PI / 2.0 + t))
 		for i in range(0, keys.length, 1):
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0)

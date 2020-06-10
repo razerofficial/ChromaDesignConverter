@@ -1589,7 +1589,7 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "sin("))
+                            if (Replace(ref line, "sin(", "sin("))
                             {
                             }
 
@@ -1602,6 +1602,14 @@ namespace ChromaDesignConverter
                             }
 
                             if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDevice1DEnum::", "EChromaSDKDevice1DEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDevice2DEnum::", "EChromaSDKDevice2DEnum."))
                             {
                             }
 
