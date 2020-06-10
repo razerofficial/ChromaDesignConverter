@@ -604,8 +604,9 @@ func showEffect9():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -624,8 +625,9 @@ func showEffect9ChromaLink():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -644,8 +646,9 @@ func showEffect9Headset():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -664,8 +667,9 @@ func showEffect9Mousepad():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -684,8 +688,9 @@ func showEffect9Mouse():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -704,8 +709,9 @@ func showEffect9Keypad():
 	#integer number of times to blink during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		var t = 1 - Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = 1 - abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	# play the animation on the dynamic canvas
@@ -893,6 +899,7 @@ func showEffect13():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -906,6 +913,7 @@ func showEffect13ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -919,6 +927,7 @@ func showEffect13Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -932,6 +941,7 @@ func showEffect13Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -945,6 +955,7 @@ func showEffect13Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -958,6 +969,7 @@ func showEffect13Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		# give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) #yellow
 	# play the animation on the dynamic canvas
@@ -1035,8 +1047,9 @@ func showEffect15():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1056,8 +1069,9 @@ func showEffect15ChromaLink():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1077,8 +1091,9 @@ func showEffect15Headset():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1098,8 +1113,9 @@ func showEffect15Mousepad():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1119,8 +1135,9 @@ func showEffect15Mouse():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1140,8 +1157,9 @@ func showEffect15Keypad():
 	#integer number of times to transition during animation
 	var speed = 2;
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		#Math.cos gives a smooth 1 to 0 to 1 curve
-		var t = Math.Abs(Math.Cos(speed * Math.PI * (frameId + 1) / (float)frameCount))
+		var t = abs(sin(speed * PI * (frameId + 1) / float(frameCount)))
 		# use t to transition from color 1 to color 2
 		var color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		# give color to the layer
@@ -1211,6 +1229,7 @@ func showEffect17():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1225,6 +1244,7 @@ func showEffect17ChromaLink():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1239,6 +1259,7 @@ func showEffect17Headset():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1253,6 +1274,7 @@ func showEffect17Mousepad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1267,6 +1289,7 @@ func showEffect17Mouse():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1281,6 +1304,7 @@ func showEffect17Keypad():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	# loop over all frames in the layer
+	for frameId in range(0, frameCount, 1):
 		var threshold = 100;
 		# give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -3311,17 +3335,21 @@ func showEffect41():
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
 	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
-	var startColumn = Math.Floor(Math.random() * maxColumn) % 22;
-	var startRow = Math.Floor(Math.random() * maxRow) % 6;
+	var startColumn = floor(Math.random() * maxColumn) % 22;
+	var startRow = floor(Math.random() * maxRow) % 6;
 	var color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var radius = 0;
-	var speed = 25 / (float)frameCount;
+	var speed = 25 / float(frameCount)
 	var lineWidth = 2;
+	for frameIndex in range(0, frameCount, 1):
 		var stroke = radius;
-				var angle = i * Math.PI / 180.0;
-				var r = Math.Floor(startRow + stroke * sin(angle))
-				var c = Math.Floor(startColumn + stroke * Math.Cos(angle))
+		for t in range(0, lineWidth, 1):
+			for i in range(0, 360, 1):
+				var angle = i * PI / 180.0;
+				var r = floor(startRow + stroke * sin(angle))
+				var c = floor(startColumn + stroke * sin(angle))
 				if (r >= 0 && r < maxRow &&
+					c >= 0 && c < maxColumn) {
 					var key = (r << 8) | c;
 					ChromaAnimationAPI.SetKeyColorName(baseLayer, frameIndex, key, color)
 			stroke += speed;
@@ -3409,18 +3437,22 @@ func showEffect42():
 	var maxRow = ChromaAnimationAPI.GetMaxRow((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	var maxColumn = ChromaAnimationAPI.GetMaxColumn((int)EChromaSDKDevice2DEnum::DE_Keyboard)
 	# pick first key
-	var pointAColumn = Math.Floor(Math.random() * maxColumn) % 22;
-	var pointARow = Math.Floor(Math.random() * maxRow) % 6;
+	var pointAColumn = floor(Math.random() * maxColumn) % 22;
+	var pointARow = floor(Math.random() * maxRow) % 6;
 	# pick a different second key
 	var pointBColumn;
 	var pointBRow;
-		pointBColumn = Math.Floor(Math.random() * maxColumn) % 22;
-		pointBRow = Math.Floor(Math.random() * maxRow) % 6;
+		do {
+		pointBColumn = floor(Math.random() * maxColumn) % 22;
+		pointBRow = floor(Math.random() * maxRow) % 6;
+	} while (pointAColumn == pointBColumn && pointARow == pointBRow)
 	var color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	var frameIndex = 0;
-		var r = Math.Floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i))
-		var c = Math.Floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i))
+	for = in range(=, 1.0f, ):
+		var r = floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i))
+		var c = floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i))
 		if (r >= 0 && r < maxRow &&
+			c >= 0 && c < maxColumn) {
 			var key = (r << 8) | c;
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameIndex, key, color)
 	# play at top speed
@@ -3501,6 +3533,7 @@ func showEffect43():
 	var color1 = ChromaAnimationAPI.GetRGB(64, 64, 0)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 0, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+		var keys[] = {
 		Keyboard::RZKEY::RZKEY_W,
 		Keyboard::RZKEY::RZKEY_A,
 		Keyboard::RZKEY::RZKEY_S,
@@ -3508,6 +3541,7 @@ func showEffect43():
 		Keyboard::RZKEY::RZKEY_P,
 		Keyboard::RZKEY::RZKEY_M,
 		Keyboard::RZKEY::RZKEY_F1,
+	};
 	var color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	ChromaAnimationAPI.SetKeysColorAllFramesName(baseLayer,  keys, (int)size(keys),  color)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
@@ -3579,6 +3613,7 @@ func showEffect44():
 	var color1 = ChromaAnimationAPI.GetRGB(32, 32, 32)
 	var color2 = ChromaAnimationAPI.GetRGB(64, 64, 64)
 	ChromaAnimationAPI.MultiplyTargetColorLerpAllFramesName(baseLayer, color1, color2)
+		var keys[] = {
 		Keyboard::RZKEY::RZKEY_W,
 		Keyboard::RZKEY::RZKEY_A,
 		Keyboard::RZKEY::RZKEY_S,
@@ -3586,6 +3621,7 @@ func showEffect44():
 		Keyboard::RZKEY::RZKEY_P,
 		Keyboard::RZKEY::RZKEY_M,
 		Keyboard::RZKEY::RZKEY_F1,
+	};
 	ChromaAnimationAPI.CopyKeysColorAllFramesName(layer2, baseLayer, keys)
 	ChromaAnimationAPI.SetChromaCustomFlagName(baseLayer, true)
 	ChromaAnimationAPI.SetChromaCustomColorAllFramesName(baseLayer)
@@ -3652,24 +3688,32 @@ func showEffect45():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 120;
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+		var keys[] = {
 		Keyboard::RZKEY::RZKEY_W,
 		Keyboard::RZKEY::RZKEY_A,
 		Keyboard::RZKEY::RZKEY_S,
 		Keyboard::RZKEY::RZKEY_D,
+	};
 	ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  255,  0)
+		keys[] = {
 		Keyboard::RZKEY::RZKEY_F1,
 		Keyboard::RZKEY::RZKEY_F2,
 		Keyboard::RZKEY::RZKEY_F3,
 		Keyboard::RZKEY::RZKEY_F4,
 		Keyboard::RZKEY::RZKEY_F5,
 		Keyboard::RZKEY::RZKEY_F6,
+	};
 	var t = 0;
 	var speed = 0.05;
+	for frameId in range(0, frameCount, 1):
 		t += speed;
-		var hp = Math.Abs(Math.Cos(Math.PI / 2.0 + t))
+		var hp = abs(sin(PI / 2.0 + t))
+		for i in range(0, keys.length, 1):
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
+				if ((i + 1) / (keys.length + 1) < hp) {
 				color = ChromaAnimationAPI.GetRGB(0, 255, 0)
+				} else {
 				color = ChromaAnimationAPI.GetRGB(0, 100, 0)
 			var key = keys[i];
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)
@@ -3748,24 +3792,32 @@ func showEffect46():
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	var frameCount = 120;
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.1, 64, 64, 64)
+		var keys[] = {
 		Keyboard::RZKEY::RZKEY_W,
 		Keyboard::RZKEY::RZKEY_A,
 		Keyboard::RZKEY::RZKEY_S,
 		Keyboard::RZKEY::RZKEY_D,
+	};
 	ChromaAnimationAPI.SetKeysColorAllFramesRGBName(baseLayer,  keys, (int)size(keys),  255,  0,  0)
+		keys[] = {
 		Keyboard::RZKEY::RZKEY_F7,
 		Keyboard::RZKEY::RZKEY_F8,
 		Keyboard::RZKEY::RZKEY_F9,
 		Keyboard::RZKEY::RZKEY_F10,
 		Keyboard::RZKEY::RZKEY_F11,
 		Keyboard::RZKEY::RZKEY_F12,
+	};
 	var t = 0;
 	var speed = 0.05;
+	for frameId in range(0, frameCount, 1):
 		t += speed;
-		var hp = Math.Abs(Math.Cos(Math.PI / 2.0 + t))
+		var hp = abs(sin(PI / 2.0 + t))
+		for i in range(0, keys.length, 1):
 			var ratio = (i + 1) / keys.length;
 			var color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0)
+				if ((i + 1) / (keys.length + 1) < hp) {
 				color = ChromaAnimationAPI.GetRGB(255, 255, 0)
+				} else {
 				color = ChromaAnimationAPI.GetRGB(100, 100, 0)
 			var key = keys[i];
 			ChromaAnimationAPI.SetKeyColorName(baseLayer, frameId, key, color)

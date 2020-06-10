@@ -1412,6 +1412,94 @@ namespace ChromaDesignConverter
             return true;
         }
 
+        static void WriteTabs(StreamWriter sw, int tabs)
+        {
+            for (int tab = 0; tab < tabs; ++tab)
+            {
+                sw.Write("\t");
+            }
+        }
+
+        static string GetAssignmentFieldName(string assignment)
+        {
+            string[] parts = assignment.Split(" ".ToCharArray());
+            if (parts[0].Trim() == "int")
+            {
+                if (parts.Length > 1)
+                {
+                    return parts[1].Trim();
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+            else
+            {
+                if (parts.Length > 2)
+                {
+                    return parts[2].Trim();
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
+
+        static string GetAssignmentFieldValue(string assignment)
+        {
+            string[] parts = assignment.Split(" ".ToCharArray());
+            if (parts[0].Trim() == "int")
+            {
+                if (parts.Length > 3)
+                {
+                    return parts[3].Trim();
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+            else
+            {
+                if (parts.Length > 2)
+                {
+                    return parts[2].Trim();
+                }
+                else
+                {
+                    return string.Empty;
+                }
+            }
+        }
+
+        static string GetConditionFieldValue(string condition, int param)
+        {
+            string[] parts = condition.Split(" ".ToCharArray());
+            if (param >= 0 && param < parts.Length)
+            {
+                return parts[param].Trim();
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+
+        static string GetIncrementValue(string assignment)
+        {
+            if (assignment.Contains("++"))
+            {
+                return "1";
+            }
+            if (assignment.Contains("--"))
+            {
+                return "-1";
+            }
+            return string.Empty;
+        }
+
         static void ProcessGodot(string filename, StreamWriter sw, int effectCount)
         {
             try
@@ -1439,6 +1527,24 @@ namespace ChromaDesignConverter
                             {
                                 continue;
                             }
+
+                            const string TOKEN_FOR = "for (";
+                            if (line.Trim().StartsWith(TOKEN_FOR))
+                            {
+                                string[] parts = line.Trim().Substring(TOKEN_FOR.Length).Split(";".ToCharArray());
+                                string fieldName = GetAssignmentFieldName(parts[0].Trim());
+                                string fieldVal = GetAssignmentFieldValue(parts[0].Trim());
+                                string condition = GetConditionFieldValue(parts[1].Trim(), 2);
+                                string increment = GetIncrementValue(parts[2].Trim());
+                                WriteTabs(sw, tabs);
+                                sw.WriteLine("for {0} in range({1}, {2}, {3}):",
+                                    fieldName, fieldVal,
+                                    condition,
+                                    increment);
+                                tabs++;
+                                continue;
+                            }
+
                             foreach (char c in line)
                             {
                                 if (c == '{')
@@ -1450,11 +1556,11 @@ namespace ChromaDesignConverter
                                     --tabs;
                                 }
                             }
-                            if (line.Contains("{"))
+                            if (line.Trim() == "{")
                             {
                                 continue;
                             }
-                            if (line.Contains("}"))
+                            if (line.Trim() == "}")
                             {
                                 continue;
                             }
@@ -1467,27 +1573,31 @@ namespace ChromaDesignConverter
                             {
                             }
 
+                            if (Replace(ref line, "(float)frameCount", "float(frameCount)"))
+                            {
+                            }
+
                             if (Replace(ref line, "float ", "var "))
                             {
                             }
 
-                            if (Replace(ref line, "MATH_PI", "Math.PI"))
+                            if (Replace(ref line, "MATH_PI", "PI"))
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "Math.Cos("))
+                            if (Replace(ref line, "cos(", "cos("))
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "Math.Sin("))
+                            if (Replace(ref line, "cos(", "sin("))
                             {
                             }
 
-                            if (Replace(ref line, "floor(", "Math.Floor("))
+                            if (Replace(ref line, "floor(", "floor("))
                             {
                             }
 
-                            if (Replace(ref line, "fabsf", "Math.Abs"))
+                            if (Replace(ref line, "fabsf", "abs"))
                             {
                             }
 
@@ -1520,10 +1630,7 @@ namespace ChromaDesignConverter
                             {
                             }
 
-                            for (int tab = 0; tab < tabs; ++tab)
-                            {
-                                sw.Write("\t");
-                            }
+                            WriteTabs(sw, tabs);
                             sw.WriteLine(line);
                         }
                         while (line != null);
