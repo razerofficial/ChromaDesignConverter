@@ -1613,6 +1613,10 @@ namespace ChromaDesignConverter
                             {
                             }
 
+                            if (Replace(ref line, "Keyboard::RZKEY::", "Keyboard.RZKEY."))
+                            {
+                            }                            
+
                             if (ConvertFloatArgumentsRemoveSuffix(ref line))
                             {
                             }
