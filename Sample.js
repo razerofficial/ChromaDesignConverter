@@ -2,8 +2,6 @@ showEffect1.onclick = function () {
     exampleReset();
     handleButtonClick(showEffect1);
 
-    ChromaAnimation.useIdleAnimation(EChromaSDKDeviceEnum.DE_Keyboard, false);
-
     // start with a blank animation
     var baseLayer = 'animations/Sprite1_Keyboard.chroma';
 

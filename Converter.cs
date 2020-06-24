@@ -2232,5 +2232,188 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                 }
             }
         }
+
+        public static void ConvertToClickTeamFusion(string input, string outputFile, int effectCount)
+        {
+            if (File.Exists(outputFile))
+            {
+                File.Delete(outputFile);
+            }
+            using (FileStream fs = File.Open(outputFile, FileMode.OpenOrCreate, FileAccess.Write, FileShare.ReadWrite))
+            {
+                using (StreamWriter sw = new StreamWriter(fs))
+                {
+                    ProcessCTF(input, sw, effectCount);
+                }
+            }
+        }
+
+        static void ProcessCTF(string filename, StreamWriter sw, int effectCount)
+        {
+            try
+            {
+                using (FileStream fs = File.Open(filename, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+                {
+                    using (StreamReader sr = new StreamReader(fs))
+                    {
+                        string line;
+                        int tabs = 0;
+                        do
+                        {
+                            line = sr.ReadLine();
+                            if (line == null ||
+                                line == "\0")
+                            {
+                                break;
+                            }
+                            line = line.Trim();
+                            if (line == "")
+                            {
+                                continue;
+                            }
+                            if (line.StartsWith("#"))
+                            {
+                                continue;
+                            }
+
+                            const string TOKEN_FOR = "for (";
+                            if (line.Trim().StartsWith(TOKEN_FOR))
+                            {
+                                string[] parts = line.Trim().Substring(TOKEN_FOR.Length).Split(";".ToCharArray());
+                                string fieldName = GetAssignmentFieldName(parts[0].Trim());
+                                string fieldVal = GetAssignmentFieldValue(parts[0].Trim());
+                                string condition = GetConditionFieldValue(parts[1].Trim(), 2);
+                                string increment = GetIncrementValue(parts[2].Trim());
+                                WriteTabs(sw, tabs);
+                                sw.WriteLine("for {0} in range({1}, {2}, {3}):",
+                                    fieldName, fieldVal,
+                                    condition,
+                                    increment);
+                                tabs++;
+                                continue;
+                            }
+
+                            foreach (char c in line)
+                            {
+                                if (c == '{')
+                                {
+                                    ++tabs;
+                                }
+                                if (c == '}')
+                                {
+                                    --tabs;
+                                }
+                            }
+                            if (line.Trim() == "{")
+                            {
+                                continue;
+                            }
+                            if (line.Trim() == "}")
+                            {
+                                WriteTabs(sw, tabs);
+                                sw.WriteLine("end");
+                                continue;
+                            }
+
+                            if (Replace(ref line, "const char*", string.Empty))
+                            {
+                            }
+
+                            if (Replace(ref line, "int ", string.Empty))
+                            {
+                            }
+
+                            if (Replace(ref line, "(float)frameCount", "float(frameCount)"))
+                            {
+                            }
+
+                            if (Replace(ref line, "float ", string.Empty))
+                            {
+                            }
+
+                            if (Replace(ref line, "MATH_PI", "PI"))
+                            {
+                            }
+
+                            if (Replace(ref line, "cos(", "cos("))
+                            {
+                            }
+
+                            if (Replace(ref line, "sin(", "sin("))
+                            {
+                            }
+
+                            if (Replace(ref line, "floor(", "floor("))
+                            {
+                            }
+
+                            if (Replace(ref line, "fabsf", "abs"))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDevice1DEnum::", "EChromaSDKDevice1DEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "(int)EChromaSDKDevice2DEnum::", "EChromaSDKDevice2DEnum."))
+                            {
+                            }
+
+                            if (Replace(ref line, "Keyboard::RZKEY::", "Keyboard.RZKEY."))
+                            {
+                            }
+
+                            if (ConvertFloatArgumentsRemoveSuffix(ref line))
+                            {
+                            }
+
+                            if (Replace(ref line, "void ShowEffect", "function ShowEffect"))
+                            {
+                            }
+
+                            if (Replace(ref line, "\"animations/", "\"Animations/"))
+                            {
+                            }
+
+                            if (Replace(ref line, "ChromaAnimationAPI::", "ChromaAnimationAPI."))
+                            {
+                            }
+
+                            if (Replace(ref line, ");", ")"))
+                            {
+                            }
+
+                            if (Replace(ref line, "//", "--"))
+                            {
+                            }
+
+                            WriteTabs(sw, tabs);
+                            sw.WriteLine(line);
+                        }
+                        while (line != null);
+
+                        for (int effect = 1; effect <= effectCount; ++effect)
+                        {
+                            sw.WriteLine("\tif index == {0} then", effect);
+                            sw.WriteLine("\t\tShowEffect{0}()", effect);
+                            sw.WriteLine("\t\tShowEffect{0}ChromaLink()", effect);
+                            sw.WriteLine("\t\tShowEffect{0}Headset()", effect);
+                            sw.WriteLine("\t\tShowEffect{0}Keypad()", effect);
+                            sw.WriteLine("\t\tShowEffect{0}Mouse()", effect);
+                            sw.WriteLine("\t\tShowEffect{0}Mousepad()", effect);
+                            sw.WriteLine("\tend");
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                Console.Error.WriteLine("Failed to process file: {0}", filename);
+            }
+        }
     }
 }
