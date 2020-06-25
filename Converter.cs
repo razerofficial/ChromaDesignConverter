@@ -2285,7 +2285,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                                 string condition = GetConditionFieldValue(parts[1].Trim(), 2);
                                 string increment = GetIncrementValue(parts[2].Trim());
                                 WriteTabs(sw, tabs);
-                                sw.WriteLine("for {0} in range({1}, {2}, {3}):",
+                                sw.WriteLine("for {0}={1},{2},{3} do",
                                     fieldName, fieldVal,
                                     condition,
                                     increment);
@@ -2323,7 +2323,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                             {
                             }
 
-                            if (Replace(ref line, "(float)frameCount", "float(frameCount)"))
+                            if (Replace(ref line, "(float)", string.Empty))
                             {
                             }
 
@@ -2331,23 +2331,23 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                             {
                             }
 
-                            if (Replace(ref line, "MATH_PI", "PI"))
+                            if (Replace(ref line, "MATH_PI", "math.pi"))
                             {
                             }
 
-                            if (Replace(ref line, "cos(", "cos("))
+                            if (Replace(ref line, "cos(", "math.cos("))
                             {
                             }
 
-                            if (Replace(ref line, "sin(", "sin("))
+                            if (Replace(ref line, "sin(", "math.sin("))
                             {
                             }
 
-                            if (Replace(ref line, "floor(", "floor("))
+                            if (Replace(ref line, "floor(", "math.floor("))
                             {
                             }
 
-                            if (Replace(ref line, "fabsf", "abs"))
+                            if (Replace(ref line, "fabsf", "math.abs"))
                             {
                             }
 

@@ -651,9 +651,9 @@ function ShowEffect9()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -674,9 +674,9 @@ function ShowEffect9ChromaLink()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -697,9 +697,9 @@ function ShowEffect9Headset()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -720,9 +720,9 @@ function ShowEffect9Mousepad()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -743,9 +743,9 @@ function ShowEffect9Mouse()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -766,9 +766,9 @@ function ShowEffect9Keypad()
 	--integer number of times to blink during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve, subtracting from one inverts the curve
-		t = 1 - abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = 1 - math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- multiply the frame by the 't' intensity
 		ChromaAnimationAPI.MultiplyIntensityName(baseLayer, frameId, t)
 	end
@@ -976,7 +976,7 @@ function ShowEffect13()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -992,7 +992,7 @@ function ShowEffect13ChromaLink()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -1008,7 +1008,7 @@ function ShowEffect13Headset()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -1024,7 +1024,7 @@ function ShowEffect13Mousepad()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -1040,7 +1040,7 @@ function ShowEffect13Mouse()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -1056,7 +1056,7 @@ function ShowEffect13Keypad()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		-- give color to the layer
 		ChromaAnimationAPI.MultiplyIntensityRGBName(baseLayer, frameId, 255, 255, 0) --yellow
 	end
@@ -1142,9 +1142,9 @@ function ShowEffect15()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1166,9 +1166,9 @@ function ShowEffect15ChromaLink()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1190,9 +1190,9 @@ function ShowEffect15Headset()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1214,9 +1214,9 @@ function ShowEffect15Mousepad()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1238,9 +1238,9 @@ function ShowEffect15Mouse()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1262,9 +1262,9 @@ function ShowEffect15Keypad()
 	--integer number of times to transition during animation
 	speed = 2;
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		--Math.cos gives a smooth 1 to 0 to 1 curve
-		t = abs(cos(speed * PI * (frameId + 1) / float(frameCount)))
+		t = math.abs(math.cos(speed * math.pi * (frameId + 1) / frameCount))
 		-- use t to transition from color 1 to color 2
 		color = ChromaAnimationAPI.LerpColor(color1, color2, t)
 		-- give color to the layer
@@ -1342,7 +1342,7 @@ function ShowEffect17()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1359,7 +1359,7 @@ function ShowEffect17ChromaLink()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1376,7 +1376,7 @@ function ShowEffect17Headset()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1393,7 +1393,7 @@ function ShowEffect17Mousepad()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1410,7 +1410,7 @@ function ShowEffect17Mouse()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -1427,7 +1427,7 @@ function ShowEffect17Keypad()
 	ChromaAnimationAPI.GetAnimation(baseLayer)
 	frameCount = ChromaAnimationAPI.GetFrameCountName(baseLayer)
 	-- loop over all frames in the layer
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		threshold = 100;
 		-- give color to the layer
 		ChromaAnimationAPI.FillThresholdColorsRGBName(baseLayer, frameId, threshold, 255, 0, 0)
@@ -3598,19 +3598,19 @@ function ShowEffect41()
 	ChromaAnimationAPI.MakeBlankFramesRGBName(baseLayer, frameCount, 0.033, 64, 0, 64)
 	maxRow = ChromaAnimationAPI.GetMaxRow(EChromaSDKDevice2DEnum.DE_Keyboard)
 	maxColumn = ChromaAnimationAPI.GetMaxColumn(EChromaSDKDevice2DEnum.DE_Keyboard)
-	startColumn = floor(Math.random() * maxColumn) % 22;
-	startRow = floor(Math.random() * maxRow) % 6;
+	startColumn = math.floor(Math.random() * maxColumn) % 22;
+	startRow = math.floor(Math.random() * maxRow) % 6;
 	color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	radius = 0;
-	speed = 25 / float(frameCount)
+	speed = 25 / frameCount;
 	lineWidth = 2;
-	for frameIndex in range(0, frameCount, 1):
+	for frameIndex=0,frameCount,1 do
 		stroke = radius;
-		for t in range(0, lineWidth, 1):
-			for i in range(0, 360, 1):
-				angle = i * PI / 180.0;
-				r = floor(startRow + stroke * sin(angle))
-				c = floor(startColumn + stroke * cos(angle))
+		for t=0,lineWidth,1 do
+			for i=0,360,1 do
+				angle = i * math.pi / 180.0;
+				r = math.floor(startRow + stroke * math.sin(angle))
+				c = math.floor(startColumn + stroke * math.cos(angle))
 				if (r >= 0 && r < maxRow &&
 					c >= 0 && c < maxColumn) {
 					key = (r << 8) | c;
@@ -3710,20 +3710,20 @@ function ShowEffect42()
 	maxRow = ChromaAnimationAPI.GetMaxRow(EChromaSDKDevice2DEnum.DE_Keyboard)
 	maxColumn = ChromaAnimationAPI.GetMaxColumn(EChromaSDKDevice2DEnum.DE_Keyboard)
 	-- pick first key
-	pointAColumn = floor(Math.random() * maxColumn) % 22;
-	pointARow = floor(Math.random() * maxRow) % 6;
+	pointAColumn = math.floor(Math.random() * maxColumn) % 22;
+	pointARow = math.floor(Math.random() * maxRow) % 6;
 	-- pick a different second key
 	pointBColumn;
 	pointBRow;
 		do {
-		pointBColumn = floor(Math.random() * maxColumn) % 22;
-		pointBRow = floor(Math.random() * maxRow) % 6;
+		pointBColumn = math.floor(Math.random() * maxColumn) % 22;
+		pointBRow = math.floor(Math.random() * maxRow) % 6;
 	} while (pointAColumn == pointBColumn && pointARow == pointBRow)
 	color = ChromaAnimationAPI.GetRGB(0, 255, 0)
 	frameIndex = 0;
-	for = in range(=, 1.0f, ):
-		r = floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i))
-		c = floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i))
+	for ===,1.0f, do
+		r = math.floor(ChromaAnimationAPI.Lerp(pointARow, pointBRow, i))
+		c = math.floor(ChromaAnimationAPI.Lerp(pointAColumn, pointBColumn, i))
 		if (r >= 0 && r < maxRow &&
 			c >= 0 && c < maxColumn) {
 			key = (r << 8) | c;
@@ -3998,10 +3998,10 @@ function ShowEffect45()
 	};
 	t = 0;
 	speed = 0.05;
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		t += speed;
-		hp = abs(cos(PI / 2.0 + t))
-		for i in range(0, keys.length, 1):
+		hp = math.abs(math.cos(math.pi / 2.0 + t))
+		for i=0,keys.length,1 do
 			ratio = (i + 1) / keys.length;
 			color = ChromaAnimationAPI.GetRGB(0, 255 * (1 - hp), 0)
 				if ((i + 1) / (keys.length + 1) < hp) {
@@ -4111,10 +4111,10 @@ function ShowEffect46()
 	};
 	t = 0;
 	speed = 0.05;
-	for frameId in range(0, frameCount, 1):
+	for frameId=0,frameCount,1 do
 		t += speed;
-		hp = abs(cos(PI / 2.0 + t))
-		for i in range(0, keys.length, 1):
+		hp = math.abs(math.cos(math.pi / 2.0 + t))
+		for i=0,keys.length,1 do
 			ratio = (i + 1) / keys.length;
 			color = ChromaAnimationAPI.GetRGB(255 * (1 - hp), 255 * (1 - hp), 0)
 				if ((i + 1) / (keys.length + 1) < hp) {
