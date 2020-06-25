@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Text;
 
@@ -2258,6 +2259,8 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                     {
                         string line;
                         int tabs = 0;
+                        int parens = 0;
+                        bool hasIf = false;
                         do
                         {
                             line = sr.ReadLine();
@@ -2315,6 +2318,24 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                                 continue;
                             }
 
+                            if (line.Trim().StartsWith("if"))
+                            {
+                                hasIf = true;
+                                parens = 0;
+                            }
+
+                            foreach (char c in line)
+                            {
+                                if (c == '(')
+                                {
+                                    ++parens;
+                                }
+                                if (c == ')')
+                                {
+                                    --parens;
+                                }
+                            }
+
                             if (Replace(ref line, "const char*", string.Empty))
                             {
                             }
@@ -2349,6 +2370,21 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
 
                             if (Replace(ref line, "fabsf", "math.abs"))
                             {
+                            }
+
+                            if (Replace(ref line, "Math.random()", "math.random()"))
+                            {
+                            }
+
+                            if (line.Contains("+="))
+                            {
+                                string[] parts = line.Trim().Split("+=".ToCharArray());
+                                if (parts.Length > 2)
+                                {
+                                    line = string.Format("{0} = {0} + {1}",
+                                        parts[0].Trim(),
+                                        parts[2].Trim());
+                                }
                             }
 
                             if (Replace(ref line, "(int)EChromaSDKDeviceEnum::", "EChromaSDKDeviceEnum."))
@@ -2391,6 +2427,103 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                             {
                             }
 
+                            if (line.Contains("&&"))
+                            {
+                                line = line.Replace("&&", "and");
+                            }
+
+                            if (line.Contains("||"))
+                            {
+                                line = line.Replace("||", "or");
+                            }
+
+                            while (line.Contains("<<"))
+                            {
+                                const string token = "<<";
+                                int indexOp = line.IndexOf(token);
+                                string part1 = line.Substring(0, indexOp).Trim();
+                                string part2 = line.Substring(indexOp + token.Length).Trim();
+                                int indexArg1 = part1.LastIndexOfAny(new char[] { ' ', '('});
+                                if (indexArg1 >= 0)
+                                {
+                                    ++indexArg1; //trim char
+                                    string arg1 = part1.Substring(indexArg1).Trim();
+                                    string pre1 = part1.Substring(0, indexArg1);
+                                    int indexArg2 = part2.IndexOfAny(new char[] { ' ', ')' });
+                                    if (indexArg2 > 0)
+                                    {
+                                        string arg2 = part2.Substring(0, indexArg2).Trim();
+                                        string post2 = part2.Substring(arg2.Length);
+                                        string newline = pre1 + string.Format("bit.lshift({0},{1})", arg1, arg2) + post2;
+                                        line = newline;
+                                    }
+                                }
+                            }
+
+                            if (line.Contains(">>"))
+                            {
+                                const string token = ">>";
+                                int indexOp = line.IndexOf(token);
+                                string part1 = line.Substring(0, indexOp).Trim();
+                                string part2 = line.Substring(indexOp + token.Length).Trim();
+                                int indexArg1 = part1.LastIndexOfAny(new char[] { ' ', '(' });
+                                if (indexArg1 >= 0)
+                                {
+                                    ++indexArg1; //trim char
+                                    string arg1 = part1.Substring(indexArg1).Trim();
+                                    string pre1 = part1.Substring(0, indexArg1);
+                                    int indexArg2 = part2.IndexOfAny(new char[] { ' ', ')' });
+                                    if (indexArg2 > 0)
+                                    {
+                                        string arg2 = part2.Substring(0, indexArg2).Trim();
+                                        string post2 = part2.Substring(arg2.Length);
+                                        string newline = pre1 + string.Format("bit.lshift({0},{1})", arg1, arg2) + post2;
+                                        line = newline;
+                                    }
+                                }
+                            }
+
+                            if (line.Contains("|"))
+                            {
+                                const string token = "|";
+                                int indexOp = line.IndexOf(token);
+                                string part1 = line.Substring(0, indexOp).Trim();
+                                string part2 = line.Substring(indexOp + token.Length).Trim();
+                                int indexArg1 = part1.LastIndexOf("=");
+                                if (indexArg1 >= 0)
+                                {
+                                    ++indexArg1; //trim char
+                                    string arg1 = part1.Substring(indexArg1).Trim();
+                                    string pre1 = part1.Substring(0, indexArg1);
+                                    int indexArg2 = part2.IndexOfAny(new char[] { ' ', ')' });
+                                    if (indexArg2 <= 0)
+                                    {
+                                        indexArg2 = part2.Length - 1;
+                                    }
+
+                                    string arg2 = part2.Substring(0, indexArg2).Trim();
+                                    string post2 = part2.Substring(arg2.Length);
+                                    string newline = pre1.Trim() + " " + string.Format("bit.bor({0},{1})", arg1, arg2) + post2;
+                                    line = newline;
+                                }
+                            }
+                            
+                            if (line.Contains(";"))
+                            {
+                                line = line.Replace(";", string.Empty);
+                            }
+
+                            if (line.Contains("{"))
+                            {
+                                line = line.Replace("{", string.Empty);
+                            }
+
+                            if (hasIf && parens == 0)
+                            {
+                                hasIf = false;
+                                line += "then";
+                            }
+
                             WriteTabs(sw, tabs);
                             sw.WriteLine(line);
                         }
@@ -2398,7 +2531,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
 
                         for (int effect = 1; effect <= effectCount; ++effect)
                         {
-                            sw.WriteLine("\tif index == {0} then", effect);
+                            sw.WriteLine("\tif buttonName == \"Button {0}\" then", effect);
                             sw.WriteLine("\t\tShowEffect{0}()", effect);
                             sw.WriteLine("\t\tShowEffect{0}ChromaLink()", effect);
                             sw.WriteLine("\t\tShowEffect{0}Headset()", effect);
