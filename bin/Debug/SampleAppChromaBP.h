@@ -850,4 +850,22 @@ class USampleAppChromaBP : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect46Keypad", Keywords = "Example"), Category = "Sample")
 	static void SampleAppShowEffect46Keypad();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47ChromaLink", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47ChromaLink();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47Headset", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47Headset();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47Mousepad", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47Mousepad();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47Mouse", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47Mouse();
+
+	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47Keypad", Keywords = "Example"), Category = "Sample")
+	static void SampleAppShowEffect47Keypad();
 };
