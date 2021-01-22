@@ -1,4 +1,4 @@
-# Chroma Animation Design Converter
+# Chroma Animation Design Converter #
 
 **Table of Contents**
 
@@ -6,7 +6,7 @@
 * [About](#about)
 
 <a name="see-also"></a>
-## See Also
+## See Also ##
 
 **Docs:**
 
@@ -16,15 +16,17 @@
 
 - [ChromaClientForDiscord](https://github.com/tgraupmann/ChromaDiscordApp) - Add Chroma lighting to the Discord App events
 
-- [ChromaClientForMixer](https://github.com/tgraupmann/ChromaClientForMixer) - Add Chroma lighting to the Mixer streaming experience
-
 - [ChromaClientForTwitch](https://github.com/tgraupmann/ChromaTwitchExtension) - Add Chroma lighting to the Twitch streaming experience
 
 **Plugins:**
 
 - [CChromaEditor](https://github.com/RazerOfficial/CChromaEditor) - C++ native MFC library for playing and editing Chroma animations
 
+- [ClickTeamFusion_ChromaSDK](https://github.com/RazerOfficial/ClickTeamFusion_ChromaSDK) - Click Team Fusion Chroma SDK Extension for playing Chroma animations
+
 - [GameMakerChromaExtension](https://github.com/RazerOfficial/GameMakerChromaExtension) - GameMaker extension to control lighting for Razer Chroma
+
+- [Godot_ChromaSDK](https://github.com/RazerOfficial/Godot_ChromaSDK) - Godot native library for playing Chroma animations
 
 - [HTML5ChromaSDK](https://github.com/RazerOfficial/HTML5ChromaSDK) - JavaScript library for playing Chroma animations
 
@@ -32,8 +34,9 @@
 
 - [UnityNativeChromaSDK](https://github.com/RazerOfficial/UnityNativeChromaSDK) - Unity native library for the ChromaSDK
 
+
 <a name="about"></a>
-## About
+## About ##
 
 The `Chroma Design Converter` is a C# console project that automates the conversion of Chroma Animation JS to various engines and platforms.
 
