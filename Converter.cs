@@ -487,6 +487,13 @@ namespace ChromaDesignConverter
                             {
                                 continue;
                             }
+                            if (line.StartsWith("let ") && line.Replace(" ", string.Empty).Contains("=["))
+                            {
+                                line = line.Replace("let ", "const byte ");
+                                line = line.Replace("[", "{");
+                                line = line.Replace("]", "};");
+                                line = line.Replace(" =", "[] =");
+                            }
                             if (line.StartsWith("var") && line.EndsWith("';"))
                             {
                                 Replace(ref line, "'", "\"");
@@ -634,6 +641,10 @@ namespace ChromaDesignConverter
 
                             if (Replace(ref line, "ChromaAnimation.", "ChromaAnimationAPI::"))
                             {
+                            }
+                            if (Replace(ref line, "ChromaAnimationAPI::openAnimationFromMemory", "ChromaAnimationAPI::OpenAnimationFromMemory"))
+                            {
+                                TrimAfter(ref line, ", function", ");");
                             }
                             if (Replace(ref line, "ChromaAnimationAPI::openAnimation", "ChromaAnimationAPI::GetAnimation"))
                             {
@@ -1813,6 +1824,7 @@ U__GAME__Button::U__GAME__Button(const FObjectInitializer& ObjectInitializer) //
 
 void U__GAME__Button::HandleClick()
 {
+#if PLATFORM_WINDOWS || PLATFORM_XBOXONE
     if (!UChromaSDKPluginBPLibrary::IsInitialized())
     {
         UE_LOG(LogTemp, Error, TEXT(""Chroma is not initialized!""));
@@ -1821,7 +1833,8 @@ void U__GAME__Button::HandleClick()
 
     lock_guard<mutex> guard(_sMutex);
 
-__BUTTONS__}";
+__BUTTONS__#endif
+}";
 
                 string buttonDefinition = @"    __IF__ (Name.Compare(""Button_Effect__ID__"") == 0)
     {
@@ -1993,6 +2006,12 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                                 funcName = funcName.Substring(0, funcName.IndexOf(tokenParens));
 
                                 line = string.Format("void UGameChromaBP::{0}{1}()", gameName, funcName);
+                            }
+
+                            if (line.StartsWith("const byte ") && line.Replace(" ", string.Empty).Contains("[]="))
+                            {
+                                line = line.Replace("const byte ", "const TArray<uint8> ");
+                                line = line.Replace("[]", string.Empty);
                             }
 
                             if (Replace(ref line, "\"Animations", string.Format("\"{0}Animations", gameName)))

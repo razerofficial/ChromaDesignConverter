@@ -18,6 +18,7 @@ USampleAppButton::USampleAppButton(const FObjectInitializer& ObjectInitializer) 
 
 void USampleAppButton::HandleClick()
 {
+#if PLATFORM_WINDOWS || PLATFORM_XBOXONE
     if (!UChromaSDKPluginBPLibrary::IsInitialized())
     {
         UE_LOG(LogTemp, Error, TEXT("Chroma is not initialized!"));
@@ -496,4 +497,5 @@ void USampleAppButton::HandleClick()
         USampleAppChromaBP::SampleAppShowEffect47Mouse();
     }
 
+#endif
 }
