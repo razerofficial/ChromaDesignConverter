@@ -4,6 +4,7 @@
 
 #include "Engine.h"
 #include "UMG.h"
+#include "SampleAppButton.h"
 #include "SampleAppChromaBP.generated.h"
 
 UCLASS()
@@ -868,4 +869,7 @@ class USampleAppChromaBP : public UBlueprintFunctionLibrary
 
 	UFUNCTION(BlueprintCallable, meta = (DisplayName = "SampleAppShowEffect47Keypad", Keywords = "Example"), Category = "Sample")
 	static void SampleAppShowEffect47Keypad();
+
+private:
+	static TArray<USampleAppButton*> _sSampleButtons;
 };

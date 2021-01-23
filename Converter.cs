@@ -1689,6 +1689,7 @@ namespace ChromaDesignConverter
 
 #include ""Engine.h""
 #include ""UMG.h""
+#include ""__GAME__Button.h""
 #include ""__GAME__ChromaBP.generated.h""
 
 UCLASS()
@@ -1755,9 +1756,12 @@ class U__GAME__ChromaBP : public UBlueprintFunctionLibrary
                     }
                 }
 
-                string classFooter = @"};";
-                Console.WriteLine("{0}", classFooter);
-                sw.WriteLine("{0}", classFooter);
+                string classFooter = @"
+private:
+	static TArray<U__GAME__Button*> _sSampleButtons;
+};";
+                Console.WriteLine("{0}", classFooter.Replace("__GAME__", gameName));
+                sw.WriteLine("{0}", classFooter.Replace("__GAME__", gameName));
             }
             catch (Exception)
             {
@@ -1920,6 +1924,8 @@ U__GAME__ChromaBP::U__GAME__ChromaBP(const FObjectInitializer& ObjectInitializer
 {
 }
 
+TArray<U__GAME__Button*> U__GAME__ChromaBP::_sSampleButtons;
+
 int U__GAME__ChromaBP::min(int a, int b)
 {
 	if (a < b)
@@ -1961,18 +1967,64 @@ void U__GAME__ChromaBP::__GAME__SetupButtonsEffects(const TArray<UButton*>& butt
 
 void U__GAME__ChromaBP::__GAME__SampleStart()
 {
+#if PLATFORM_WINDOWS || PLATFORM_XBOXONE
 	if (!UChromaSDKPluginBPLibrary::IsInitialized())
 	{
-		UChromaSDKPluginBPLibrary::ChromaSDKInit();
+		FAppInfoType appInfo;
+		appInfo.Title = ""UE4 Chroma Sample Application"";
+		appInfo.Description = ""A sample application using Razer Chroma SDK"";
+		appInfo.Author_Name = ""Razer"";
+		appInfo.Author_Contact = ""https://github.com/razerofficial/UE4_XDK_SampleApp"";
+
+		//appInfo.SupportedDevice = 
+		//    0x01 | // Keyboards
+		//    0x02 | // Mice
+		//    0x04 | // Headset
+		//    0x08 | // Mousepads
+		//    0x10 | // Keypads
+		//    0x20   // ChromaLink devices
+		//    ;
+		appInfo.SupportedDevice = (0x01 | 0x02 | 0x04 | 0x08 | 0x10 | 0x20);
+		appInfo.Category = 1;
+
+		int32 result = UChromaSDKPluginBPLibrary::ChromaSDKInitSDK(appInfo);
+		switch (result)
+		{
+		case RZRESULT_DLL_NOT_FOUND:
+			UE_LOG(LogTemp, Error, TEXT(""Chroma DLL is not found!""));
+			break;
+		case RZRESULT_DLL_INVALID_SIGNATURE:
+			UE_LOG(LogTemp, Error, TEXT(""Chroma DLL has an invalid signature!""));
+			break;
+		case RZRESULT_SUCCESS:
+			break;
+		default:
+			UE_LOG(LogTemp, Error, TEXT(""Failed to initialize Chroma!""));
+			break;
+		}
 	}
+#endif
 }
 
 void U__GAME__ChromaBP::__GAME__SampleEnd()
 {
+#if PLATFORM_WINDOWS || PLATFORM_XBOXONE
 	if (UChromaSDKPluginBPLibrary::IsInitialized())
 	{
 		UChromaSDKPluginBPLibrary::ChromaSDKUnInit();
 	}
+
+	while (_sSampleButtons.Num() > 0)
+	{
+		U__GAME__Button* dynamicButton = _sSampleButtons[0];
+		_sSampleButtons.RemoveAt(0);
+		if (dynamicButton && dynamicButton->IsValidLowLevel())
+		{
+			dynamicButton->RemoveFromRoot();
+			dynamicButton->ConditionalBeginDestroy();
+		}
+	}
+#endif
 }";
                 Console.WriteLine("{0}", classDefinition.Replace("__GAME__", gameName));
                 sw.WriteLine("{0}", classDefinition.Replace("__GAME__", gameName));
