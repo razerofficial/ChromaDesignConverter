@@ -1195,6 +1195,12 @@ namespace ChromaDesignConverter
                             {
                             }
 
+                            if (line.StartsWith("const byte ") && line.Replace(" ", string.Empty).Contains("[]="))
+                            {
+                                line = line.Replace("[]", string.Empty);
+                                line = line.Replace("const byte ", "byte[] ");
+                            }
+
                             if (Replace(ref line, "const char*", "string"))
                             {
                             }
