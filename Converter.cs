@@ -756,6 +756,9 @@ namespace ChromaDesignConverter
                             if (Replace(ref line, "ChromaAnimationAPI::fillThresholdColorsMinMaxAllFramesRGB(", "ChromaAnimationAPI::FillThresholdColorsMinMaxAllFramesRGBName("))
                             {
                             }
+                            if (Replace(ref line, "ChromaAnimationAPI::subtractThresholdColorsMinMaxAllFramesRGB(", "ChromaAnimationAPI::SubtractThresholdColorsMinMaxAllFramesRGBName("))
+                            {
+                            }
                             if (Replace(ref line, "ChromaAnimationAPI::multiplyIntensityColorAllFrames(", "ChromaAnimationAPI::MultiplyIntensityColorAllFramesName("))
                             {
                             }
