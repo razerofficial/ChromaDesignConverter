@@ -2,12 +2,13 @@
 {
     class Program
     {
-        const string GAME_NAME = "SampleApp";
-        const int EFFECT_COUNT = 47;
+        const string GAME_NAME = "SampleGame";
+        const int EFFECT_COUNT = 15;
+        const bool UPGRADE_KEYBOARD_EXTENDED = true;
 
         static void Main(string[] args)
         {
-            Converter.ConvertToCpp("Sample.js", "Output.cpp", EFFECT_COUNT);
+            Converter.ConvertToCpp("Sample.js", "Output.cpp", EFFECT_COUNT, UPGRADE_KEYBOARD_EXTENDED);
             Converter.ConvertToUnity("Output.cpp", "Unity.cs", EFFECT_COUNT);
             Converter.ConvertToVB("Unity.cs", "Output.vb", EFFECT_COUNT);
             Converter.ConvertToClickTeamFusion("Output.cpp", "CTF.lua", EFFECT_COUNT);

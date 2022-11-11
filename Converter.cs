@@ -417,7 +417,7 @@ namespace ChromaDesignConverter
             return true;
         }
 
-        static void ProcessHTML5(string filename, StreamWriter sw, int effectCount)
+        static void ProcessHTML5(string filename, StreamWriter sw, int effectCount, bool upgradeKeyboardExtended)
         {
             try
             {
@@ -446,6 +446,10 @@ namespace ChromaDesignConverter
                                 line.StartsWith("handleButtonClick("))
                             {
                                 continue;
+                            }
+                            if (upgradeKeyboardExtended && line.Contains("_Keyboard.chroma"))
+                            {
+                                line = line.Replace("_Keyboard.chroma", "_KeyboardExtended.chroma");
                             }
                             if (readingArray)
                             {
@@ -2341,7 +2345,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             }
         }
 
-        public static void ConvertToCpp(string input, string outputFile, int effectCount)
+        public static void ConvertToCpp(string input, string outputFile, int effectCount, bool upgradeKeyboardExtended)
         {
             if (File.Exists(outputFile))
             {
@@ -2351,7 +2355,7 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
             {
                 using (StreamWriter sw = new StreamWriter(fs))
                 {
-                    ProcessHTML5(input, sw, effectCount);
+                    ProcessHTML5(input, sw, effectCount, upgradeKeyboardExtended);
                 }
             }
         }
