@@ -4,7 +4,7 @@
     {
         const string GAME_NAME = "SampleGame";
         const int EFFECT_COUNT = 15;
-        const bool UPGRADE_KEYBOARD_EXTENDED = true;
+        const bool UPGRADE_KEYBOARD_EXTENDED = false;
 
         static void Main(string[] args)
         {
