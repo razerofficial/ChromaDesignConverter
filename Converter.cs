@@ -2261,11 +2261,11 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                                 line = line.Replace("[]", string.Empty);
                             }
 
-                            if (Replace(ref line, "\"Animations", string.Format("\"{0}Animations", gameName)))
+                            if (Replace(ref line, "\"Animations", "\"GameSampleAnimations"))
                             {
                             }
 
-                            if (Replace(ref line, "\"animations", string.Format("\"{0}Animations", gameName)))
+                            if (Replace(ref line, "\"animations", "\"GameSampleAnimations"))
                             {
                             }
 
@@ -2274,6 +2274,10 @@ void U__GAME__ChromaBP::__GAME__SampleEnd()
                             }
 
                             if (Replace(ref line, "ChromaAnimationAPI::", "UChromaSDKPluginBPLibrary::"))
+                            {
+                            }
+
+                            if (Replace(ref line, "UChromaSDKPluginBPLibrary::CoreSetEventName", "UChromaSDKPluginBPLibrary::SetEventName"))
                             {
                             }
 
