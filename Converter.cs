@@ -454,8 +454,10 @@ namespace ChromaDesignConverter
                                 ++effectCount;
 
                                 line = "// Trigger haptic effect\r\n";
-                                line += string.Format(" ChromaAnimationAPI::CoreSetEventName(L\"{0}\");\r\n",
+                                string code = string.Format(" ChromaAnimationAPI::CoreSetEventName(L\"{0}\");\r\n",
                                     functionName);
+                                code = code.Replace("L\"ShowEffect", "L\"Effect");
+                                line += code;
                             }
                             if (upgradeKeyboardExtended && line.Contains("_Keyboard.chroma"))
                             {
